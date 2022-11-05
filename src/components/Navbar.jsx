@@ -2,8 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <div className="fixed bottom-10 left-1/2 z-40 flex w-80 -translate-x-1/2 justify-between rounded-lg bg-black/75 px-6 py-4 font-inter text-sm text-white">
-      <button>
+    <div className="fixed bottom-10 left-1/2 z-40 flex w-80 -translate-x-1/2 select-none justify-between rounded-lg bg-black/75 px-6 font-inter text-sm text-white">
+      <button className="py-4">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
@@ -12,7 +12,7 @@ export default function Navbar() {
           Inicio
         </NavLink>
       </button>
-      <button>
+      <button className="py-4">
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
@@ -20,7 +20,7 @@ export default function Navbar() {
           Proyectos
         </NavLink>
       </button>
-      <button>
+      <button className="py-4">
         <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
@@ -28,7 +28,7 @@ export default function Navbar() {
           Sobre mí
         </NavLink>
       </button>
-      <button>
+      <button className="py-4">
         <NavLink
           to="/contact"
           className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
