@@ -10,12 +10,14 @@ export default function Projects() {
           Recientes
         </h1>
         <p className="max-w-sm text-sm">
-          Una colección de proyectos en los que he trabajado, todos ellos
-          páginas o aplicaciones web. orientados en la búsqueda de soluciones a
-          problemas actuales y futuros
+          Una colección de proyectos en los que he trabajado, sean páginas o
+          aplicaciones web, pensados en la búsqueda de soluciones a problemas
+          actuales y futuros
         </p>
       </div>
-      <div className="mb-10 flex flex-col gap-10">
+      <div className="mb-20 flex flex-col gap-10 lg:gap-40">
+        <Project />
+        <Project />
         <Project />
       </div>
     </div>
