@@ -15,7 +15,7 @@ export default function Navbar() {
         scaleX: 0,
         transition: { delay: 0.2, duration: 0.3 },
       }}
-      className="fixed bottom-10 left-1/2 z-40 -ml-[160px] w-80 select-none rounded-lg bg-black/75 px-4 font-inter text-[14px] text-white backdrop-blur-md"
+      className="fixed bottom-10 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/80 px-4 font-inter text-[14px] text-white backdrop-blur-sm"
     >
       <motion.ul
         initial={{ opacity: 0 }}
@@ -27,7 +27,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-bronzegold-400' : undefined
+              isActive ? 'font-bold text-gold-300' : undefined
             }
             end
           >
@@ -38,7 +38,7 @@ export default function Navbar() {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-bronzegold-400' : undefined
+              isActive ? 'font-bold text-gold-300' : undefined
             }
           >
             <p className="py-4 px-2">Proyectos</p>
@@ -48,7 +48,7 @@ export default function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-bronzegold-400' : undefined
+              isActive ? 'font-bold text-gold-300' : undefined
             }
           >
             <p className="py-4 px-2">Sobre mí</p>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-bronzegold-400' : undefined
+              isActive ? 'font-bold text-gold-300' : undefined
             }
           >
             <p className="py-4 px-2">Contacto</p>

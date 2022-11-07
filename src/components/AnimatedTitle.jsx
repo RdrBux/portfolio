@@ -3,11 +3,11 @@ import { motion } from 'framer-motion';
 export default function AnimatedTitle({ text, type = 'section' }) {
   const classContent =
     type === 'section'
-      ? 'text-5xl font-semibold md:text-7xl lg:text-8xl 2xl:text-9xl'
-      : 'font-respira text-[18vw] sm:text-[16vw] md:text-8xl md:leading-tight';
+      ? 'text-[54px] leading-none font-semibold md:text-7xl lg:text-8xl 2xl:text-9xl'
+      : 'font-respira text-[18vw] sm:text-[16vw] md:text-8xl leading-tight md:leading-tight';
 
   const title = {
-    visible: { opacity: 1 /* transition: { staggerChildren: 0.03 } */ },
+    visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
 
@@ -18,7 +18,7 @@ export default function AnimatedTitle({ text, type = 'section' }) {
       rotateY: '0deg',
       scale: 1,
       transition: {
-        delay: Math.log2(i + 5) / Math.log2(10) - 0.7,
+        delay: Math.log10(i + 5) - 0.7,
         duration: 0.2,
         ease: 'easeIn',
       },

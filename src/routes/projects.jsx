@@ -35,7 +35,7 @@ export default function Projects() {
               problemas actuales y futuros
             </motion.p>
           </div>
-          <div className="mb-20 flex flex-col gap-10 lg:gap-40">
+          <div className="mb-20 flex flex-col gap-20 lg:gap-40">
             <Project />
             <Project />
             <Project />
