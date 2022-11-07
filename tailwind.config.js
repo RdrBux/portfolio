@@ -4,26 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gold: '#F4EDDF',
-      },
-      animation: {
-        blob: 'blob 5s infinite',
-      },
-      keyframes: {
-        blob: {
-          '0%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
-
-          '33%': {
-            transform: 'translate(30px, -50px) scale(1.2)',
-          },
-          '67%': {
-            transform: 'translate(-20px, 20px) scale(0.8)',
-          },
-          '100%': {
-            transform: 'translate(0px, 0px) scale(1)',
-          },
+        gold: {
+          50: '#fbfaf4',
+          100: '#f9f0bd',
+          200: '#f1dd81',
+          300: '#dcb84f',
+          400: '#bd8e2a',
+          500: '#9e6f15',
+          600: '#80550d',
+          700: '#62400c',
+          800: '#432c0b',
+          900: '#2c1b08',
         },
       },
     },
