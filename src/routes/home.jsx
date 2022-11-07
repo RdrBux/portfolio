@@ -21,20 +21,30 @@ export default function Home() {
             animate={{
               y: 0,
               opacity: 1,
-              transition: { delay: 0.3, duration: 0.2, ease: 'easeOut' },
+              transition: {
+                delay: 0.6,
+                ease: 'easeOut',
+                y: { duration: 0.5 },
+                opacity: { duration: 1.2 },
+              },
             }}
-            className="text-2xl font-semibold text-gold-600"
+            className="text-2xl font-semibold text-bronzegold-700"
           >
             /Desarrolador Web
             <br />
             /Diseñador Web
           </motion.p>
           <motion.p
-            initial={{ y: '-0.5rem', opacity: 0 }}
+            initial={{ y: '-0.25rem', opacity: 0 }}
             animate={{
               y: 0,
               opacity: 1,
-              transition: { delay: 0.4, duration: 0.2, ease: 'easeOut' },
+              ease: 'easeOut',
+              transition: {
+                delay: 0.8,
+                y: { duration: 0.5 },
+                opacity: { duration: 1.2 },
+              },
             }}
           >
             Trabajando en la transformación de grandes ideas en experiencias

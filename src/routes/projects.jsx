@@ -16,11 +16,24 @@ export default function Projects() {
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
             <AnimatedTitle text="Proyectos Recientes" />
-            <p className="max-w-sm text-sm">
+            <motion.p
+              initial={{ y: '-0.25rem', opacity: 0 }}
+              animate={{
+                y: 0,
+                opacity: 1,
+                transition: {
+                  delay: 0.7,
+                  ease: 'easeOut',
+                  y: { duration: 0.5 },
+                  opacity: { duration: 1.2 },
+                },
+              }}
+              className="max-w-sm text-sm"
+            >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensados en la búsqueda de soluciones a
               problemas actuales y futuros
-            </p>
+            </motion.p>
           </div>
           <div className="mb-20 flex flex-col gap-10 lg:gap-40">
             <Project />

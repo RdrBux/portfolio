@@ -8,7 +8,7 @@ export default function Navbar() {
       animate={{
         opacity: 1,
         scaleX: 1,
-        transition: { duration: 0.5, delay: 0.5 },
+        transition: { duration: 0.5, delay: 1.2 },
       }}
       exit={{
         opacity: 0,
@@ -19,7 +19,7 @@ export default function Navbar() {
     >
       <motion.ul
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.5, delay: 0.8 } }}
+        animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.6 } }}
         exit={{ opacity: 0 }}
         className="flex justify-between"
       >
@@ -27,7 +27,7 @@ export default function Navbar() {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-bronzegold-400' : undefined
             }
             end
           >
@@ -38,7 +38,7 @@ export default function Navbar() {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-bronzegold-400' : undefined
             }
           >
             <p className="py-4 px-2">Proyectos</p>
@@ -48,7 +48,7 @@ export default function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-bronzegold-400' : undefined
             }
           >
             <p className="py-4 px-2">Sobre mí</p>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-bronzegold-400' : undefined
             }
           >
             <p className="py-4 px-2">Contacto</p>
