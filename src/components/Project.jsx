@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import ProjectImg from '../assets/project-img1.png';
 
 export default function Project() {
+  const navigate = useNavigate();
+
   function handleClick() {
-    console.log('project clicked');
+    navigate('/project');
   }
 
   return (
