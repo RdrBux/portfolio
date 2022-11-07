@@ -16,7 +16,7 @@ module.exports = {
           800: '#432c0b',
           900: '#2c1b08',
         }, */
-        gold: {
+        /* gold: {
           50: '#FAF7EA',
           100: '#F6EED5',
           200: '#EEDFAF',
@@ -27,7 +27,7 @@ module.exports = {
           700: '#826A1C',
           800: '#584813',
           900: '#2A2209',
-        },
+        }, */
         bronzegold: {
           50: '#FAF7F0',
           100: '#F5F0E0',

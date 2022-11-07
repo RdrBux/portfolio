@@ -9,7 +9,7 @@ const AnimatedRoutes = () => {
   const location = useLocation();
 
   return (
-    <div className="h-screen w-screen bg-stone-200">
+    <div className="h-screen w-screen">
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />

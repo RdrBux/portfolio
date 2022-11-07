@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function AnimatedTitle({ text, type = 'section' }) {
   const classContent =
     type === 'section'
-      ? 'text-5xl font-semibold md:text-7xl lg:text-8xl xl:text-9xl'
+      ? 'text-5xl font-semibold md:text-7xl lg:text-8xl 2xl:text-9xl'
       : 'font-respira text-[18vw] sm:text-[16vw] md:text-8xl md:leading-tight';
 
   const title = {

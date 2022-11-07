@@ -54,7 +54,7 @@ export default function Home() {
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
-        className="absolute inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
+        className="fixed inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
         exit={{
@@ -65,7 +65,7 @@ export default function Home() {
             borderRadius: { duration: 0.1, delay: 0.5 },
           },
         }}
-        className="absolute bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
+        className="fixed bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
       ></motion.div>
     </motion.div>
   );
