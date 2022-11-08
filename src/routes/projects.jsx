@@ -11,7 +11,7 @@ export default function Projects() {
           translateY: '2rem',
           borderRadius: '2rem',
         }}
-        className="h-full w-screen origin-top bg-white"
+        className="h-full w-screen max-w-full origin-top bg-white"
       >
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">

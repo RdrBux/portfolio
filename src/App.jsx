@@ -1,5 +1,6 @@
+import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import Navbar from './components/Navbar';
 
@@ -9,10 +10,14 @@ export default function App() {
     preloader.style.display = 'none';
   }, []);
 
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Navbar />
+    <>
+      <AnimatePresence>
+        {location.pathname !== '/project' && <Navbar />}
+      </AnimatePresence>
       <AnimatedRoutes />
-    </BrowserRouter>
+    </>
   );
 }

@@ -2,13 +2,13 @@
 @tailwind components;
 
 body::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 body {
   background-color: rgb(231 229 228);
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  /* -ms-overflow-style: none; */ /* IE and Edge */
+  /* scrollbar-width: none; */ /* Firefox */
 }
 
 @tailwind utilities;
