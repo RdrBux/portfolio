@@ -88,7 +88,7 @@ export default function Contact() {
               href="mailto:rodriguezrodrigoemmanuel@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="group w-fit uppercase"
+              className="group w-fit"
             >
               <div className="flex items-center gap-2">
                 rodriguezrodrigoemmanuel@gmail.com
@@ -117,48 +117,50 @@ export default function Contact() {
             </div>
           </div>
           <hr />
-          <form
-            ref={form}
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-5 py-10 text-sm lg:py-20 lg:text-base"
-          >
-            <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
-            <label className="flex flex-col font-medium">
-              Nombre*
-              <input
-                className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
-                type="text"
-                name="user_name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </label>
-            <label className="flex flex-col font-medium">
-              Correo electrónico*
-              <input
-                className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
-                type="email"
-                name="user_email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </label>
-            <label className="flex flex-col font-medium">
-              Mensaje*
-              <textarea
-                value={message}
-                name="message"
-                onChange={(e) => setMessage(e.target.value)}
-                className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
-                required
-              />
-            </label>
-            <button className="rounded-lg bg-black py-4 text-base font-bold text-white">
-              ENVIAR
-            </button>
-          </form>
+          <div className="flex flex-col items-center">
+            <form
+              ref={form}
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-5 py-10 text-sm lg:w-3/4 lg:py-20 lg:text-base"
+            >
+              <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
+              <label className="flex flex-col font-medium">
+                Nombre*
+                <input
+                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  type="text"
+                  name="user_name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </label>
+              <label className="flex flex-col font-medium">
+                Correo electrónico*
+                <input
+                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  type="email"
+                  name="user_email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </label>
+              <label className="flex flex-col font-medium">
+                Mensaje*
+                <textarea
+                  value={message}
+                  name="message"
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  required
+                />
+              </label>
+              <button className="rounded-lg bg-black py-4 px-12 text-base font-bold text-white">
+                ENVIAR
+              </button>
+            </form>
+          </div>
 
           <div className="">
             <hr />
