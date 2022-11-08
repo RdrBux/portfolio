@@ -31,7 +31,7 @@ export default function Navbar() {
             }
             end
           >
-            <p className="py-4 px-2">Inicio</p>
+            <p className="nav-element | py-4 px-2">Inicio</p>
           </NavLink>
         </li>
         <li>
@@ -41,7 +41,7 @@ export default function Navbar() {
               isActive ? 'font-bold text-teal-200' : undefined
             }
           >
-            <p className="py-4 px-2">Proyectos</p>
+            <p className="nav-element | py-4 px-2">Proyectos</p>
           </NavLink>
         </li>
         <li>
@@ -51,7 +51,7 @@ export default function Navbar() {
               isActive ? 'font-bold text-teal-200' : undefined
             }
           >
-            <p className="py-4 px-2">Sobre mí</p>
+            <p className="nav-element | py-4 px-2">Sobre mí</p>
           </NavLink>
         </li>
         <li>
@@ -61,7 +61,7 @@ export default function Navbar() {
               isActive ? 'font-bold text-teal-200' : undefined
             }
           >
-            <p className="py-4 px-2">Contacto</p>
+            <p className="nav-element | py-4 px-2">Contacto</p>
           </NavLink>
         </li>
       </motion.ul>

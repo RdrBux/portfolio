@@ -1,8 +1,61 @@
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AnimatedTitle from '../components/AnimatedTitle';
 import LangSelector from '../components/LangSelector';
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    function swapRouteOnScroll(e) {
+      navigate('/projects');
+    }
+
+    document.addEventListener('wheel', swapRouteOnScroll);
+    return () => document.removeEventListener('wheel', swapRouteOnScroll);
+  }, [navigate]);
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+
+    let yDown = null;
+
+    function getTouches(e) {
+      return e.touches;
+    }
+
+    function handleTouchStart(e) {
+      const firstTouch = getTouches(e)[0];
+      yDown = firstTouch.clientY;
+    }
+
+    function handleTouchMove(e) {
+      if (!yDown) {
+        return;
+      }
+
+      let yUp = e.touches[0].clientY;
+
+      let yDiff = yDown - yUp;
+
+      if (
+        Math.abs(yDiff) >= 4 &&
+        !e.target.className.split(' ').includes('nav-element')
+      ) {
+        navigate('/projects');
+      }
+
+      yDown = null;
+    }
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
+
   return (
     <motion.div>
       <motion.div
