@@ -8,6 +8,9 @@ import ProjectNav from '../components/ProjectNav';
 
 export default function FullProject() {
   const [showFixedEls, setShowFixedEls] = useState(false);
+  const [topSidePage, setTopSidePage] = useState(true);
+
+  console.log(topSidePage);
 
   useEffect(() => {
     function x() {
@@ -23,20 +26,37 @@ export default function FullProject() {
     return () => window.removeEventListener('scroll', x);
   }, [showFixedEls]);
 
+  useEffect(() => {
+    function y() {
+      const halfHeight = document.body.scrollHeight / 2;
+      if (window.scrollY < halfHeight && !topSidePage) {
+        setTopSidePage(true);
+      }
+      if (window.scrollY >= halfHeight && topSidePage) {
+        setTopSidePage(false);
+      }
+    }
+
+    window.addEventListener('scroll', y);
+    return () => window.removeEventListener('scroll', y);
+  }, [topSidePage]);
+
   return (
     <motion.div>
       <motion.div
         exit={{
           scale: 0.9,
-          translateY: '2rem',
+          translateY: topSidePage ? '2rem' : '-2rem',
         }}
-        className="relative mt-16 w-screen max-w-full origin-top rounded-t-2xl bg-white font-inter"
+        className={`relative mt-16 w-screen max-w-full ${
+          topSidePage ? 'origin-top' : 'origin-bottom'
+        } rounded-t-2xl bg-white font-inter lg:rounded-t-[2rem]`}
       >
+        <CloseProject />
         <AnimatePresence>
           {showFixedEls && (
             <div>
               <ProjectNav />
-              <CloseProject />
             </div>
           )}
         </AnimatePresence>

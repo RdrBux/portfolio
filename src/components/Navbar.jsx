@@ -15,13 +15,13 @@ export default function Navbar() {
         scaleX: 0,
         transition: { delay: 0.2, duration: 0.3 },
       }}
-      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/80 px-4 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
+      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/80  px-2 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
     >
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.4 } }}
         exit={{ opacity: 0 }}
-        className="flex justify-between font-medium"
+        className="flex justify-evenly font-medium"
       >
         <li>
           <NavLink
