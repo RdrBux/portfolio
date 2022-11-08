@@ -9,7 +9,7 @@ export default function Project() {
   }
 
   return (
-    <div>
+    <div className="font-inter">
       <div
         onClick={handleClick}
         className="flex w-full cursor-pointer flex-col lg:flex-row lg:items-center"

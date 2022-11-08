@@ -8,26 +8,26 @@ export default function Navbar() {
       animate={{
         opacity: 1,
         scaleX: 1,
-        transition: { duration: 0.5, delay: 1.2 },
+        transition: { type: 'spring', duration: 0.6, delay: 1.2 },
       }}
       exit={{
         opacity: 0,
         scaleX: 0,
         transition: { delay: 0.2, duration: 0.3 },
       }}
-      className="fixed bottom-10 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/80 px-4 font-inter text-[14px] text-white backdrop-blur-sm"
+      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/80 px-4 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
     >
       <motion.ul
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.6 } }}
+        animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.4 } }}
         exit={{ opacity: 0 }}
-        className="flex justify-between"
+        className="flex justify-between font-medium"
       >
         <li>
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-teal-200' : undefined
             }
             end
           >
@@ -38,7 +38,7 @@ export default function Navbar() {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-teal-200' : undefined
             }
           >
             <p className="py-4 px-2">Proyectos</p>
@@ -48,7 +48,7 @@ export default function Navbar() {
           <NavLink
             to="/about"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-teal-200' : undefined
             }
           >
             <p className="py-4 px-2">Sobre mí</p>
@@ -58,7 +58,7 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              isActive ? 'font-bold text-gold-300' : undefined
+              isActive ? 'font-bold text-teal-200' : undefined
             }
           >
             <p className="py-4 px-2">Contacto</p>
@@ -68,28 +68,3 @@ export default function Navbar() {
     </motion.nav>
   );
 }
-
-/* useEffect(() => {
-    const tl = gsap.timeline();
-    tl.from(navRef.current, {
-      alpha: 0,
-      duration: 1,
-    })
-      .from(
-        navRef.current,
-        {
-          borderRadius: '50px',
-          scaleX: 0,
-          duration: 0.5,
-        },
-        0.0
-      )
-      .from(
-        ulRef.current,
-        {
-          alpha: 0,
-          duration: 1,
-        },
-        '-=0.6'
-      );
-  }, []); */

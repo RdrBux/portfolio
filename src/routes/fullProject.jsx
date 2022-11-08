@@ -1,10 +1,28 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import Accordion from '../components/Accordion';
 import ProjectImg from '../assets/project-img1.png';
 import ProjectArticle from '../components/ProjectArticle';
 import CloseProject from '../components/CloseProject';
+import ProjectNav from '../components/ProjectNav';
 
 export default function FullProject() {
+  const [showFixedEls, setShowFixedEls] = useState(false);
+
+  useEffect(() => {
+    function x() {
+      if (window.scrollY > 100 && !showFixedEls) {
+        setShowFixedEls(true);
+      }
+      if (window.scrollY <= 100 && showFixedEls) {
+        setShowFixedEls(false);
+      }
+    }
+
+    window.addEventListener('scroll', x);
+    return () => window.removeEventListener('scroll', x);
+  }, [showFixedEls]);
+
   return (
     <motion.div>
       <motion.div
@@ -14,16 +32,23 @@ export default function FullProject() {
         }}
         className="relative mt-16 w-screen max-w-full origin-top rounded-t-2xl bg-white font-inter"
       >
-        <CloseProject />
-        <div className="container flex flex-col pt-14">
+        <AnimatePresence>
+          {showFixedEls && (
+            <div>
+              <ProjectNav />
+              <CloseProject />
+            </div>
+          )}
+        </AnimatePresence>
+        <div className="container flex flex-col pt-14 lg:pt-24">
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
             <p className="lg:text-lg">Descripción de la página / Otra</p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 lg:mt-16">
             <Accordion />
           </div>
-          <div className="flex flex-col gap-8 py-10">
+          <div className="flex flex-col gap-8 py-10 lg:py-16">
             <img src={ProjectImg} alt="" />
             <img src={ProjectImg} alt="" />
             <img src={ProjectImg} alt="" />

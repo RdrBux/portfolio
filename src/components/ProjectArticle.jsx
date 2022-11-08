@@ -2,7 +2,7 @@ import ProjectImg from '../assets/project-img1.png';
 
 export default function ProjectArticle() {
   return (
-    <div className="mt flex flex-col gap-8 border-t-2 py-10">
+    <div className="mt flex flex-col gap-8 border-t-2 py-10 lg:py-16">
       <h3 className="text-3xl font-semibold lg:text-6xl">
         Título del Artículo
       </h3>

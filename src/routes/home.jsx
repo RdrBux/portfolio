@@ -28,7 +28,7 @@ export default function Home() {
                 opacity: { duration: 1.2 },
               },
             }}
-            className="text-2xl font-semibold text-gold-700"
+            className="text-2xl font-semibold text-teal-700"
           >
             /Desarrolador Web
             <br />

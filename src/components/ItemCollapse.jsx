@@ -50,7 +50,7 @@ export default function ItemCollapse({ title, activeItem, setActiveItem }) {
               height: 0,
               transition: { duration: 0.2, ease: 'easeInOut' },
             }}
-            className="overflow-hidden"
+            className="overflow-hidden text-black/80"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante eu in
             ultrices aliquet proin sapien non, tempus consectetur. A interdum
