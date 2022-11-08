@@ -10,8 +10,6 @@ export default function FullProject() {
   const [showFixedEls, setShowFixedEls] = useState(false);
   const [topSidePage, setTopSidePage] = useState(true);
 
-  console.log(topSidePage);
-
   useEffect(() => {
     function x() {
       if (window.scrollY > 100 && !showFixedEls) {
@@ -27,7 +25,7 @@ export default function FullProject() {
   }, [showFixedEls]);
 
   useEffect(() => {
-    function y() {
+    function halfHeightSwapper() {
       const halfHeight = document.body.scrollHeight / 2;
       if (window.scrollY < halfHeight && !topSidePage) {
         setTopSidePage(true);
@@ -37,8 +35,8 @@ export default function FullProject() {
       }
     }
 
-    window.addEventListener('scroll', y);
-    return () => window.removeEventListener('scroll', y);
+    window.addEventListener('scroll', halfHeightSwapper);
+    return () => window.removeEventListener('scroll', halfHeightSwapper);
   }, [topSidePage]);
 
   return (
@@ -52,7 +50,6 @@ export default function FullProject() {
           topSidePage ? 'origin-top' : 'origin-bottom'
         } rounded-t-2xl bg-white font-inter lg:rounded-t-[2rem]`}
       >
-        <CloseProject />
         <AnimatePresence>
           {showFixedEls && (
             <div>
@@ -61,6 +58,7 @@ export default function FullProject() {
           )}
         </AnimatePresence>
         <div className="container flex flex-col pt-14 lg:pt-24">
+          <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
             <p className="lg:text-lg">Descripción de la página / Otra</p>

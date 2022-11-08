@@ -1,17 +1,37 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedTitle from '../components/AnimatedTitle';
 import Project from '../components/Project';
 
 export default function Projects() {
+  const [topSidePage, setTopSidePage] = useState(true);
+
+  useEffect(() => {
+    function halfHeightSwapper() {
+      const halfHeight = document.body.scrollHeight / 2;
+      if (window.scrollY < halfHeight && !topSidePage) {
+        setTopSidePage(true);
+      }
+      if (window.scrollY >= halfHeight && topSidePage) {
+        setTopSidePage(false);
+      }
+    }
+
+    window.addEventListener('scroll', halfHeightSwapper);
+    return () => window.removeEventListener('scroll', halfHeightSwapper);
+  }, [topSidePage]);
+
   return (
     <motion.div>
       <motion.div
         exit={{
           scale: 0.9,
-          translateY: '2rem',
+          translateY: topSidePage ? '2rem' : '-2rem',
           borderRadius: '2rem',
         }}
-        className="h-full w-screen max-w-full origin-top bg-white"
+        className={`h-full w-screen max-w-full ${
+          topSidePage ? 'origin-top' : 'origin-bottom'
+        } bg-white`}
       >
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">

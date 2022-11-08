@@ -37,7 +37,7 @@ export default function Navbar() {
         <li>
           <a
             className="inline-block py-4 px-2"
-            href="#https://google.com"
+            href="https://google.com"
             target="_blank"
             rel="noreferrer"
           >

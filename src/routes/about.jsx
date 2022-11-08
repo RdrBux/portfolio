@@ -2,16 +2,18 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <motion.div>
+    <motion.div className="font-inter">
       <motion.div
         exit={{
           scale: 0.9,
           translateY: '2rem',
           borderRadius: '2rem',
         }}
-        className="h-full min-h-screen w-screen origin-top bg-white"
+        className="h-full w-screen origin-top bg-white"
       >
-        <h1>About</h1>
+        <div className="container flex flex-col gap-5">
+          <h1>hi</h1>
+        </div>
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
