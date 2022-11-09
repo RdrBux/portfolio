@@ -34,7 +34,7 @@ export default function Projects() {
         } bg-white`}
       >
         <div className="container flex flex-col">
-          <div className="flex h-[90vh] flex-col justify-center gap-2 uppercase">
+          <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
             <AnimatedTitle text="Proyectos Recientes" />
             <motion.p
               initial={{ y: '-0.25rem', opacity: 0 }}

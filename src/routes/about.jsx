@@ -20,7 +20,7 @@ export default function About() {
         className="h-full w-full origin-top bg-white pb-28"
       >
         <div className="container flex flex-col gap-5">
-          <div className="py-20 uppercase lg:py-32">
+          <div className="py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Sobre mí" />
           </div>
           <div className="flex flex-col gap-20">

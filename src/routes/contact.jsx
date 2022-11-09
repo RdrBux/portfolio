@@ -75,7 +75,7 @@ export default function Contact() {
       >
         {showAlert && <AlertContact />}
         <div className="container flex flex-col lg:w-3/4">
-          <div className="flex flex-col gap-3 py-20 uppercase lg:py-32">
+          <div className="flex flex-col items-center gap-3 py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Contacto" />
             <motion.p
               initial={{ y: '-0.25rem', opacity: 0 }}
