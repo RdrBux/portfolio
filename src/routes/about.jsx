@@ -9,7 +9,7 @@ export default function About() {
           translateY: '2rem',
           borderRadius: '2rem',
         }}
-        className="h-full w-screen origin-top bg-white"
+        className="h-full w-full origin-top bg-white"
       >
         <div className="container flex flex-col gap-5">
           <h1>hi</h1>
@@ -17,7 +17,7 @@ export default function About() {
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
+        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
         exit={{
@@ -28,7 +28,7 @@ export default function About() {
             borderRadius: { duration: 0.1, delay: 0.5 },
           },
         }}
-        className="fixed bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
+        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
       ></motion.div>
     </motion.div>
   );

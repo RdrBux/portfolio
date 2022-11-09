@@ -46,7 +46,7 @@ export default function FullProject() {
           scale: 0.9,
           translateY: topSidePage ? '2rem' : '-2rem',
         }}
-        className={`relative mt-16 w-screen max-w-full ${
+        className={`relative mt-16 w-full max-w-full ${
           topSidePage ? 'origin-top' : 'origin-bottom'
         } rounded-t-2xl bg-white font-inter lg:rounded-t-[2rem]`}
       >
@@ -87,7 +87,7 @@ export default function FullProject() {
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
+        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
         exit={{
@@ -98,7 +98,7 @@ export default function FullProject() {
             borderRadius: { duration: 0.1, delay: 0.5 },
           },
         }}
-        className="fixed bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
+        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
       ></motion.div>
     </motion.div>
   );

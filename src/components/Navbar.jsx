@@ -5,7 +5,6 @@ import { NavLink, useLocation } from 'react-router-dom';
 export default function Navbar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
-  console.log(activeLink);
 
   useEffect(() => {
     setActiveLink(location.pathname);

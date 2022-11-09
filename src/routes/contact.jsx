@@ -3,11 +3,14 @@ import { motion } from 'framer-motion';
 import AnimatedTitle from '../components/AnimatedTitle';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
+import AlertContact from '../components/AlertContact';
 
 export default function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const form = useRef();
 
@@ -23,10 +26,18 @@ export default function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          setIsError(false);
+          setShowAlert(true);
+          setTimeout(() => {
+            setShowAlert(false);
+          }, 3000);
         },
         (error) => {
-          console.log(error.text);
+          setIsError(true);
+          setShowAlert(true);
+          setTimeout(() => {
+            setShowAlert(false);
+          }, 3000);
         }
       );
 
@@ -60,8 +71,9 @@ export default function Contact() {
           translateY: '2rem',
           borderRadius: '2rem',
         }}
-        className="min-h-screen w-screen max-w-full origin-top bg-white"
+        className="min-h-screen w-full max-w-full origin-top bg-white"
       >
+        {showAlert && <AlertContact />}
         <div className="container flex flex-col">
           <div className="flex flex-col items-center justify-center gap-3 py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Contacto" />
@@ -173,7 +185,7 @@ export default function Contact() {
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
+        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
         exit={{
@@ -184,7 +196,7 @@ export default function Contact() {
             borderRadius: { duration: 0.1, delay: 0.5 },
           },
         }}
-        className="fixed bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
+        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
       ></motion.div>
     </motion.div>
   );

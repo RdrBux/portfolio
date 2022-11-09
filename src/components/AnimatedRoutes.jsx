@@ -9,7 +9,7 @@ import Projects from '../routes/projects';
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <div className="h-screen w-screen max-w-full">
+    <div className="h-screen w-full max-w-full">
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />

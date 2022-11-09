@@ -29,7 +29,7 @@ export default function Projects() {
           translateY: topSidePage ? '2rem' : '-2rem',
           borderRadius: '2rem',
         }}
-        className={`h-full w-screen max-w-full ${
+        className={`h-full w-full max-w-full ${
           topSidePage ? 'origin-top' : 'origin-bottom'
         } bg-white`}
       >
@@ -51,7 +51,7 @@ export default function Projects() {
               className="max-w-sm text-sm"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
-              aplicaciones web, pensados en la búsqueda de soluciones a
+              aplicaciones web, pensadas en la búsqueda de soluciones a
               problemas actuales y futuros
             </motion.p>
           </div>
@@ -64,7 +64,7 @@ export default function Projects() {
       </motion.div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-screen bg-black/30 opacity-0"
+        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
         exit={{
@@ -75,7 +75,7 @@ export default function Projects() {
             borderRadius: { duration: 0.1, delay: 0.5 },
           },
         }}
-        className="fixed bottom-0 z-30 w-screen rounded-t-[2rem] bg-white"
+        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
       ></motion.div>
     </motion.div>
   );
