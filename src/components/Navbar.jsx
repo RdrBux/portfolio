@@ -23,79 +23,89 @@ export default function Navbar() {
         scaleX: 0,
         transition: { delay: 0.2, duration: 0.3 },
       }}
-      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/75  px-2 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
+      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] flex w-[328px] select-none justify-center rounded-full bg-black/75 py-2 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
     >
       <motion.ul
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.4 } }}
         exit={{ opacity: 0 }}
-        className="flex justify-evenly font-medium"
+        className="just grid w-[312px] grid-cols-4 font-medium"
       >
-        <li>
+        {' '}
+        {/* "flex justify-evenly font-medium" */}
+        <li className="w-full">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative py-4 px-2">
-              Inicio
-              {activeLink === '/' && (
-                <motion.div
-                  layoutId="underline"
-                  className="absolute left-2 right-2 h-0.5 rounded-full bg-white"
-                ></motion.div>
-              )}
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+              <div className="relative w-fit">
+                Inicio
+                {activeLink === '/' && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                  ></motion.div>
+                )}
+              </div>
             </motion.div>
           </NavLink>
         </li>
-        <li>
+        <li className="w-full">
           <NavLink
             to="/projects"
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative py-4 px-2">
-              Projectos
-              {activeLink === '/projects' && (
-                <motion.div
-                  layoutId="underline"
-                  className="absolute left-2 right-2 h-0.5 rounded-full bg-white"
-                ></motion.div>
-              )}
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+              <div className="relative w-fit">
+                Projectos
+                {activeLink === '/projects' && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                  ></motion.div>
+                )}
+              </div>
             </motion.div>
           </NavLink>
         </li>
-        <li>
+        <li className="w-full">
           <NavLink
             to="/about"
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative py-4 px-2">
-              Sobre mí
-              {activeLink === '/about' && (
-                <motion.div
-                  layoutId="underline"
-                  className="absolute left-2 right-2 h-0.5 rounded-full bg-white"
-                ></motion.div>
-              )}
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+              <div className="relative w-fit">
+                Sobre mí
+                {activeLink === '/about' && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                  ></motion.div>
+                )}
+              </div>
             </motion.div>
           </NavLink>
         </li>
-        <li>
+        <li className="w-full">
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative py-4 px-2">
-              Contacto
-              {activeLink === '/contact' && (
-                <motion.div
-                  layoutId="underline"
-                  className="absolute left-2 right-2 h-0.5 rounded-full bg-white"
-                ></motion.div>
-              )}
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+              <div className="relative w-fit">
+                Contacto
+                {activeLink === '/contact' && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                  ></motion.div>
+                )}
+              </div>
             </motion.div>
           </NavLink>
         </li>
