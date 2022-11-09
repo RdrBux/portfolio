@@ -41,7 +41,7 @@ export default function Projects() {
               animate={{
                 opacity: 1,
                 transition: {
-                  delay: 0.8,
+                  delay: 0.7,
                   duration: 1,
                 },
               }}

@@ -11,7 +11,7 @@ export default function About() {
       transition: {
         when: 'beforeChildren',
         staggerChildren: 0.3,
-        delay: 0.3,
+        delay: 0.2,
       },
     },
     hidden: { opacity: 0 },
