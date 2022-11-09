@@ -31,15 +31,13 @@ export default function Navbar() {
         exit={{ opacity: 0 }}
         className="just grid w-[312px] grid-cols-4 font-medium"
       >
-        {' '}
-        {/* "flex justify-evenly font-medium" */}
         <li className="w-full">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/5">
               <div className="relative w-fit">
                 Inicio
                 {activeLink === '/' && (
@@ -58,7 +56,7 @@ export default function Navbar() {
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/5">
               <div className="relative w-fit">
                 Projectos
                 {activeLink === '/projects' && (
@@ -77,7 +75,7 @@ export default function Navbar() {
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/5">
               <div className="relative w-fit">
                 Sobre mí
                 {activeLink === '/about' && (
@@ -96,7 +94,7 @@ export default function Navbar() {
             className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
             end
           >
-            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/10">
+            <motion.div className="nav-element | relative flex justify-center py-2 hover:rounded-full hover:bg-white/5">
               <div className="relative w-fit">
                 Contacto
                 {activeLink === '/contact' && (
