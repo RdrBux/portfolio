@@ -64,7 +64,7 @@ export default function Contact() {
   );
 
   return (
-    <motion.div className="font-inter">
+    <motion.div>
       <motion.div
         exit={{
           scale: 0.9,
@@ -74,8 +74,8 @@ export default function Contact() {
         className="min-h-screen w-full max-w-full origin-top bg-white"
       >
         {showAlert && <AlertContact />}
-        <div className="container flex flex-col">
-          <div className="flex flex-col items-center justify-center gap-3 py-20 text-center uppercase lg:py-32">
+        <div className="container flex flex-col lg:w-3/4">
+          <div className="flex flex-col gap-3 py-20 uppercase lg:py-32">
             <AnimatedTitle text="Contacto" />
             <motion.p
               initial={{ y: '-0.25rem', opacity: 0 }}
@@ -89,7 +89,7 @@ export default function Contact() {
                   opacity: { duration: 1.2 },
                 },
               }}
-              className="max-w-sm text-sm"
+              className="max-w-sm pl-1 text-sm md:max-w-md"
             >
               No dudes en ponerte en contacto, ya sea por cuestiones laborales,
               consultas o simplemente para saludar
@@ -133,7 +133,7 @@ export default function Contact() {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="flex flex-col gap-5 py-10 text-sm lg:w-3/4 lg:py-20 lg:text-base"
+              className="flex w-full flex-col gap-5 py-10 text-sm lg:py-20 lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
               <label className="flex flex-col font-medium">

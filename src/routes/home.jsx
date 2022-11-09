@@ -54,7 +54,7 @@ export default function Home() {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchmove', handleTouchMove);
     };
-  }, []);
+  }, [navigate]);
 
   return (
     <motion.div>

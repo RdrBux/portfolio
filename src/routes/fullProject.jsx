@@ -48,7 +48,7 @@ export default function FullProject() {
         }}
         className={`relative mt-16 w-full max-w-full ${
           topSidePage ? 'origin-top' : 'origin-bottom'
-        } rounded-t-2xl bg-white font-inter lg:rounded-t-[2rem]`}
+        } rounded-t-2xl bg-white lg:rounded-t-[2rem]`}
       >
         <AnimatePresence>
           {showFixedEls && (

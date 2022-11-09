@@ -34,7 +34,7 @@ export default function Projects() {
         } bg-white`}
       >
         <div className="container flex flex-col">
-          <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
+          <div className="flex h-[90vh] flex-col justify-center gap-2 uppercase">
             <AnimatedTitle text="Proyectos Recientes" />
             <motion.p
               initial={{ y: '-0.25rem', opacity: 0 }}
@@ -48,7 +48,7 @@ export default function Projects() {
                   opacity: { duration: 1.2 },
                 },
               }}
-              className="max-w-sm text-sm"
+              className="max-w-sm pl-1 text-sm md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a
