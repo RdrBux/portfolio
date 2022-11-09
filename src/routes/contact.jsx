@@ -78,15 +78,12 @@ export default function Contact() {
           <div className="flex flex-col items-center gap-3 py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Contacto" />
             <motion.p
-              initial={{ y: '-0.25rem', opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{
-                y: 0,
                 opacity: 1,
                 transition: {
-                  delay: 0.4,
-                  ease: 'easeOut',
-                  y: { duration: 0.5 },
-                  opacity: { duration: 1.2 },
+                  delay: 0.5,
+                  duration: 1,
                 },
               }}
               className="max-w-sm pl-1 text-sm md:max-w-md"
@@ -95,41 +92,46 @@ export default function Contact() {
               consultas o simplemente para saludar
             </motion.p>
           </div>
-          <div className="flex flex-col items-center gap-5 pb-10 text-lg text-black/80 lg:text-2xl">
-            <a
-              href="mailto:rodriguezrodrigoemmanuel@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="group w-fit"
-            >
-              <div className="flex items-center gap-2">
-                rodriguezrodrigoemmanuel@gmail.com
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.8, duration: 1 } }}
+          >
+            <div className="flex flex-col items-center gap-5 pb-10 text-lg text-black/80 lg:text-2xl">
+              <a
+                href="mailto:rodriguezrodrigoemmanuel@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                className="group w-fit"
+              >
+                <div className="flex items-center gap-2">
+                  rodriguezrodrigoemmanuel@gmail.com
+                </div>
+                <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+              </a>
+              <div className="flex gap-16">
+                <a
+                  href="https://www.linkedin.com/in/rdrbux/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2">
+                    Linkedin {arrow}
+                  </div>
+                  <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+                </a>
+                <a
+                  href="https://github.com/RdrBux"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group"
+                >
+                  <div className="flex items-center gap-2">Github {arrow}</div>
+                  <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+                </a>
               </div>
-              <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
-            </a>
-            <div className="flex gap-16">
-              <a
-                href="https://www.linkedin.com/in/rdrbux/"
-                target="_blank"
-                rel="noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-2">Linkedin {arrow}</div>
-                <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
-              </a>
-              <a
-                href="https://github.com/RdrBux"
-                target="_blank"
-                rel="noreferrer"
-                className="group"
-              >
-                <div className="flex items-center gap-2">Github {arrow}</div>
-                <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
-              </a>
             </div>
-          </div>
-          <hr />
-          <div className="flex flex-col items-center">
+            <hr />
             <form
               ref={form}
               onSubmit={handleSubmit}
@@ -172,15 +174,15 @@ export default function Contact() {
                 ENVIAR
               </button>
             </form>
-          </div>
 
-          <div className="">
-            <hr />
-            <div className="pb-24 pt-10 text-center">
-              Rodrigo Rodríguez - 2022. <br />
-              Gracias por visitar mi rincón en la web.
+            <div className="">
+              <hr />
+              <div className="pb-24 pt-10 text-center">
+                Rodrigo Rodríguez - 2022. <br />
+                Gracias por visitar mi rincón en la web.
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
       <motion.div

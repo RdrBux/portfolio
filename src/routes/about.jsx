@@ -5,6 +5,23 @@ import AnimatedTitle from '../components/AnimatedTitle';
 export default function About() {
   const navigate = useNavigate();
 
+  const parentAnim = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: 'beforeChildren',
+        staggerChildren: 0.3,
+        delay: 0.3,
+      },
+    },
+    hidden: { opacity: 0 },
+  };
+
+  const childAnim = {
+    visible: { opacity: 1, transition: { duration: 1 } },
+    hidden: { opacity: 0 },
+  };
+
   function handleContact() {
     navigate('/contact');
   }
@@ -23,8 +40,13 @@ export default function About() {
           <div className="py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Sobre mí" />
           </div>
-          <div className="flex flex-col gap-20">
-            <div className="lg:w-7/12">
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={parentAnim}
+            className="flex flex-col gap-20"
+          >
+            <motion.div variants={childAnim} className="lg:w-1/2">
               <h2 className="text-3xl font-bold lg:text-6xl">
                 Rodrigo Rodríguez
               </h2>
@@ -49,11 +71,14 @@ export default function About() {
                   Amante de los animales.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col gap-4 lg:gap-6">
+            </motion.div>
+            <motion.div
+              variants={childAnim}
+              className="flex flex-col gap-4 lg:gap-6"
+            >
               <h3 className="text-3xl font-bold lg:text-6xl">HABILIDADES</h3>
               <div>
-                Uso del stack{' '}
+                Stack más usado:{' '}
                 <div className="tooltip | inline-block">
                   MERN
                   <span className="tooltiptext">
@@ -62,7 +87,7 @@ export default function About() {
                 </div>
                 .
               </div>
-              <div className="grid gap-2 uppercase lg:grid-cols-2">
+              <div className="grid gap-2 uppercase lg:grid-cols-2 lg:gap-4">
                 <div className="">
                   <h4 className="font-bold">FRONTEND</h4>
                   <p className="text-black/75">
@@ -85,8 +110,8 @@ export default function About() {
                   <p className="text-black/75">figma, illustrator, photoshop</p>
                 </div>
               </div>
-            </div>
-            <div className="flex gap-2 text-2xl">
+            </motion.div>
+            <motion.div variants={childAnim} className="flex gap-2 text-2xl">
               Ponte en{' '}
               <button onClick={handleContact} className="group">
                 <div className="flex items-center gap-1">
@@ -108,8 +133,8 @@ export default function About() {
                 </div>
                 <span className="block h-[1px] max-w-full bg-black duration-300 group-hover:max-w-0"></span>
               </button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </motion.div>
       <motion.div

@@ -37,15 +37,12 @@ export default function Projects() {
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
             <AnimatedTitle text="Proyectos Recientes" />
             <motion.p
-              initial={{ y: '-0.25rem', opacity: 0 }}
+              initial={{ opacity: 0 }}
               animate={{
-                y: 0,
                 opacity: 1,
                 transition: {
-                  delay: 0.7,
-                  ease: 'easeOut',
-                  y: { duration: 0.5 },
-                  opacity: { duration: 1.2 },
+                  delay: 0.8,
+                  duration: 1,
                 },
               }}
               className="max-w-sm pl-1 text-sm md:max-w-md"
