@@ -95,7 +95,7 @@ export default function Contact() {
               consultas o simplemente para saludar
             </motion.p>
           </div>
-          <div className="flex flex-col items-center gap-5 pb-10 text-black/80 lg:text-2xl">
+          <div className="flex flex-col items-center gap-5 pb-10 text-lg text-black/80 lg:text-2xl">
             <a
               href="mailto:rodriguezrodrigoemmanuel@gmail.com"
               target="_blank"
@@ -168,7 +168,7 @@ export default function Contact() {
                   required
                 />
               </label>
-              <button className="rounded-lg bg-black py-4 px-12 text-base font-bold text-white">
+              <button className="rounded-lg bg-black py-3 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>
@@ -177,8 +177,8 @@ export default function Contact() {
           <div className="">
             <hr />
             <div className="pb-24 pt-10 text-center">
-              © Rodrigo Rodríguez 2022. <br />
-              Todos los derechos reservados.
+              Rodrigo Rodríguez - 2022. <br />
+              Gracias por visitar mi rincón en la web.
             </div>
           </div>
         </div>

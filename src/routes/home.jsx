@@ -88,6 +88,7 @@ export default function Home() {
             /Diseñador Web
           </motion.p>
           <motion.p
+            className="max-w-sm"
             initial={{ y: '-0.25rem', opacity: 0 }}
             animate={{
               y: 0,
