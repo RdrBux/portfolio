@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import Accordion from '../components/Accordion';
 import ProjectImg from '../assets/project-img1.png';
 import ProjectArticle from '../components/ProjectArticle';
@@ -9,6 +9,8 @@ import ProjectNav from '../components/ProjectNav';
 export default function FullProject() {
   const [showFixedEls, setShowFixedEls] = useState(false);
   const [topSidePage, setTopSidePage] = useState(true);
+
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     function x() {
@@ -41,6 +43,10 @@ export default function FullProject() {
 
   return (
     <motion.div>
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-700"
+      ></motion.div>
       <motion.div
         exit={{
           scale: 0.9,
