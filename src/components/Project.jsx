@@ -25,7 +25,7 @@ export default function Project() {
             <h2 className="text-5xl font-bold lg:text-6xl">TÍTULO</h2>
             <p className="text-neutral-500">Descripción de la página / Otra</p>
           </div>
-          <p className="text-lg text-neutral-700">
+          <p className="text-lg text-neutral-600">
             A simplified yet beautiful shopping experience with an innovative
             approach to e-commerce in the digital space.
           </p>

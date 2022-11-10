@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import AnimatedTitle from '../components/AnimatedTitle';
+import Picture from '../assets/picture.jpg';
 
 export default function About() {
   const navigate = useNavigate();
@@ -46,30 +47,41 @@ export default function About() {
             variants={parentAnim}
             className="flex flex-col gap-12 lg:gap-20"
           >
-            <motion.div variants={childAnim} className="lg:w-1/2">
-              <h2 className="text-3xl font-bold lg:text-5xl">
-                Rodrigo Rodríguez
-              </h2>
-              <div className="mt-8 flex flex-col gap-2 text-neutral-700 lg:text-lg">
-                <p>
-                  Desarrollador y diseñador web, actualmente viviendo en
-                  Argentina.
-                </p>
-                <p>
-                  Apasionado por la creación de grandes experiencias digitales,
-                  siempre enfocado en la microgestión de cada detalle e
-                  interacción para optimizar las experiencias de usuarios.
-                </p>
-                <p>
-                  Técnico en Administración de Empresas con formación en gestion
-                  y control, marketing, contabilidad y finanzas.
-                </p>
-                <p>
-                  Tenista, runner y ajedrecista en el tiempo libre.
-                  <br />
-                  Amante de los animales.
-                </p>
+            <motion.div
+              variants={childAnim}
+              className="grid items-center lg:grid-cols-2 lg:gap-20"
+            >
+              <div className="z-10">
+                <h2 className="text-3xl font-bold lg:text-5xl">
+                  Rodrigo Rodríguez
+                </h2>
+                <div className="mt-8 flex flex-col gap-4 text-neutral-600 lg:gap-8 lg:text-lg">
+                  <p>
+                    Desarrollador y diseñador web, actualmente viviendo en
+                    Argentina.
+                  </p>
+                  <p>
+                    Apasionado por la creación de grandes experiencias
+                    digitales, siempre enfocado en la microgestión de cada
+                    detalle e interacción para optimizar las experiencias de
+                    usuarios.
+                  </p>
+                  <p>
+                    Técnico en Administración de Empresas con formación en
+                    gestion y control, marketing, contabilidad y finanzas.
+                  </p>
+                  <p>
+                    Tenista, runner y ajedrecista en el tiempo libre.
+                    <br />
+                    Amante de los animales.
+                  </p>
+                </div>
               </div>
+              <img
+                className="row-start-1 rounded-2xl lg:col-start-2 lg:mb-0" /* -mb-20 */
+                src={Picture}
+                alt=""
+              />
             </motion.div>
             <hr />
             <motion.div
@@ -114,8 +126,8 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
+                <div className="flex gap-4">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

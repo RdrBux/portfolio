@@ -137,7 +137,7 @@ export default function Contact() {
               className="flex w-full flex-col gap-5 text-sm lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
-              <label className="flex flex-col font-medium text-neutral-700">
+              <label className="flex flex-col font-medium text-neutral-600">
                 Nombre*
                 <input
                   className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
@@ -148,7 +148,7 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium text-neutral-700">
+              <label className="flex flex-col font-medium text-neutral-600">
                 Correo electrónico*
                 <input
                   className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
@@ -159,7 +159,7 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium text-neutral-700">
+              <label className="flex flex-col font-medium text-neutral-600">
                 Mensaje*
                 <textarea
                   value={message}
@@ -176,7 +176,7 @@ export default function Contact() {
 
             <hr />
 
-            <div className="pb-32 text-center text-lg text-neutral-700 lg:pb-40">
+            <div className="pb-32 text-center text-lg text-neutral-600 lg:pb-40">
               Gracias por visitar mi rincón en la web.
               <br />
               Rodrigo Rodríguez - 2022
