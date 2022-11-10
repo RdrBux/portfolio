@@ -1,5 +1,7 @@
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ProjectImg from '../assets/project-img1.png';
+import VideoSrc from '../assets/Home_Slacker.mp4';
 
 export default function Project() {
   const navigate = useNavigate();
@@ -9,7 +11,11 @@ export default function Project() {
   }
 
   return (
-    <div className="font-inter">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1, transition: { duration: 1 } }}
+      viewport={{ once: true }}
+    >
       <div
         onClick={handleClick}
         className="flex w-full cursor-pointer flex-col lg:flex-row lg:items-center"
@@ -43,10 +49,13 @@ export default function Project() {
           </button>
         </div>
         <div className="shrink-0 lg:w-1/2">
-          <img className="w-full" src={ProjectImg} alt="" />
+          <video playsInline muted loop autoPlay>
+            <source src={VideoSrc} type="video/mp4" />
+          </video>
+          {/* <img className="w-full" src={ProjectImg} alt="" /> */}
         </div>
       </div>
-      <div className="mt-12 hidden items-center lg:flex">
+      {/* <div className="mt-12 hidden items-center lg:flex">
         <div className="h-[1px] w-full bg-gray-200"></div>
         <div className="ml-4 flex shrink-0 gap-4">
           <button className="flex items-center gap-2 rounded-full border bg-neutral-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-black/80 hover:bg-transparent hover:text-black">
@@ -84,7 +93,7 @@ export default function Project() {
             </svg>
           </button>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </motion.div>
   );
 }

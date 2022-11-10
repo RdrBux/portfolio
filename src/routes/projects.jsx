@@ -52,11 +52,17 @@ export default function Projects() {
               problemas actuales y futuros
             </motion.p>
           </div>
-          <div className="mb-20 flex flex-col gap-20 lg:gap-40">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
+            className="mb-20 flex flex-col gap-12 lg:gap-20"
+          >
             <Project />
+            <hr />
             <Project />
+            <hr />
             <Project />
-          </div>
+          </motion.div>
         </div>
       </motion.div>
       <motion.div
