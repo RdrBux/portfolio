@@ -41,7 +41,7 @@ export default function Home() {
       let yDiff = yDown - yUp;
 
       if (
-        Math.abs(yDiff) >= 4 &&
+        Math.abs(yDiff) >= 6 &&
         !e.target.className.split(' ').includes('nav-element')
       ) {
         navigate('/projects');
@@ -83,12 +83,12 @@ export default function Home() {
             }}
             className="text-2xl font-semibold text-teal-700"
           >
-            /Desarrolador Web
+            /Desarrollador Web
             <br />
             /Diseñador Web
           </motion.p>
           <motion.p
-            className="max-w-sm"
+            className="max-w-sm text-neutral-700 lg:text-lg"
             initial={{ y: '-0.25rem', opacity: 0 }}
             animate={{
               y: 0,

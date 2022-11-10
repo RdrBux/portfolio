@@ -44,7 +44,7 @@ export default function FullProject() {
       <motion.div
         exit={{
           scale: 0.9,
-          translateY: topSidePage ? '2rem' : '-2rem',
+          translateY: topSidePage ? '2rem' : '-4rem',
         }}
         className={`relative mt-16 w-full max-w-full ${
           topSidePage ? 'origin-top' : 'origin-bottom'
@@ -61,7 +61,9 @@ export default function FullProject() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
-            <p className="lg:text-lg">Descripción de la página / Otra</p>
+            <p className="text-neutral-700 lg:text-lg">
+              Descripción de la página / Otra
+            </p>
           </div>
           <div className="mt-10 lg:mt-16">
             <Accordion />

@@ -11,7 +11,7 @@ export default function About() {
       transition: {
         when: 'beforeChildren',
         staggerChildren: 0.3,
-        delay: 0.2,
+        delay: 0.15,
       },
     },
     hidden: { opacity: 0 },
@@ -34,7 +34,7 @@ export default function About() {
           translateY: '2rem',
           borderRadius: '2rem',
         }}
-        className="h-full w-full origin-top bg-white pb-28"
+        className="h-full w-full origin-top bg-white pb-32"
       >
         <div className="container flex flex-col gap-5">
           <div className="py-20 text-center uppercase lg:py-32">
@@ -44,13 +44,13 @@ export default function About() {
             initial="hidden"
             animate="visible"
             variants={parentAnim}
-            className="flex flex-col gap-20"
+            className="flex flex-col gap-12 lg:gap-20"
           >
             <motion.div variants={childAnim} className="lg:w-1/2">
               <h2 className="text-3xl font-bold lg:text-6xl">
                 Rodrigo Rodríguez
               </h2>
-              <div className="mt-4 flex flex-col gap-2 text-black/75">
+              <div className="mt-8 flex flex-col gap-2 text-neutral-700 lg:text-lg">
                 <p>
                   Desarrollador y diseñador web, actualmente viviendo en
                   Argentina.
@@ -61,9 +61,8 @@ export default function About() {
                   interacción para optimizar las experiencias de usuarios.
                 </p>
                 <p>
-                  Formación académica en Administración de Empresas con
-                  conocimientos en gestion y control, marketing, contabilidad y
-                  finanzas.
+                  Técnico en Administración de Empresas con formación en gestion
+                  y control, marketing, contabilidad y finanzas.
                 </p>
                 <p>
                   Tenista, runner y ajedrecista en el tiempo libre.
@@ -72,6 +71,7 @@ export default function About() {
                 </p>
               </div>
             </motion.div>
+            <hr />
             <motion.div
               variants={childAnim}
               className="flex flex-col gap-4 lg:gap-6"
@@ -90,27 +90,30 @@ export default function About() {
               <div className="grid gap-2 uppercase lg:grid-cols-2 lg:gap-4">
                 <div className="">
                   <h4 className="font-bold">FRONTEND</h4>
-                  <p className="text-black/75">
+                  <p className="text-neutral-700">
                     html, css, javascript, typescript, react, tailwindcss, gsap,
                     framer motion
                   </p>
                 </div>
                 <div className="">
                   <h4 className="font-bold">BACKEND</h4>
-                  <p className="text-black/75">
+                  <p className="text-neutral-700">
                     node.js, express, mongodb, MYSQL, firebase
                   </p>
                 </div>
                 <div className="">
                   <h4 className="font-bold">TESTING</h4>
-                  <p className="text-black/75">jest, cypress</p>
+                  <p className="text-neutral-700">jest, cypress</p>
                 </div>
                 <div className="">
                   <h4 className="font-bold">DISEÑO</h4>
-                  <p className="text-black/75">figma, illustrator, photoshop</p>
+                  <p className="text-neutral-700">
+                    figma, illustrator, photoshop
+                  </p>
                 </div>
               </div>
             </motion.div>
+            <hr />
             <motion.div variants={childAnim} className="flex gap-2 text-2xl">
               Ponte en{' '}
               <button onClick={handleContact} className="group">

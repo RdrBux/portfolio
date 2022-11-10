@@ -28,18 +28,16 @@ export default function Contact() {
         (result) => {
           setIsError(false);
           setShowAlert(true);
-          setTimeout(() => {
-            setShowAlert(false);
-          }, 3000);
         },
         (error) => {
           setIsError(true);
           setShowAlert(true);
-          setTimeout(() => {
-            setShowAlert(false);
-          }, 3000);
         }
       );
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
 
     setName('');
     setEmail('');
@@ -73,7 +71,7 @@ export default function Contact() {
         }}
         className="min-h-screen w-full max-w-full origin-top bg-white"
       >
-        {showAlert && <AlertContact />}
+        {showAlert && <AlertContact isError={isError} />}
         <div className="container flex flex-col lg:w-3/4">
           <div className="flex flex-col items-center gap-3 py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Contacto" />
@@ -82,21 +80,22 @@ export default function Contact() {
               animate={{
                 opacity: 1,
                 transition: {
-                  delay: 0.5,
+                  delay: 0.4,
                   duration: 1,
                 },
               }}
               className="max-w-sm pl-1 text-sm md:max-w-md"
             >
-              No dudes en ponerte en contacto, ya sea por cuestiones laborales,
+              No dudes en comunicarte, ya sea por cuestiones laborales,
               consultas o simplemente para saludar
             </motion.p>
           </div>
           <motion.div
+            className="flex flex-col gap-12 lg:gap-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.8, duration: 1 } }}
           >
-            <div className="flex flex-col items-center gap-5 pb-10 text-lg text-black/80 lg:text-2xl">
+            <div className="flex flex-col items-center gap-5 text-lg text-black/80 lg:text-2xl">
               <a
                 href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                 target="_blank"
@@ -135,13 +134,13 @@ export default function Contact() {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="flex w-full flex-col gap-5 py-10 text-sm lg:py-20 lg:text-base" /* lg:w-3/4 */
+              className="flex w-full flex-col gap-5 text-sm lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
-              <label className="flex flex-col font-medium">
+              <label className="flex flex-col font-medium text-neutral-700">
                 Nombre*
                 <input
-                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
                   type="text"
                   name="user_name"
                   value={name}
@@ -149,10 +148,10 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium">
+              <label className="flex flex-col font-medium text-neutral-700">
                 Correo electrónico*
                 <input
-                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
                   type="email"
                   name="user_email"
                   value={email}
@@ -160,13 +159,13 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium">
+              <label className="flex flex-col font-medium text-neutral-700">
                 Mensaje*
                 <textarea
                   value={message}
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1 rounded-lg bg-gray-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
                   required
                 />
               </label>
@@ -175,12 +174,12 @@ export default function Contact() {
               </button>
             </form>
 
-            <div className="">
-              <hr />
-              <div className="pb-24 pt-10 text-center">
-                Rodrigo Rodríguez - 2022. <br />
-                Gracias por visitar mi rincón en la web.
-              </div>
+            <hr />
+
+            <div className="pb-32 text-center text-lg text-neutral-700 lg:pb-40">
+              Gracias por visitar mi rincón en la web
+              <br />
+              Rodrigo Rodríguez - 2022
             </div>
           </motion.div>
         </div>

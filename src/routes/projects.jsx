@@ -26,7 +26,7 @@ export default function Projects() {
       <motion.div
         exit={{
           scale: 0.9,
-          translateY: topSidePage ? '2rem' : '-2rem',
+          translateY: topSidePage ? '2rem' : '-4rem',
           borderRadius: '2rem',
         }}
         className={`h-full w-full max-w-full ${
@@ -41,11 +41,11 @@ export default function Projects() {
               animate={{
                 opacity: 1,
                 transition: {
-                  delay: 0.7,
+                  delay: 0.6,
                   duration: 1,
                 },
               }}
-              className="max-w-sm pl-1 text-sm md:max-w-md"
+              className="max-w-sm pl-1 text-sm text-neutral-900 md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a

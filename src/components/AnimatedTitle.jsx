@@ -18,7 +18,7 @@ export default function AnimatedTitle({ text, type = 'section' }) {
       rotateY: '0deg',
       scale: 1,
       transition: {
-        delay: Math.log10(i + 5) - 0.7,
+        delay: Math.log10(i + 5) - 0.77,
         duration: 0.2,
         ease: 'easeIn',
       },
