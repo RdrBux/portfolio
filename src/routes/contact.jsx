@@ -177,7 +177,7 @@ export default function Contact() {
             <hr />
 
             <div className="pb-32 text-center text-lg text-neutral-700 lg:pb-40">
-              Gracias por visitar mi rincón en la web
+              Gracias por visitar mi rincón en la web.
               <br />
               Rodrigo Rodríguez - 2022
             </div>

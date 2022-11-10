@@ -24,7 +24,7 @@ export default function Navbar() {
       >
         <li>
           <a
-            className="inline-block py-4 px-2"
+            className="inline-block py-4 px-2 hover:underline"
             href="https://google.com"
             target="_blank"
             rel="noreferrer"
@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="h-6 w-[1px] bg-gray-500"></div>
         <li>
           <a
-            className="inline-block py-4 px-2"
+            className="inline-block py-4 px-2 hover:underline"
             href="https://google.com"
             target="_blank"
             rel="noreferrer"

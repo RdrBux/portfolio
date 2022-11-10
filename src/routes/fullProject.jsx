@@ -45,7 +45,7 @@ export default function FullProject() {
     <motion.div>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-700"
+        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-600"
       ></motion.div>
       <motion.div
         exit={{
