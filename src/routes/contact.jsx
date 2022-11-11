@@ -95,7 +95,7 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.8, duration: 1 } }}
           >
-            <div className="flex flex-col items-center gap-5 text-lg text-black/80 lg:text-2xl">
+            <div className="flex flex-col items-center gap-5 text-lg text-slate-800 lg:text-2xl">
               <a
                 href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                 target="_blank"
@@ -105,7 +105,7 @@ export default function Contact() {
                 <div className="flex items-center gap-2">
                   rodriguezrodrigoemmanuel@gmail.com
                 </div>
-                <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+                <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
               </a>
               <div className="flex gap-16">
                 <a
@@ -117,7 +117,7 @@ export default function Contact() {
                   <div className="flex items-center gap-2">
                     Linkedin {arrow}
                   </div>
-                  <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+                  <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
                 </a>
                 <a
                   href="https://github.com/RdrBux"
@@ -126,7 +126,7 @@ export default function Contact() {
                   className="group"
                 >
                   <div className="flex items-center gap-2">Github {arrow}</div>
-                  <span className="block h-[1px] max-w-full bg-black/75 duration-300 group-hover:max-w-0"></span>
+                  <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
                 </a>
               </div>
             </div>
@@ -137,10 +137,10 @@ export default function Contact() {
               className="flex w-full flex-col gap-5 text-sm lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
-              <label className="flex flex-col font-medium text-neutral-600">
+              <label className="flex flex-col font-medium text-slate-600">
                 Nombre*
                 <input
-                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-slate-200 px-4 py-2 text-base"
                   type="text"
                   name="user_name"
                   value={name}
@@ -148,10 +148,10 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium text-neutral-600">
+              <label className="flex flex-col font-medium text-slate-600">
                 Correo electrónico*
                 <input
-                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-slate-200 px-4 py-2 text-base"
                   type="email"
                   name="user_email"
                   value={email}
@@ -159,24 +159,24 @@ export default function Contact() {
                   required
                 />
               </label>
-              <label className="flex flex-col font-medium text-neutral-600">
+              <label className="flex flex-col font-medium text-slate-600">
                 Mensaje*
                 <textarea
                   value={message}
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1 rounded-lg bg-neutral-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-lg bg-slate-200 px-4 py-2 text-base"
                   required
                 />
               </label>
-              <button className="rounded-lg bg-black py-3 px-12 text-base font-bold text-white">
+              <button className="rounded-lg bg-teal-900 py-3 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>
 
             <hr />
 
-            <div className="pb-32 text-center text-lg text-neutral-600 lg:pb-40">
+            <div className="pb-32 text-center text-lg text-slate-600 lg:pb-40">
               Gracias por visitar mi rincón en la web.
               <br />
               Rodrigo Rodríguez - 2022

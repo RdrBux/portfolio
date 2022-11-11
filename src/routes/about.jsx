@@ -55,7 +55,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold lg:text-5xl">
                   Rodrigo Rodríguez
                 </h2>
-                <div className="mt-8 flex flex-col gap-4 text-neutral-600 lg:gap-8 lg:text-lg">
+                <div className="mt-8 flex flex-col gap-4 text-slate-600 lg:gap-8 lg:text-lg">
                   <p>
                     Desarrollador y diseñador web, actualmente viviendo en
                     Argentina.
@@ -89,9 +89,9 @@ export default function About() {
               className="flex flex-col gap-5 lg:gap-8"
             >
               <h3 className="text-3xl font-bold lg:text-5xl">Habilidades</h3>
-              <div className="text-xl text-neutral-600">
+              <div className="text-xl text-slate-600">
                 Stack más usado:{' '}
-                <div className="tooltip | inline-block text-black">
+                <div className="tooltip | inline-block text-slate-900">
                   MERN.
                   <span className="tooltiptext">
                     MongoDB, Express, React, Node.js
@@ -117,10 +117,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-slate-800">
                       Frontend
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-slate-500">
                       HTML, CSS, Javascript, Typescript, React, Tailwindcss,
                       Gsap, Framer Motion
                     </p>
@@ -144,10 +144,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-slate-800">
                       Backend
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-slate-500">
                       Node.js, Express, MongoDb, MySQL, Firebase
                     </p>
                   </div>
@@ -170,10 +170,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-slate-800">
                       Testing
                     </h4>
-                    <p className="mt-1 text-neutral-500">Jest, Cypress</p>
+                    <p className="mt-1 text-slate-500">Jest, Cypress</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -194,10 +194,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-slate-800">
                       Diseño
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-slate-500">
                       Figma, Illustrator, Photoshop
                     </p>
                   </div>
@@ -225,7 +225,7 @@ export default function About() {
                     />
                   </svg>
                 </div>
-                <span className="block h-[1px] max-w-full bg-black duration-300 group-hover:max-w-0"></span>
+                <span className="block h-[1px] max-w-full bg-slate-900 duration-300 group-hover:max-w-0"></span>
               </button>
             </motion.div>
           </motion.div>

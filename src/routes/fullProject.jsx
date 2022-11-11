@@ -67,7 +67,7 @@ export default function FullProject() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
-            <p className="text-neutral-600 lg:text-lg">
+            <p className="text-slate-600 lg:text-lg">
               Descripción de la página / Otra
             </p>
           </div>

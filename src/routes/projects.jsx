@@ -45,7 +45,7 @@ export default function Projects() {
                   duration: 1,
                 },
               }}
-              className="max-w-sm pl-1 text-sm text-neutral-900 md:max-w-md"
+              className="max-w-sm pl-1 text-sm text-slate-900 md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a
