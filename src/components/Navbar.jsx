@@ -17,20 +17,20 @@ export default function Navbar() {
         animate={{
           opacity: 1,
           scaleX: 1,
-          transition: { type: 'spring', duration: 0.6, delay: 1.2 },
+          transition: { type: 'spring', duration: 0.6, delay: 3.2 },
         }}
         exit={{
           opacity: 0,
           scaleX: 0,
           transition: { delay: 0.2, duration: 0.3 },
         }}
-        className="flex w-[328px] select-none justify-center rounded-full bg-teal-900/75 py-2 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
+        className="flex w-[328px] select-none justify-center rounded-full bg-stone-900/80 py-2 font-cabinet text-[15px] text-neutral-200 shadow-lg backdrop-blur-sm"
       >
         <motion.ul
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5, delay: 1.4 } }}
+          animate={{ opacity: 1, transition: { duration: 0.5, delay: 3.4 } }}
           exit={{ opacity: 0 }}
-          className="just grid w-[312px] grid-cols-4 font-medium"
+          className="just grid w-[312px] grid-cols-4 font-semibold"
         >
           <li className="w-full">
             <NavLink
@@ -44,7 +44,7 @@ export default function Navbar() {
                   {activeLink === '/' && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                      className="absolute left-1 right-1 h-0.5 rounded-full bg-stone-300"
                     ></motion.div>
                   )}
                 </div>
@@ -63,7 +63,7 @@ export default function Navbar() {
                   {activeLink === '/projects' && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                      className="absolute left-1 right-1 h-0.5 rounded-full bg-stone-300"
                     ></motion.div>
                   )}
                 </div>
@@ -82,7 +82,7 @@ export default function Navbar() {
                   {activeLink === '/about' && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                      className="absolute left-1 right-1 h-0.5 rounded-full bg-stone-300"
                     ></motion.div>
                   )}
                 </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
                   {activeLink === '/contact' && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute left-1 right-1 h-0.5 rounded-full bg-white"
+                      className="absolute left-1 right-1 h-0.5 rounded-full bg-stone-300"
                     ></motion.div>
                   )}
                 </div>

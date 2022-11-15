@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import AnimatedTitle from '../components/AnimatedTitle';
 import Picture from '../assets/picture.jpg';
 
 export default function About() {
@@ -29,18 +28,11 @@ export default function About() {
 
   return (
     <motion.div>
-      <motion.div
-        exit={{
-          scale: 0.9,
-          translateY: '2rem',
-          borderRadius: '2rem',
-        }}
-        className="h-full w-full origin-top bg-white pb-32"
-      >
+      <div className="h-full w-full origin-top bg-neutral-300 pb-32">
         <div className="container flex flex-col gap-5">
-          <div className="py-20 text-center uppercase lg:py-32">
+          {/* <div className="py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Sobre mí" />
-          </div>
+          </div> */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -55,20 +47,20 @@ export default function About() {
                 <h2 className="text-3xl font-bold lg:text-5xl">
                   Rodrigo Rodríguez
                 </h2>
-                <div className="mt-8 flex flex-col gap-4 text-slate-600 lg:gap-8 lg:text-lg">
+                <div className="mt-8 flex flex-col gap-4 text-neutral-600 lg:text-lg">
                   <p>
                     Desarrollador y diseñador web, actualmente viviendo en
                     Argentina.
+                  </p>
+                  <p>
+                    Técnico en Administración de Empresas con formación en
+                    gestion y control, marketing, contabilidad y finanzas.
                   </p>
                   <p>
                     Apasionado por la creación de grandes experiencias
                     digitales, siempre enfocado en la microgestión de cada
                     detalle e interacción para optimizar las experiencias de
                     usuarios.
-                  </p>
-                  <p>
-                    Técnico en Administración de Empresas con formación en
-                    gestion y control, marketing, contabilidad y finanzas.
                   </p>
                   <p>
                     Tenista, runner y ajedrecista en el tiempo libre.
@@ -89,9 +81,9 @@ export default function About() {
               className="flex flex-col gap-5 lg:gap-8"
             >
               <h3 className="text-3xl font-bold lg:text-5xl">Habilidades</h3>
-              <div className="text-xl text-slate-600">
+              <div className="text-xl text-neutral-600">
                 Stack más usado:{' '}
-                <div className="tooltip | inline-block text-slate-900">
+                <div className="tooltip | inline-block text-neutral-900">
                   MERN.
                   <span className="tooltiptext">
                     MongoDB, Express, React, Node.js
@@ -117,10 +109,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-slate-800">
+                    <h4 className="text-xl font-medium text-neutral-800">
                       Frontend
                     </h4>
-                    <p className="mt-1 text-slate-500">
+                    <p className="mt-1 text-neutral-500">
                       HTML, CSS, Javascript, Typescript, React, Tailwindcss,
                       Gsap, Framer Motion
                     </p>
@@ -144,10 +136,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-slate-800">
+                    <h4 className="text-xl font-medium text-neutral-800">
                       Backend
                     </h4>
-                    <p className="mt-1 text-slate-500">
+                    <p className="mt-1 text-neutral-500">
                       Node.js, Express, MongoDb, MySQL, Firebase
                     </p>
                   </div>
@@ -170,10 +162,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-slate-800">
+                    <h4 className="text-xl font-medium text-neutral-800">
                       Testing
                     </h4>
-                    <p className="mt-1 text-slate-500">Jest, Cypress</p>
+                    <p className="mt-1 text-neutral-500">Jest, Cypress</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -194,10 +186,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-slate-800">
+                    <h4 className="text-xl font-medium text-neutral-800">
                       Diseño
                     </h4>
-                    <p className="mt-1 text-slate-500">
+                    <p className="mt-1 text-neutral-500">
                       Figma, Illustrator, Photoshop
                     </p>
                   </div>
@@ -225,27 +217,34 @@ export default function About() {
                     />
                   </svg>
                 </div>
-                <span className="block h-[1px] max-w-full bg-slate-900 duration-300 group-hover:max-w-0"></span>
+                <span className="block h-[1px] max-w-full bg-stone-900 duration-300 group-hover:max-w-0"></span>
               </button>
             </motion.div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
         className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
+        animate={{
+          height: 0,
+          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
+        }}
         exit={{
           height: '100vh',
-          borderRadius: 0,
           transition: {
-            height: { duration: 0.3, delay: 0.3, ease: 'easeOut' },
-            borderRadius: { duration: 0.1, delay: 0.5 },
+            height: {
+              duration: 0.3,
+              ease: 'easeOut',
+            },
           },
         }}
-        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
-      ></motion.div>
+        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
+      >
+        RR
+      </motion.div>
     </motion.div>
   );
 }

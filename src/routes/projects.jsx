@@ -1,41 +1,43 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import AnimatedTitle from '../components/AnimatedTitle';
 import Project from '../components/Project';
 
 export default function Projects() {
-  const [topSidePage, setTopSidePage] = useState(true);
-
-  useEffect(() => {
-    function halfHeightSwapper() {
-      const halfHeight = document.body.scrollHeight / 2;
-      if (window.scrollY < halfHeight && !topSidePage) {
-        setTopSidePage(true);
-      }
-      if (window.scrollY >= halfHeight && topSidePage) {
-        setTopSidePage(false);
-      }
-    }
-
-    window.addEventListener('scroll', halfHeightSwapper);
-    return () => window.removeEventListener('scroll', halfHeightSwapper);
-  }, [topSidePage]);
-
   return (
     <motion.div>
-      <motion.div
-        exit={{
-          scale: 0.9,
-          translateY: topSidePage ? '2rem' : '-4rem',
-          borderRadius: '2rem',
-        }}
-        className={`h-full w-full max-w-full ${
-          topSidePage ? 'origin-top' : 'origin-bottom'
-        } bg-white`}
-      >
+      <div className="h-full w-full max-w-full bg-stone-300">
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
-            <AnimatedTitle text="Proyectos Recientes" />
+            {/* <AnimatedTitle text="Proyectos Recientes" /> */}
+            <div className="flex flex-col items-center gap-4 font-cabinet text-[54px] font-extrabold leading-none md:text-8xl lg:text-9xl 2xl:text-[12rem]">
+              <motion.div className="flex w-full items-end justify-center overflow-hidden">
+                <motion.div
+                  initial={{ y: '100%' }}
+                  animate={{
+                    y: 0,
+                    transition: {
+                      y: { duration: 0.5, ease: 'easeOut', delay: 0.3 },
+                    },
+                  }}
+                  className="h-[80%]"
+                >
+                  PROYECTOS
+                </motion.div>
+              </motion.div>
+              <motion.div className="flex w-full items-end justify-center overflow-hidden">
+                <motion.div
+                  initial={{ y: '100%' }}
+                  animate={{
+                    y: 0,
+                    transition: {
+                      y: { duration: 0.5, ease: 'easeOut', delay: 0.3 },
+                    },
+                  }}
+                  className="h-[80%]"
+                >
+                  RECIENTES
+                </motion.div>
+              </motion.div>
+            </div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{
@@ -45,7 +47,7 @@ export default function Projects() {
                   duration: 1,
                 },
               }}
-              className="max-w-sm pl-1 text-sm text-slate-900 md:max-w-md"
+              className="max-w-sm pl-1 text-sm text-neutral-900 md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a
@@ -64,22 +66,29 @@ export default function Projects() {
             <Project />
           </motion.div>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
         className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
+        animate={{
+          height: 0,
+          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
+        }}
         exit={{
           height: '100vh',
-          borderRadius: 0,
           transition: {
-            height: { duration: 0.3, delay: 0.3, ease: 'easeOut' },
-            borderRadius: { duration: 0.1, delay: 0.5 },
+            height: {
+              duration: 0.3,
+              ease: 'easeOut',
+            },
           },
         }}
-        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
-      ></motion.div>
+        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
+      >
+        RR
+      </motion.div>
     </motion.div>
   );
 }

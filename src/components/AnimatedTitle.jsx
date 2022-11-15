@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function AnimatedTitle({ text, type = 'section' }) {
   const classContent =
     type === 'section'
-      ? 'font-inter text-[54px] leading-none font-semibold md:text-8xl lg:text-9xl 2xl:text-[12rem]'
+      ? 'font-cabinet text-[54px] leading-none font-semibold md:text-8xl lg:text-9xl 2xl:text-[12rem]'
       : 'font-respira text-[18vw] sm:text-[16vw] md:text-8xl leading-tight md:leading-tight';
 
   const title = {
@@ -18,7 +18,7 @@ export default function AnimatedTitle({ text, type = 'section' }) {
       rotateY: '0deg',
       scale: 1,
       transition: {
-        delay: Math.log10(i + 5) - 0.77,
+        delay: Math.log10(i + 5) - 0.17,
         duration: 0.2,
         ease: 'easeIn',
       },

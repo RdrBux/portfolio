@@ -14,7 +14,7 @@ export default function Navbar() {
         scaleX: 0,
         transition: { delay: 0.2, duration: 0.3 },
       }}
-      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/75 font-inter text-[14px] text-white shadow-lg backdrop-blur-sm"
+      className="fixed bottom-8 left-1/2 z-40 -ml-[164px] w-[328px] select-none rounded-full bg-black/75 font-cabinet text-[14px] text-white shadow-lg backdrop-blur-sm"
     >
       <motion.ul
         initial={{ opacity: 0 }}

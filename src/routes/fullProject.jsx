@@ -8,7 +8,6 @@ import ProjectNav from '../components/ProjectNav';
 
 export default function FullProject() {
   const [showFixedEls, setShowFixedEls] = useState(false);
-  const [topSidePage, setTopSidePage] = useState(true);
 
   const { scrollYProgress } = useScroll();
 
@@ -26,36 +25,13 @@ export default function FullProject() {
     return () => window.removeEventListener('scroll', x);
   }, [showFixedEls]);
 
-  useEffect(() => {
-    function halfHeightSwapper() {
-      const halfHeight = document.body.scrollHeight / 2;
-      if (window.scrollY < halfHeight && !topSidePage) {
-        setTopSidePage(true);
-      }
-      if (window.scrollY >= halfHeight && topSidePage) {
-        setTopSidePage(false);
-      }
-    }
-
-    window.addEventListener('scroll', halfHeightSwapper);
-    return () => window.removeEventListener('scroll', halfHeightSwapper);
-  }, [topSidePage]);
-
   return (
     <motion.div>
       <motion.div
         style={{ scaleX: scrollYProgress }}
         className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-600"
       ></motion.div>
-      <motion.div
-        exit={{
-          scale: 0.9,
-          translateY: topSidePage ? '2rem' : '-4rem',
-        }}
-        className={`relative mt-16 w-full max-w-full ${
-          topSidePage ? 'origin-top' : 'origin-bottom'
-        } rounded-t-2xl bg-white lg:rounded-t-[2rem]`}
-      >
+      <div className="relative mt-16 w-full max-w-full rounded-t-2xl bg-white lg:rounded-t-[2rem]">
         <AnimatePresence>
           {showFixedEls && (
             <div>
@@ -67,7 +43,7 @@ export default function FullProject() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
-            <p className="text-slate-600 lg:text-lg">
+            <p className="text-neutral-600 lg:text-lg">
               Descripción de la página / Otra
             </p>
           </div>
@@ -92,22 +68,29 @@ export default function FullProject() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
       <motion.div
         exit={{ display: 'block', opacity: 1 }}
         className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
       ></motion.div>
       <motion.div
+        animate={{
+          height: 0,
+          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
+        }}
         exit={{
           height: '100vh',
-          borderRadius: 0,
           transition: {
-            height: { duration: 0.3, delay: 0.3, ease: 'easeOut' },
-            borderRadius: { duration: 0.1, delay: 0.5 },
+            height: {
+              duration: 0.3,
+              ease: 'easeOut',
+            },
           },
         }}
-        className="fixed bottom-0 z-30 w-full rounded-t-[2rem] bg-white"
-      ></motion.div>
+        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
+      >
+        RR
+      </motion.div>
     </motion.div>
   );
 }

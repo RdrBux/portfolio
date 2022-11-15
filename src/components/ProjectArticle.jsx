@@ -6,7 +6,7 @@ export default function ProjectArticle() {
       <h3 className="text-3xl font-semibold lg:text-5xl">
         Título del Artículo
       </h3>
-      <p className="text-slate-600">
+      <p className="text-neutral-600">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut proin
         faucibus aliquet sollicitudin egestas. Egestas lacus et curabitur amet,
         et habitant laoreet metus. Condimentum amet in amet, leo placerat.

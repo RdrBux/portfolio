@@ -44,7 +44,10 @@ module.exports = {
     },
     fontFamily: {
       inter: ['"Inter Tight"', 'sans-serif'],
+      playfair: ['"Playfair Display", serif'],
+      noto: ['"Noto Serif Display", serif;'],
       respira: ['"Respira-Black"', '"Inter Tight"', 'sans-serif'],
+      cabinet: ['"Cabinet Grotesk"', '"Inter Tight"', 'sans-serif'],
     },
     container: {
       center: true,
