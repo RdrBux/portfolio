@@ -24,7 +24,7 @@ export default function Navbar() {
           scaleX: 0,
           transition: { delay: 0.2, duration: 0.3 },
         }}
-        className="flex w-[328px] select-none justify-center rounded-full bg-stone-900/80 py-2 font-cabinet text-[15px] text-neutral-200 shadow-lg backdrop-blur-sm"
+        className="flex w-[328px] select-none justify-center rounded-full bg-stone-900/80 py-2 font-cabinet text-[15px] text-stone-200 shadow-lg backdrop-blur-sm"
       >
         <motion.ul
           initial={{ opacity: 0 }}

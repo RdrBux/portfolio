@@ -30,7 +30,7 @@ export default function FullProject() {
     <TransitionElement>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-600"
+        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-emerald-600"
       ></motion.div>
       <div className="relative mt-16 w-full max-w-full rounded-t-2xl bg-white lg:rounded-t-[2rem]">
         <AnimatePresence>
@@ -44,7 +44,7 @@ export default function FullProject() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">TÍTULO</h2>
-            <p className="text-neutral-600 lg:text-lg">
+            <p className="text-stone-600 lg:text-lg">
               Descripción de la página / Otra
             </p>
           </div>

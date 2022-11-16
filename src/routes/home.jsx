@@ -4,7 +4,7 @@ import TransitionElement from '../components/TransitionElement';
 export default function Home() {
   return (
     <TransitionElement>
-      <div className="h-screen w-full origin-top overflow-hidden bg-stone-300">
+      <div className="h-screen w-full origin-top overflow-hidden">
         {/* <div className="absolute">
           <img className="h-screen w-screen opacity-50" src={bgCircle} alt="" />
         </div> */}
@@ -17,7 +17,7 @@ export default function Home() {
                   y: 0,
                   x: '-100vw',
                   transition: {
-                    y: { duration: 0.5, ease: 'easeOut', delay: 0.3 },
+                    y: { duration: 0.5, ease: 'easeOut', delay: 0.2 },
                     x: { duration: 2, delay: 1 },
                   },
                 }}
@@ -33,7 +33,7 @@ export default function Home() {
                   y: 0,
                   x: '100vw',
                   transition: {
-                    y: { duration: 0.5, ease: 'easeOut', delay: 0.3 },
+                    y: { duration: 0.5, ease: 'easeOut', delay: 0.2 },
                     x: { duration: 2, delay: 1 },
                   },
                 }}
@@ -60,9 +60,7 @@ export default function Home() {
                 <br />
                 RODRÍGUEZ
               </div>
-              <p className="-mt-1 text-sm text-neutral-800">
-                Desarrollador Web
-              </p>
+              <p className="-mt-1 text-sm text-stone-800">Desarrollador Web</p>
             </div>
             <div className="relative flex items-center rounded-bl-2xl border-l border-b border-black bg-stone-300 p-4 font-semibold before:absolute before:-bottom-3 before:-left-3 before:-z-10 before:h-6 before:w-6 before:rotate-45 before:bg-black">
               <div>
@@ -82,7 +80,7 @@ export default function Home() {
               opacity: 1,
               y: 0,
               transition: {
-                delay: 2.5,
+                delay: 2.4,
                 opacity: { duration: 1 },
                 y: { duration: 0.3 },
               },
@@ -127,7 +125,7 @@ export default function Home() {
             /Diseñador Web
           </motion.p>
           <motion.p
-            className="max-w-sm text-neutral-600 lg:text-lg"
+            className="max-w-sm text-stone-600 lg:text-lg"
             initial={{ y: '-0.25rem', opacity: 0 }}
             animate={{
               y: 0,

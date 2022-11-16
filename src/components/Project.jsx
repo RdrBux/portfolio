@@ -22,14 +22,14 @@ export default function Project() {
         <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
           <div>
             <h2 className="text-5xl font-bold lg:text-6xl">TÍTULO</h2>
-            <p className="text-neutral-500">Descripción de la página / Otra</p>
+            <p className="text-stone-700">Descripción de la página / Otra</p>
           </div>
-          <p className="text-lg text-neutral-600">
+          <p className="text-lg text-stone-800">
             A simplified yet beautiful shopping experience with an innovative
             approach to e-commerce in the digital space.
           </p>
 
-          <button className="flex w-fit items-center gap-2 rounded-full border border-neutral-800 px-6 py-2 text-sm font-medium text-neutral-900 shadow duration-200 hover:bg-stone-900 hover:text-white">
+          <button className="flex w-fit items-center gap-2 rounded-full border border-stone-800 bg-stone-900 px-6 py-2 text-sm font-bold text-white shadow duration-200 hover:bg-transparent hover:text-stone-900">
             <p>EXPLORAR</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ export default function Project() {
       {/* <div className="mt-12 hidden items-center lg:flex">
         <div className="h-[1px] w-full bg-gray-200"></div>
         <div className="ml-4 flex shrink-0 gap-4">
-          <button className="flex items-center gap-2 rounded-full border bg-neutral-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-neutral-900/80 hover:bg-transparent hover:text-neutral-900">
+          <button className="flex items-center gap-2 rounded-full border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
             VER DEMO{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ export default function Project() {
               />
             </svg>
           </button>
-          <button className="flex items-center gap-2 rounded-full border bg-neutral-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-neutral-900/80 hover:bg-transparent hover:text-neutral-900">
+          <button className="flex items-center gap-2 rounded-full border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
             VER CÓDIGO{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"

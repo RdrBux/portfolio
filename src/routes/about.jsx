@@ -29,7 +29,7 @@ export default function About() {
 
   return (
     <TransitionElement>
-      <div className="h-full w-full origin-top bg-neutral-300 pb-32">
+      <div className="h-full w-full origin-top bg-stone-300 pb-32">
         <div className="container flex flex-col gap-5">
           {/* <div className="py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Sobre mí" />
@@ -48,7 +48,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold lg:text-5xl">
                   Rodrigo Rodríguez
                 </h2>
-                <div className="mt-8 flex flex-col gap-4 text-neutral-600 lg:text-lg">
+                <div className="mt-8 flex flex-col gap-4 text-stone-700 lg:text-lg">
                   <p>
                     Desarrollador y diseñador web, actualmente viviendo en
                     Argentina.
@@ -82,9 +82,9 @@ export default function About() {
               className="flex flex-col gap-5 lg:gap-8"
             >
               <h3 className="text-3xl font-bold lg:text-5xl">Habilidades</h3>
-              <div className="text-xl text-neutral-600">
+              <div className="text-xl text-stone-700">
                 Stack más usado:{' '}
-                <div className="tooltip | inline-block text-neutral-900">
+                <div className="tooltip | inline-block text-stone-900">
                   MERN.
                   <span className="tooltiptext">
                     MongoDB, Express, React, Node.js
@@ -93,7 +93,7 @@ export default function About() {
               </div>
               <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-10">
                 <div className="flex gap-4">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -110,17 +110,17 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-stone-800">
                       Frontend
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-stone-600">
                       HTML, CSS, Javascript, Typescript, React, Tailwindcss,
                       Gsap, Framer Motion
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -137,16 +137,16 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-stone-800">
                       Backend
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-stone-600">
                       Node.js, Express, MongoDb, MySQL, Firebase
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -163,14 +163,14 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-stone-800">
                       Testing
                     </h4>
-                    <p className="mt-1 text-neutral-500">Jest, Cypress</p>
+                    <p className="mt-1 text-stone-600">Jest, Cypress</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="h-fit w-fit rounded-lg bg-teal-700 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -187,10 +187,10 @@ export default function About() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-xl font-medium text-neutral-800">
+                    <h4 className="text-xl font-medium text-stone-800">
                       Diseño
                     </h4>
-                    <p className="mt-1 text-neutral-500">
+                    <p className="mt-1 text-stone-600">
                       Figma, Illustrator, Photoshop
                     </p>
                   </div>
