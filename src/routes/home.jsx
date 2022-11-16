@@ -4,45 +4,40 @@ import TransitionElement from '../components/TransitionElement';
 export default function Home() {
   return (
     <TransitionElement>
-      <div className="h-screen w-full origin-top overflow-hidden">
-        {/* <div className="absolute">
-          <img className="h-screen w-screen opacity-50" src={bgCircle} alt="" />
-        </div> */}
-        <div className="absolute flex h-full flex-col items-center justify-center font-cabinet text-[14vw] font-extrabold leading-[14vw]">
-          <div className="flex flex-col items-center gap-4">
-            <motion.div className="flex w-screen items-end justify-center overflow-hidden">
-              <motion.div
-                initial={{ y: '100%' }}
-                animate={{
-                  y: 0,
-                  x: '-100vw',
-                  transition: {
-                    y: { duration: 0.5, ease: 'easeOut', delay: 0.2 },
-                    x: { duration: 2, delay: 1 },
-                  },
-                }}
-                className="h-[80%]"
-              >
-                RODRIGO
-              </motion.div>
+      <div className="h-screen w-full overflow-hidden">
+        <div className="absolute flex h-full flex-col items-center justify-center gap-4 font-cabinet text-[14vw] font-extrabold leading-[14vw]">
+          <motion.div className="flex w-screen items-end justify-center overflow-hidden">
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{
+                y: 0,
+                x: '-100vw',
+                transition: {
+                  y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
+                  x: { duration: 2, delay: 1 },
+                },
+              }}
+              className="h-[80%]"
+            >
+              RODRIGO
             </motion.div>
-            <motion.div className="flex w-screen items-end justify-center overflow-hidden">
-              <motion.div
-                initial={{ y: '100%' }}
-                animate={{
-                  y: 0,
-                  x: '100vw',
-                  transition: {
-                    y: { duration: 0.5, ease: 'easeOut', delay: 0.2 },
-                    x: { duration: 2, delay: 1 },
-                  },
-                }}
-                className="h-[80%]"
-              >
-                RODRÍGUEZ
-              </motion.div>
+          </motion.div>
+          <motion.div className="flex w-screen items-end justify-center overflow-hidden">
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{
+                y: 0,
+                x: '100vw',
+                transition: {
+                  y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
+                  x: { duration: 2, delay: 1 },
+                },
+              }}
+              className="h-[80%]"
+            >
+              RODRÍGUEZ
             </motion.div>
-          </div>
+          </motion.div>
         </div>
         <div className="container relative flex h-full flex-col justify-between gap-10 font-cabinet">
           <motion.div
