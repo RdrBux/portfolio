@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import Project from '../components/Project';
+import Separator from '../components/Separator';
 import TransitionElement from '../components/TransitionElement';
 
 export default function Projects() {
   return (
     <TransitionElement>
-      <div className="h-full w-full max-w-full bg-stone-300">
+      <div className="h-full w-full max-w-full">
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
             {/* <AnimatedTitle text="Proyectos Recientes" /> */}
@@ -61,9 +62,9 @@ export default function Projects() {
             className="mb-20 flex flex-col gap-12 lg:gap-20"
           >
             <Project />
-            <hr />
+            <Separator />
             <Project />
-            <hr />
+            <Separator starLocation={3} />
             <Project />
           </motion.div>
         </div>

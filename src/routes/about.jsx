@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Picture from '../assets/picture.jpg';
+import Separator from '../components/Separator';
 import TransitionElement from '../components/TransitionElement';
 
 export default function About() {
@@ -29,7 +30,7 @@ export default function About() {
 
   return (
     <TransitionElement>
-      <div className="h-full w-full origin-top bg-stone-300 pb-32">
+      <div className="h-full w-full origin-top pb-32">
         <div className="container flex flex-col gap-5">
           {/* <div className="py-20 text-center uppercase lg:py-32">
             <AnimatedTitle text="Sobre mí" />
@@ -76,7 +77,7 @@ export default function About() {
                 alt=""
               />
             </motion.div>
-            <hr />
+            <Separator />
             <motion.div
               variants={childAnim}
               className="flex flex-col gap-5 lg:gap-8"
@@ -197,7 +198,7 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
-            <hr />
+            <Separator starLocation={3} />
             <motion.div variants={childAnim} className="flex gap-2 text-2xl">
               Ponte en{' '}
               <button onClick={handleContact} className="group">

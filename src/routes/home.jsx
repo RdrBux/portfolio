@@ -54,7 +54,7 @@ export default function Home() {
             }}
             className="z-10 grid grid-cols-[1fr,auto]"
           >
-            <div className="grow-1 w-full rounded-br-2xl border-b border-black bg-stone-300 py-4">
+            <div className="w-full rounded-br-2xl border-b border-black bg-stone-300 py-4">
               <div className="text-xl font-extrabold leading-none">
                 RODRIGO
                 <br />

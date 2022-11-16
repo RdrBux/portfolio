@@ -9,6 +9,7 @@ export default function Navbar() {
   useEffect(() => {
     setActiveLink(location.pathname);
   }, [location]);
+  console.log(location);
 
   return (
     <motion.div className="fixed bottom-8 z-50 flex w-screen justify-center">
@@ -17,7 +18,11 @@ export default function Navbar() {
         animate={{
           opacity: 1,
           scaleX: 1,
-          transition: { type: 'spring', duration: 0.6, delay: 3.2 },
+          transition: {
+            type: 'spring',
+            duration: 0.6,
+            delay: location.pathname === '/' ? 3.2 : 1.5,
+          },
         }}
         exit={{
           opacity: 0,
@@ -28,7 +33,13 @@ export default function Navbar() {
       >
         <motion.ul
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 0.5, delay: 3.4 } }}
+          animate={{
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+              delay: location.pathname === '/' ? 3.4 : 1.7,
+            },
+          }}
           exit={{ opacity: 0 }}
           className="just grid w-[312px] grid-cols-4 font-semibold"
         >

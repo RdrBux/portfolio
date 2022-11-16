@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import AlertContact from '../components/AlertContact';
 import TransitionElement from '../components/TransitionElement';
+import Separator from '../components/Separator';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -139,7 +140,7 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            <hr />
+            <Separator />
             <form
               ref={form}
               onSubmit={handleSubmit}
