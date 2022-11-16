@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import AlertContact from '../components/AlertContact';
+import TransitionElement from '../components/TransitionElement';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -61,7 +62,7 @@ export default function Contact() {
   );
 
   return (
-    <motion.div>
+    <TransitionElement>
       <div className="min-h-screen w-full max-w-full origin-top bg-stone-300">
         {showAlert && <AlertContact isError={isError} />}
         <div className="container flex flex-col lg:w-3/4">
@@ -184,28 +185,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
-      ></motion.div>
-      <motion.div
-        animate={{
-          height: 0,
-          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
-        }}
-        exit={{
-          height: '100vh',
-          transition: {
-            height: {
-              duration: 0.3,
-              ease: 'easeOut',
-            },
-          },
-        }}
-        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
-      >
-        RR
-      </motion.div>
-    </motion.div>
+    </TransitionElement>
   );
 }

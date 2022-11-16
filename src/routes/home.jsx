@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
+import TransitionElement from '../components/TransitionElement';
 
 export default function Home() {
   return (
-    <motion.div>
+    <TransitionElement>
       <div className="h-screen w-full origin-top overflow-hidden bg-stone-300">
         {/* <div className="absolute">
           <img className="h-screen w-screen opacity-50" src={bgCircle} alt="" />
@@ -99,29 +100,7 @@ export default function Home() {
           <div className="h-20"></div>
         </div>
       </div>
-      <motion.div
-        exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
-      ></motion.div>
-      <motion.div
-        animate={{
-          height: 0,
-          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
-        }}
-        exit={{
-          height: '100vh',
-          transition: {
-            height: {
-              duration: 0.3,
-              ease: 'easeOut',
-            },
-          },
-        }}
-        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-stone-300"
-      >
-        RR
-      </motion.div>
-    </motion.div>
+    </TransitionElement>
   );
 }
 

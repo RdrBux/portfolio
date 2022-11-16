@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Picture from '../assets/picture.jpg';
+import TransitionElement from '../components/TransitionElement';
 
 export default function About() {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ export default function About() {
   }
 
   return (
-    <motion.div>
+    <TransitionElement>
       <div className="h-full w-full origin-top bg-neutral-300 pb-32">
         <div className="container flex flex-col gap-5">
           {/* <div className="py-20 text-center uppercase lg:py-32">
@@ -223,28 +224,6 @@ export default function About() {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
-      ></motion.div>
-      <motion.div
-        animate={{
-          height: 0,
-          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
-        }}
-        exit={{
-          height: '100vh',
-          transition: {
-            height: {
-              duration: 0.3,
-              ease: 'easeOut',
-            },
-          },
-        }}
-        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
-      >
-        RR
-      </motion.div>
-    </motion.div>
+    </TransitionElement>
   );
 }

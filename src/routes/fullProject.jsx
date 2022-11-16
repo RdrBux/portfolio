@@ -5,6 +5,7 @@ import ProjectImg from '../assets/project-img1.png';
 import ProjectArticle from '../components/ProjectArticle';
 import CloseProject from '../components/CloseProject';
 import ProjectNav from '../components/ProjectNav';
+import TransitionElement from '../components/TransitionElement';
 
 export default function FullProject() {
   const [showFixedEls, setShowFixedEls] = useState(false);
@@ -26,7 +27,7 @@ export default function FullProject() {
   }, [showFixedEls]);
 
   return (
-    <motion.div>
+    <TransitionElement>
       <motion.div
         style={{ scaleX: scrollYProgress }}
         className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-teal-600"
@@ -69,28 +70,6 @@ export default function FullProject() {
           </div>
         </div>
       </div>
-      <motion.div
-        exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
-      ></motion.div>
-      <motion.div
-        animate={{
-          height: 0,
-          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
-        }}
-        exit={{
-          height: '100vh',
-          transition: {
-            height: {
-              duration: 0.3,
-              ease: 'easeOut',
-            },
-          },
-        }}
-        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
-      >
-        RR
-      </motion.div>
-    </motion.div>
+    </TransitionElement>
   );
 }

@@ -11,7 +11,7 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <motion.div className="fixed bottom-8 z-40 flex w-screen justify-center">
+    <motion.div className="fixed bottom-8 z-50 flex w-screen justify-center">
       <motion.nav
         initial={{ opacity: 0, scaleX: 0 }}
         animate={{

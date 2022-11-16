@@ -14,7 +14,7 @@ export default function CloseProject() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       onClick={handleClick}
-      className="sticky top-6 right-6 z-40 w-fit self-end rounded-full bg-black/75 p-1 text-white duration-500 hover:rotate-90 lg:top-8"
+      className="sticky top-6 right-6 z-30 w-fit self-end rounded-full bg-black/75 p-1 text-white duration-500 hover:rotate-90 lg:top-8"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

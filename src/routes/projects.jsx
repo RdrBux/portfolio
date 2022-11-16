@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
 import Project from '../components/Project';
+import TransitionElement from '../components/TransitionElement';
 
 export default function Projects() {
   return (
-    <motion.div>
+    <TransitionElement>
       <div className="h-full w-full max-w-full bg-stone-300">
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
@@ -67,28 +68,6 @@ export default function Projects() {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        exit={{ display: 'block', opacity: 1 }}
-        className="fixed inset-0 z-20 hidden h-screen w-full bg-black/30 opacity-0"
-      ></motion.div>
-      <motion.div
-        animate={{
-          height: 0,
-          transition: { duration: 0.3, ease: 'easeOut', delay: 0.3 },
-        }}
-        exit={{
-          height: '100vh',
-          transition: {
-            height: {
-              duration: 0.3,
-              ease: 'easeOut',
-            },
-          },
-        }}
-        className="fixed top-0 z-50 flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-stone-900 text-7xl text-neutral-200"
-      >
-        RR
-      </motion.div>
-    </motion.div>
+    </TransitionElement>
   );
 }
