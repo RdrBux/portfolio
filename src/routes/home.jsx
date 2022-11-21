@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
+import star from '../assets/star.svg';
 
 export default function Home() {
   return (
     <TransitionElement>
-      <div className="h-screen w-full overflow-hidden">
+      <div className="h-screen w-full overflow-hidden bg-[#D6F4FE]">
         <div className="absolute flex h-full flex-col items-center justify-center gap-4 font-cabinet text-[14vw] font-extrabold leading-[14vw]">
           <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
@@ -49,7 +51,7 @@ export default function Home() {
             }}
             className="z-10 grid grid-cols-[1fr,auto]"
           >
-            <div className="w-full rounded-br-2xl border-b border-black bg-stone-300 py-4">
+            <div className="w-full border-b border-black py-4">
               <div className="text-xl font-extrabold leading-none">
                 RODRIGO
                 <br />
@@ -57,16 +59,14 @@ export default function Home() {
               </div>
               <p className="-mt-1 text-sm text-stone-800">Desarrollador Web</p>
             </div>
-            <div className="relative flex items-center rounded-bl-2xl border-l border-b border-black bg-stone-300 p-4 font-semibold before:absolute before:-bottom-3 before:-left-3 before:-z-10 before:h-6 before:w-6 before:rotate-45 before:bg-black">
-              <div>
-                <span className="font-extrabold">ESPAÑOL X</span>
-                <br />
-                ENGLISH
-              </div>
-              {/* <div className="before:absolute before:-bottom-4 before:-left-4 before:z-0 before:h-8 before:w-8 before:rotate-45 before:bg-black"></div> */}
+            <div className="relative flex items-center border-l border-b border-black p-4 font-semibold">
+              <LangSelector />
+              <img
+                className="absolute bottom-0 left-0 w-8 translate-y-[16.5px] -translate-x-[16.5px]"
+                src={star}
+                alt=""
+              />
             </div>
-            <div className="h-4 rounded-tr-2xl bg-stone-300"></div>
-            <div className="h-4 rounded-tl-2xl bg-stone-300"></div>
           </motion.div>
 
           <motion.p

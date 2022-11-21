@@ -6,11 +6,9 @@ export default function LangSelector() {
   }
 
   return (
-    <button
-      onClick={handleClick}
-      className="h-fit w-fit rounded-full bg-teal-900/75 px-4 py-2 text-sm font-bold text-white shadow backdrop-blur-sm"
-    >
-      ESPAÑOL
-    </button>
+    <select className="cursor-pointer bg-transparent">
+      <option value="">ESPAÑOL</option>
+      <option value="">ENGLISH</option>
+    </select>
   );
 }
