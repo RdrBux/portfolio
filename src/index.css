@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  background-color: #cbe2ed /* rgb(214 211 209) */;
+  background-color: #bee7ca /* rgb(214 211 209) */;
   /* -ms-overflow-style: none; */ /* IE and Edge */
   /* scrollbar-width: none; */ /* Firefox */
 }

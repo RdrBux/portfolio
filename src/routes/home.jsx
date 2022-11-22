@@ -6,7 +6,7 @@ import star from '../assets/star.svg';
 export default function Home() {
   return (
     <TransitionElement>
-      <div className="h-screen w-full overflow-hidden bg-[#D6F4FE]">
+      <div className="h-screen w-full overflow-hidden bg-[#BEE7CA]">
         <div className="absolute flex h-full flex-col items-center justify-center gap-4 font-cabinet text-[14vw] font-extrabold leading-[14vw]">
           <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
@@ -41,7 +41,8 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="container relative flex h-full flex-col justify-between gap-10 font-cabinet">
+        <div className="container relative flex h-full w-full items-center">
+          {/* <div className="container relative flex h-full flex-col justify-between gap-10 font-cabinet"> */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{
@@ -49,9 +50,9 @@ export default function Home() {
               y: 0,
               transition: { delay: 3.1, duration: 0.5, ease: 'easeOut' },
             }}
-            className="z-10 grid grid-cols-[1fr,auto]"
+            className="absolute top-0 z-10 grid h-fit w-full grid-cols-[1fr,auto]"
           >
-            <div className="w-full border-b border-black py-4">
+            <div className="w-full border-b border-black py-2">
               <div className="text-xl font-extrabold leading-none">
                 RODRIGO
                 <br />
@@ -80,17 +81,10 @@ export default function Home() {
                 y: { duration: 0.3 },
               },
             }}
-            className="text-4xl font-medium uppercase lg:text-8xl"
+            className="row-start-1 self-center text-4xl font-bold uppercase lg:w-1/2 lg:text-7xl"
           >
-            Transformando{' '}
-            <span
-              className="font-extrabold" /* className="bg-gradient-to-r from-teal-500 to-sky-500 bg-clip-text text-transparent" */
-            >
-              grandes ideas
-            </span>{' '}
-            en experiencias digitales únicas
+            Transformando grandes ideas en experiencias digitales únicas
           </motion.p>
-          <div className="h-20"></div>
         </div>
       </div>
     </TransitionElement>

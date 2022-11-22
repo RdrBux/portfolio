@@ -15,7 +15,7 @@ export default function TransitionElement(props) {
           transformOrigin: 'bottom',
           transition: { ease: 'easeIn', duration: 0.5 },
         }}
-        className="fixed top-0 z-40 flex h-screen w-screen origin-top flex-col items-center justify-center overflow-hidden bg-emerald-900 text-7xl text-stone-300"
+        className="fixed top-0 z-40 flex h-screen w-screen origin-top flex-col items-center justify-center overflow-hidden bg-purple-300 text-7xl text-stone-300"
       ></motion.div>
     </motion.div>
   );

@@ -101,7 +101,7 @@ export default function Contact() {
             </motion.p>
           </div>
           <motion.div
-            className="flex flex-col gap-12 lg:gap-20"
+            className="-mx-4 flex flex-col items-center gap-12 lg:gap-20"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.8, duration: 1 } }}
           >
@@ -140,17 +140,16 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-            <Separator />
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="mb-28 flex w-full flex-col gap-5 text-sm lg:text-base" /* lg:w-3/4 */
+              className="-mx-4 mb-28 flex w-full flex-col gap-5 rounded-[2rem] bg-white p-8 text-sm shadow-lg lg:py-12 lg:px-8 lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
               <label className="flex flex-col font-medium text-stone-700">
                 Nombre*
                 <input
-                  className="mt-1 rounded-lg bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
                   type="text"
                   name="user_name"
                   value={name}
@@ -161,7 +160,7 @@ export default function Contact() {
               <label className="flex flex-col font-medium text-stone-700">
                 Correo electrónico*
                 <input
-                  className="mt-1 rounded-lg bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
                   type="email"
                   name="user_email"
                   value={email}
@@ -175,11 +174,11 @@ export default function Contact() {
                   value={message}
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1 rounded-lg bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
                   required
                 />
               </label>
-              <button className="rounded-lg bg-emerald-900 py-3 px-12 text-base font-bold text-white">
+              <button className="rounded-xl bg-black py-3 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>

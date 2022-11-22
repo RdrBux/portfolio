@@ -59,7 +59,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
-            className="mb-20 flex flex-col gap-12 lg:gap-20"
+            className="-mx-4 mb-20 flex flex-col gap-16 rounded-[2rem] bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
           >
             <Project />
             <Separator />
