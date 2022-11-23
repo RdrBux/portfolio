@@ -45,11 +45,11 @@ export default function About() {
               variants={childAnim}
               className="grid items-center lg:grid-cols-2 lg:gap-20"
             >
-              <div className="z-10">
+              <div className="z-10 -mx-4 rounded-[2rem] bg-white p-10 shadow-lg">
                 <h2 className="text-3xl font-bold lg:text-5xl">
                   Rodrigo Rodríguez
                 </h2>
-                <div className="mt-8 flex flex-col gap-4 text-stone-700 lg:text-lg">
+                <div className="mt-8 flex flex-col gap-4 font-inter text-stone-800 lg:text-lg">
                   <p>
                     Desarrollador y diseñador web, actualmente viviendo en
                     Argentina.
@@ -83,7 +83,7 @@ export default function About() {
               className="flex flex-col gap-5 lg:gap-8"
             >
               <h3 className="text-3xl font-bold lg:text-5xl">Habilidades</h3>
-              <div className="text-xl text-stone-700">
+              <div className="text-xl text-stone-800">
                 Stack más usado:{' '}
                 <div className="tooltip | inline-block text-stone-900">
                   MERN.
@@ -92,8 +92,8 @@ export default function About() {
                   </span>
                 </div>
               </div>
-              <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-10">
-                <div className="flex gap-4">
+              <div className="grid items-start gap-6 text-lg lg:grid-cols-4 lg:gap-6">
+                <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
                   <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export default function About() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -114,13 +114,13 @@ export default function About() {
                     <h4 className="text-xl font-medium text-stone-800">
                       Frontend
                     </h4>
-                    <p className="mt-1 text-stone-600">
+                    <p className="mt-1 text-stone-700">
                       HTML, CSS, Javascript, Typescript, React, Tailwindcss,
                       Gsap, Framer Motion
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
                   <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ export default function About() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -141,12 +141,12 @@ export default function About() {
                     <h4 className="text-xl font-medium text-stone-800">
                       Backend
                     </h4>
-                    <p className="mt-1 text-stone-600">
+                    <p className="mt-1 text-stone-700">
                       Node.js, Express, MongoDb, MySQL, Firebase
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
                   <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function About() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -167,10 +167,10 @@ export default function About() {
                     <h4 className="text-xl font-medium text-stone-800">
                       Testing
                     </h4>
-                    <p className="mt-1 text-stone-600">Jest, Cypress</p>
+                    <p className="mt-1 text-stone-700">Jest, Cypress</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
                   <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ export default function About() {
                       viewBox="0 0 24 24"
                       strokeWidth={1.5}
                       stroke="currentColor"
-                      className="h-6 w-6"
+                      className="h-8 w-8"
                     >
                       <path
                         strokeLinecap="round"
@@ -191,7 +191,7 @@ export default function About() {
                     <h4 className="text-xl font-medium text-stone-800">
                       Diseño
                     </h4>
-                    <p className="mt-1 text-stone-600">
+                    <p className="mt-1 text-stone-700">
                       Figma, Illustrator, Photoshop
                     </p>
                   </div>
