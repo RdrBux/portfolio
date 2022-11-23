@@ -45,11 +45,11 @@ export default function About() {
               variants={childAnim}
               className="grid items-center lg:grid-cols-2 lg:gap-20"
             >
-              <div className="z-10 -mx-4 rounded-[2rem] bg-white p-10 shadow-lg">
+              <div className="z-10 rounded-[2rem] bg-white p-10 shadow-lg">
                 <h2 className="text-3xl font-bold lg:text-5xl">
                   Rodrigo Rodríguez
                 </h2>
-                <div className="mt-8 flex flex-col gap-4 font-inter text-stone-800 lg:text-lg">
+                <div className="mt-8 flex flex-col gap-4 text-stone-800 lg:text-lg">
                   <p>
                     Desarrollador y diseñador web, actualmente viviendo en
                     Argentina.
@@ -94,7 +94,7 @@ export default function About() {
               </div>
               <div className="grid items-start gap-6 text-lg lg:grid-cols-4 lg:gap-6">
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -121,7 +121,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -147,7 +147,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -171,7 +171,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="h-fit w-fit rounded-lg bg-emerald-700 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

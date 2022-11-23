@@ -2,11 +2,13 @@ import { motion } from 'framer-motion';
 import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
 import star from '../assets/star.svg';
+import underline from '../assets/underline.svg';
+import underdeco from '../assets/underdeco.svg';
 
 export default function Home() {
   return (
     <TransitionElement>
-      <div className="h-screen w-full overflow-hidden bg-[#BEE7CA]">
+      <div className="h-screen w-full overflow-hidden">
         <div className="absolute flex h-full flex-col items-center justify-center gap-4 font-cabinet text-[14vw] font-extrabold leading-[14vw]">
           <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
@@ -83,7 +85,20 @@ export default function Home() {
             }}
             className="row-start-1 self-center text-4xl font-bold uppercase lg:w-1/2 lg:text-7xl"
           >
-            Transformando grandes ideas en experiencias digitales únicas
+            Transformando{' '}
+            <span className="fancy__underline relative inline-block">
+              grandes ideas
+              <img className="absolute -bottom-1" src={underline} alt="" />
+            </span>{' '}
+            en experiencias digitales{' '}
+            <span className="relative">
+              únicas{' '}
+              <img
+                className="absolute -bottom-1 -right-4"
+                src={underdeco}
+                alt=""
+              />
+            </span>
           </motion.p>
         </div>
       </div>

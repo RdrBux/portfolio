@@ -6,7 +6,7 @@ export default function LangSelector() {
   }
 
   return (
-    <select className="cursor-pointer bg-transparent">
+    <select className="cursor-pointer rounded-lg bg-transparent p-2">
       <option value="">ESPAÑOL</option>
       <option value="">ENGLISH</option>
     </select>

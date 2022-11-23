@@ -5,12 +5,30 @@ html {
   font-size: 16px;
 }
 
+.fancy__underline a,
+.fancy__underline span {
+  display: inline-block;
+  background-position-y: -0%;
+  background-image: linear-gradient(transparent 50%, #67b3e8 50%);
+  transition: background 0.3s ease;
+  background-size: 2px;
+  background-size: auto 175%;
+  text-decoration: none;
+  font-weight: 600;
+}
+@media (min-width: 992px) {
+  .fancy__underline a:hover,
+  .fancy__underline span:hover {
+    background-position-y: 100%;
+  }
+}
+
 body::-webkit-scrollbar {
   /* display: none; */
 }
 
 body {
-  background-color: #bee7ca /* rgb(214 211 209) */;
+  background-color: rgb(243 232 255) /* rgb(214 211 209) */;
   /* -ms-overflow-style: none; */ /* IE and Edge */
   /* scrollbar-width: none; */ /* Firefox */
 }
