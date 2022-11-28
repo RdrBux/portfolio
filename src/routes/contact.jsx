@@ -4,7 +4,6 @@ import emailjs from '@emailjs/browser';
 import { useRef } from 'react';
 import AlertContact from '../components/AlertContact';
 import TransitionElement from '../components/TransitionElement';
-import Separator from '../components/Separator';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -66,7 +65,7 @@ export default function Contact() {
     <TransitionElement>
       <div className="min-h-screen w-full max-w-full origin-top">
         {showAlert && <AlertContact isError={isError} />}
-        <div className="container flex flex-col lg:w-3/4">
+        <div className="container flex flex-col lg:w-7/12">
           <div className="flex flex-col items-center py-20 text-center uppercase lg:py-32">
             {/* <AnimatedTitle text="Contacto" /> */}
             <div className="font-cabinet text-[54px] font-extrabold leading-none md:text-8xl lg:text-9xl 2xl:text-[12rem]">
@@ -143,13 +142,13 @@ export default function Contact() {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="-mx-4 mb-28 flex w-full flex-col gap-5 rounded-[2rem] bg-white p-8 text-sm shadow-lg lg:py-12 lg:px-8 lg:text-base" /* lg:w-3/4 */
+              className="-mx-4 mb-28 flex w-full flex-col gap-4 rounded-[2rem] bg-white p-8 text-sm shadow-lg lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
               <label className="flex flex-col font-medium text-stone-700">
                 Nombre*
                 <input
-                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
                   type="text"
                   name="user_name"
                   value={name}
@@ -160,7 +159,7 @@ export default function Contact() {
               <label className="flex flex-col font-medium text-stone-700">
                 Correo electrónico*
                 <input
-                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
                   type="email"
                   name="user_email"
                   value={email}
@@ -174,11 +173,11 @@ export default function Contact() {
                   value={message}
                   name="message"
                   onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1 rounded-xl bg-stone-200 px-4 py-2 text-base"
+                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
                   required
                 />
               </label>
-              <button className="rounded-xl bg-black py-3 px-12 text-base font-bold text-white">
+              <button className="mt-4 rounded-full bg-black py-4 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>

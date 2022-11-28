@@ -4,6 +4,7 @@ import TransitionElement from '../components/TransitionElement';
 import star from '../assets/star.svg';
 import underline from '../assets/underline.svg';
 import underdeco from '../assets/underdeco.svg';
+import imgFront from '../assets/img-front.png';
 
 export default function Home() {
   return (
@@ -83,22 +84,13 @@ export default function Home() {
                 y: { duration: 0.3 },
               },
             }}
-            className="row-start-1 self-center text-4xl font-bold uppercase lg:w-1/2 lg:text-7xl"
+            className="lg:w-1/24 flex items-center text-4xl font-bold uppercase lg:text-7xl"
           >
-            Transformando{' '}
-            <span className="fancy__underline relative inline-block">
-              grandes ideas
-              <img className="absolute -bottom-1" src={underline} alt="" />
-            </span>{' '}
-            en experiencias digitales{' '}
-            <span className="relative">
-              únicas{' '}
-              <img
-                className="absolute -bottom-1 -right-4"
-                src={underdeco}
-                alt=""
-              />
-            </span>
+            {/* <div className="lg:w-1/2"> */}
+            {/* "lg:w-1/24 row-start-1 flex self-center text-4xl font-bold uppercase lg:text-7xl" */}
+            Transformando grandes ideas en experiencias digitales únicas
+            {/* </div> */}
+            {/* <img className="h-96" src={imgFront} alt="" /> */}
           </motion.p>
         </div>
       </div>

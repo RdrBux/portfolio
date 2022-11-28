@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import Picture from '../assets/picture.jpg';
+import imgSide from '../assets/img-side.png';
 import Separator from '../components/Separator';
 import TransitionElement from '../components/TransitionElement';
 
@@ -43,7 +43,7 @@ export default function About() {
           >
             <motion.div
               variants={childAnim}
-              className="grid items-center lg:grid-cols-2 lg:gap-20"
+              className="mt-20 grid items-center lg:grid-cols-2 lg:gap-20"
             >
               <div className="z-10 rounded-[2rem] bg-white p-10 shadow-lg">
                 <h2 className="text-3xl font-bold lg:text-5xl">
@@ -72,8 +72,8 @@ export default function About() {
                 </div>
               </div>
               <img
-                className="row-start-1 rounded-2xl lg:col-start-2 lg:mb-0" /* -mb-20 */
-                src={Picture}
+                className="row-start-1 h-96 rounded-2xl lg:col-start-2 lg:mb-0" /* -mb-20 */
+                src={imgSide}
                 alt=""
               />
             </motion.div>
@@ -142,7 +142,7 @@ export default function About() {
                       Backend
                     </h4>
                     <p className="mt-1 text-stone-700">
-                      Node.js, Express, MongoDb, MySQL, Firebase
+                      Node.js, Express, MongoDB, MySQL, Firebase
                     </p>
                   </div>
                 </div>

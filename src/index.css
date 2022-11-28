@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  background-color: rgb(243 232 255) /* rgb(214 211 209) */;
+  background-color: rgb(231 229 228) /* rgb(214 211 209) */;
   /* -ms-overflow-style: none; */ /* IE and Edge */
   /* scrollbar-width: none; */ /* Firefox */
 }
