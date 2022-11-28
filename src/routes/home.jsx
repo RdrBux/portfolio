@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <TransitionElement>
       <div className="h-screen w-full overflow-hidden">
-        <div className="absolute flex h-full flex-col items-center justify-center gap-4 font-cabinet text-[14vw] font-extrabold leading-[14vw]">
+        <div className="absolute flex h-full flex-col items-center justify-center gap-4 text-[14vw] font-extrabold leading-[14vw]">
           <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
               initial={{ y: '100%' }}
@@ -44,7 +44,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="container relative flex h-full w-full items-center">
+        <div className="container relative flex h-full w-full flex-col">
           {/* <div className="container relative flex h-full flex-col justify-between gap-10 font-cabinet"> */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -84,11 +84,17 @@ export default function Home() {
                 y: { duration: 0.3 },
               },
             }}
-            className="lg:w-1/24 flex items-center text-4xl font-bold uppercase lg:text-7xl"
+            className="mt-40 flex text-4xl font-bold uppercase lg:text-7xl"
           >
             {/* <div className="lg:w-1/2"> */}
             {/* "lg:w-1/24 row-start-1 flex self-center text-4xl font-bold uppercase lg:text-7xl" */}
-            Transformando grandes ideas en experiencias digitales únicas
+            Transformando
+            <br />
+            grandes ideas
+            <br />
+            en experiencias
+            <br />
+            digitales únicas
             {/* </div> */}
             {/* <img className="h-96" src={imgFront} alt="" /> */}
           </motion.p>

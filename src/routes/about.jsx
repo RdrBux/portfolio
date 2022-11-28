@@ -56,7 +56,7 @@ export default function About() {
                   </p>
                   <p>
                     Técnico en Administración de Empresas con formación en
-                    gestion y control, marketing, contabilidad y finanzas.
+                    gestión y control, marketing, contabilidad y finanzas.
                   </p>
                   <p>
                     Apasionado por la creación de grandes experiencias
@@ -94,7 +94,7 @@ export default function About() {
               </div>
               <div className="grid items-start gap-6 text-lg lg:grid-cols-4 lg:gap-6">
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -121,7 +121,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="mt-1 h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
+                  <div className="mt-1 h-fit w-fit rounded-lg bg-emerald-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -147,7 +147,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-emerald-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -171,7 +171,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-4 rounded-[2rem] bg-white p-10 shadow-lg lg:h-72">
-                  <div className="h-fit w-fit rounded-lg bg-purple-900 p-3 text-white">
+                  <div className="h-fit w-fit rounded-lg bg-emerald-900 p-3 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

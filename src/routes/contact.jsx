@@ -142,7 +142,7 @@ export default function Contact() {
             <form
               ref={form}
               onSubmit={handleSubmit}
-              className="-mx-4 mb-28 flex w-full flex-col gap-4 rounded-[2rem] bg-white p-8 text-sm shadow-lg lg:text-base" /* lg:w-3/4 */
+              className="-mx-4 mb-28 flex w-full flex-col gap-4 rounded-[2rem] bg-white p-10 text-sm shadow-lg lg:text-base" /* lg:w-3/4 */
             >
               <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
               <label className="flex flex-col font-medium text-stone-700">
@@ -177,7 +177,7 @@ export default function Contact() {
                   required
                 />
               </label>
-              <button className="mt-4 rounded-full bg-black py-4 px-12 text-base font-bold text-white">
+              <button className="mt-4 rounded-full bg-emerald-900 py-4 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>

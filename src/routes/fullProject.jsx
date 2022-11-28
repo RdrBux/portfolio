@@ -30,7 +30,7 @@ export default function FullProject() {
     <TransitionElement>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-purple-600"
+        className="fixed top-0 left-0 right-0 z-50 h-2 origin-left bg-emerald-600"
       ></motion.div>
       <div className="relative mt-16 w-full max-w-full rounded-t-2xl bg-white lg:rounded-t-[2rem]">
         <AnimatePresence>
