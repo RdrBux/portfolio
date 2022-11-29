@@ -177,7 +177,7 @@ export default function Contact() {
                   required
                 />
               </label>
-              <button className="mt-4 rounded-full bg-emerald-900 py-4 px-12 text-base font-bold text-white">
+              <button className="mt-4 rounded-full bg-blue-900 py-4 px-12 text-base font-bold text-white">
                 ENVIAR
               </button>
             </form>

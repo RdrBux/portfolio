@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import ProjectOne from '../components/ProjectOne';
 import ProjectTwo from '../components/ProjectTwo';
-import Separator from '../components/Separator';
 import TransitionElement from '../components/TransitionElement';
 
 export default function Projects() {
@@ -60,12 +59,12 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
-            className="-mx-4 mb-20 flex flex-col gap-16 rounded-[2rem] bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
+            className="-mx-4 mb-20 flex flex-col gap-16 rounded-[2rem] border bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
           >
             <ProjectOne />
-            <Separator />
+            <hr />
             <ProjectTwo />
-            <Separator starLocation={3} />
+            <hr />
             <ProjectOne />
           </motion.div>
         </div>

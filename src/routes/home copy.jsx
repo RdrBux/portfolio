@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
-import First from '../components/home/First';
 import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
+import star from '../assets/star.svg';
+import underline from '../assets/underline.svg';
+import underdeco from '../assets/underdeco.svg';
+import imgFront from '../assets/img-front.png';
 
 export default function Home() {
   return (
     <TransitionElement>
       <div className="h-screen w-full overflow-hidden bg-white">
         <div className="absolute flex h-full flex-col items-center justify-center gap-4 text-[14vw] font-extrabold leading-[14vw]">
-          <motion.div className="z-50 flex w-screen items-end justify-center overflow-hidden">
+          <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
               initial={{ y: '100%' }}
               animate={{
@@ -41,36 +44,62 @@ export default function Home() {
             </motion.div>
           </motion.div>
         </div>
-        <div className="container relative grid h-full w-full items-center gap-3 lg:grid-cols-2">
-          <LangSelector />
-          <div className="z-10 flex flex-col gap-2">
-            <h1 className="text-[16vw] font-extrabold leading-none lg:text-8xl 2xl:text-9xl">
-              RODRIGO <br />
-              RODRÍGUEZ
-            </h1>
-            <p className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-3xl font-bold text-transparent">
-              /Desarrollador Fullstack
-            </p>
-            <p className="max-w-sm font-medium text-slate-700">
-              Trabajando en la transformación de grandes ideas en experiencias
-              digitales únicas
-            </p>
-          </div>
-          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-20 h-[500px]  w-full rounded-xl opacity-20 lg:relative">
-            <div className="rotated -mt-10 flex flex-col gap-4">
-              <div className="ml-24">
-                <First />
+        <div className="container relative flex h-full w-full flex-col">
+          {/* <div className="container relative flex h-full flex-col justify-between gap-10 font-cabinet"> */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 3.1, duration: 0.5, ease: 'easeOut' },
+            }}
+            className="absolute top-0 z-10 grid h-fit w-full grid-cols-[1fr,auto]"
+          >
+            <div className="w-full border-b border-gray-400 py-2">
+              <div className="text-xl font-bold leading-none">
+                RODRIGO
+                <br />
+                RODRÍGUEZ
               </div>
-              <div className="flex gap-4">
-                <First />
-                <First />
-              </div>
-              <div className="-ml-24 flex gap-4">
-                <First />
-                <First />
-              </div>
+              <p className="-mt-1 text-sm text-slate-700">Desarrollador Web</p>
             </div>
-          </div>
+            <div className="relative flex items-center border-l border-b border-gray-400 p-4 font-semibold">
+              <LangSelector />
+              <img
+                className="absolute bottom-0 left-0 w-8 translate-y-[16.5px] -translate-x-[16.5px]"
+                src={star}
+                alt=""
+              />
+            </div>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 2.4,
+                opacity: { duration: 1 },
+                y: { duration: 0.3 },
+              },
+            }}
+            className="mt-40 text-4xl font-extrabold uppercase lg:text-7xl"
+          >
+            {/* <div className="lg:w-1/2"> */}
+            {/* "lg:w-1/24 row-start-1 flex self-center text-4xl font-bold uppercase lg:text-7xl" */}
+            Transformando
+            <br />
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              grandes ideas
+            </span>
+            <br />
+            en experiencias
+            <br />
+            digitales únicas
+            {/* </div> */}
+            {/* <img className="h-96" src={imgFront} alt="" /> */}
+          </motion.p>
         </div>
       </div>
     </TransitionElement>

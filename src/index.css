@@ -5,22 +5,12 @@ html {
   font-size: 16px;
 }
 
-.fancy__underline a,
-.fancy__underline span {
-  display: inline-block;
-  background-position-y: -0%;
-  background-image: linear-gradient(transparent 50%, #67b3e8 50%);
-  transition: background 0.3s ease;
-  background-size: 2px;
-  background-size: auto 175%;
-  text-decoration: none;
-  font-weight: 600;
+.shadowed {
+  box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.25);
 }
-@media (min-width: 992px) {
-  .fancy__underline a:hover,
-  .fancy__underline span:hover {
-    background-position-y: 100%;
-  }
+
+.rotated {
+  transform: rotateX(50deg) rotateZ(-35deg);
 }
 
 body::-webkit-scrollbar {
@@ -28,7 +18,7 @@ body::-webkit-scrollbar {
 }
 
 body {
-  background-color: rgb(231 229 228) /* rgb(214 211 209) */;
+  background-color: rgb(243 244 246) /* rgb(214 211 209) */;
   /* -ms-overflow-style: none; */ /* IE and Edge */
   /* scrollbar-width: none; */ /* Firefox */
 }
