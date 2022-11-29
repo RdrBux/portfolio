@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import First from '../components/home/First';
+import Second from '../components/home/Second';
 import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
 
@@ -57,18 +58,8 @@ export default function Home() {
             </p>
           </div>
           <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-20 h-[500px]  w-full rounded-xl lg:relative">
-            <div className="rotated -mt-10 flex flex-col gap-4">
-              <div className="ml-24">
-                <First />
-              </div>
-              <div className="flex gap-4">
-                <First />
-                <First />
-              </div>
-              <div className="-ml-24 flex gap-4">
-                <First />
-                <First />
-              </div>
+            <div className="rotated1 -mt-10 flex flex-col gap-4">
+              <Second />
             </div>
           </div>
         </div>
