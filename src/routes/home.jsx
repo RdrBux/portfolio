@@ -7,19 +7,19 @@ export default function Home() {
   return (
     <TransitionElement>
       <div className="h-screen w-full overflow-hidden bg-white">
-        <div className="absolute flex h-full flex-col items-center justify-center gap-4 text-[14vw] font-extrabold leading-[14vw]">
-          <motion.div className="z-50 flex w-screen items-end justify-center overflow-hidden">
+        <div className="absolute flex h-full flex-col items-center justify-center gap-4 text-[20vw] font-extrabold leading-[14vw]">
+          <motion.div className="flex w-screen items-end justify-center overflow-hidden">
             <motion.div
               initial={{ y: '100%' }}
               animate={{
                 y: 0,
-                x: '-100vw',
+                x: '-120vw',
                 transition: {
                   y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
                   x: { duration: 2, delay: 1 },
                 },
               }}
-              className="h-[80%]"
+              className="h-[95%]"
             >
               RODRIGO
             </motion.div>
@@ -29,26 +29,26 @@ export default function Home() {
               initial={{ y: '100%' }}
               animate={{
                 y: 0,
-                x: '100vw',
+                x: '120vw',
                 transition: {
                   y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
                   x: { duration: 2, delay: 1 },
                 },
               }}
-              className="h-[80%]"
+              className="h-[95%]"
             >
               RODRÍGUEZ
             </motion.div>
           </motion.div>
         </div>
+        <LangSelector />
         <div className="container relative grid h-full w-full items-center gap-3 lg:grid-cols-2">
-          <LangSelector />
           <div className="z-10 flex flex-col gap-2">
             <h1 className="text-[16vw] font-extrabold leading-none lg:text-8xl 2xl:text-9xl">
               RODRIGO <br />
               RODRÍGUEZ
             </h1>
-            <p className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-3xl font-bold text-transparent">
+            <p className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl">
               /Desarrollador Fullstack
             </p>
             <p className="max-w-sm font-medium text-slate-700">
@@ -56,7 +56,7 @@ export default function Home() {
               digitales únicas
             </p>
           </div>
-          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-20 h-[500px]  w-full rounded-xl opacity-20 lg:relative">
+          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-20 h-[500px]  w-full rounded-xl lg:relative">
             <div className="rotated -mt-10 flex flex-col gap-4">
               <div className="ml-24">
                 <First />

@@ -6,7 +6,7 @@ export default function LangSelector() {
   }
 
   return (
-    <select className="absolute top-6 right-6 w-fit cursor-pointer rounded-full bg-slate-900/75 py-2 px-4 font-bold text-white">
+    <select className="absolute top-6 right-6 z-20 w-fit cursor-pointer rounded-full bg-slate-900/75 py-2 px-4 font-bold text-white">
       <option value="">ESPAÑOL</option>
       <option value="">ENGLISH</option>
     </select>

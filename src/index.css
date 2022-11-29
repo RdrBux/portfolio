@@ -13,14 +13,31 @@ html {
   transform: rotateX(50deg) rotateZ(-35deg);
 }
 
-body::-webkit-scrollbar {
-  /* display: none; */
+body {
+  background-color: rgb(243 244 246);
 }
 
-body {
-  background-color: rgb(243 244 246) /* rgb(214 211 209) */;
-  /* -ms-overflow-style: none; */ /* IE and Edge */
-  /* scrollbar-width: none; */ /* Firefox */
+/* SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b7b7b7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* TOOLTIP */
