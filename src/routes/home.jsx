@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
-import First from '../components/home/First';
-import Second from '../components/home/Second';
+import Comment from '../components/home/Comment';
+import FriendsList from '../components/home/FriendsList';
+import SoundPlayer from '../components/home/SoundPlayer';
 import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
 
@@ -52,14 +53,19 @@ export default function Home() {
             <p className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl">
               /Desarrollador Fullstack
             </p>
-            <p className="max-w-sm font-medium text-slate-700">
+            <p className="font-base max-w-sm text-lg text-slate-800">
               Trabajando en la transformación de grandes ideas en experiencias
               digitales únicas
             </p>
+            <div className=""></div>
           </div>
-          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-20 h-[500px]  w-full rounded-xl lg:relative">
-            <div className="rotated1 -mt-10 flex flex-col gap-4">
-              <Second />
+          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-10 h-[500px]  w-full rounded-xl lg:relative">
+            <div className="rotated | -mt-10 flex flex-col gap-4">
+              <Comment />
+              <div className="-ml-40 flex items-center gap-4">
+                <SoundPlayer />
+                <FriendsList />
+              </div>
             </div>
           </div>
         </div>

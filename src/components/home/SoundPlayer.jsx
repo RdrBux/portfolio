@@ -6,7 +6,7 @@ import surprise from '../../assets/sounds/surprise.mp3';
 import money from '../../assets/sounds/money.mp3';
 import wrong from '../../assets/sounds/wrong.mp3';
 
-export default function Second() {
+export default function SoundPlayer() {
   const [sound, setSound] = useState(new Audio(pop));
   const [soundName, setSoundName] = useState('Pop');
   const [playing, setPlaying] = useState(false);
@@ -74,7 +74,7 @@ export default function Second() {
   const playButton = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-16 w-16 cursor-pointer text-gray-500 duration-300 group-hover:text-blue-900"
+      className="h-16 w-16 cursor-pointer text-blue-700 duration-300"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -89,7 +89,7 @@ export default function Second() {
   const pauseButton = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-16 w-16 cursor-pointer text-gray-500 duration-300 group-hover:text-blue-900"
+      className="h-16 w-16 cursor-pointer text-blue-700 duration-300"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -102,15 +102,15 @@ export default function Second() {
   );
 
   return (
-    <div className="shadowed | group flex w-[240px] select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-100 duration-300 hover:bg-blue-200 hover:opacity-100 hover:shadow-none">
+    <div className="shadowed | flex w-[240px] select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-20 grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:shadow-none hover:grayscale-0">
       <div className="flex items-end gap-2">
-        <div className="h-10 w-5 rounded-full bg-gray-300 duration-300 group-hover:bg-amber-200"></div>
-        <div className="h-16 w-5 rounded-full bg-gray-300 duration-300 group-hover:bg-amber-200"></div>
-        <div className="h-14 w-5 rounded-full bg-gray-300 duration-300 group-hover:bg-amber-200"></div>
-        <div className="h-20 w-5 rounded-full bg-gray-300 duration-300 group-hover:bg-amber-200"></div>
-        <div className="h-16 w-5 rounded-full bg-gray-300 duration-300 group-hover:bg-amber-200"></div>
+        <div className="h-10 w-5 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-16 w-5 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-14 w-5 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-20 w-5 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-16 w-5 rounded-full bg-amber-200 duration-300"></div>
       </div>
-      <div className="flex w-full items-center justify-between rounded-full bg-black/10 p-1 duration-300 group-hover:bg-white/50">
+      <div className="flex w-full items-center justify-between rounded-full bg-black/10 p-1 duration-300">
         <div className="ml-6 w-full leading-tight">
           <p className="font-bold">Play me</p>
           <div className="mt-2 flex w-24 items-center justify-between gap-2">
