@@ -48,7 +48,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
                 <div className="relative w-fit">
                   Inicio
                   {activeLink === '/' && (
@@ -67,7 +67,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
                 <div className="relative w-fit">
                   Projectos
                   {activeLink === '/projects' && (
@@ -86,7 +86,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
                 <div className="relative w-fit">
                   Sobre mí
                   {activeLink === '/about' && (
@@ -105,7 +105,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
                 <div className="relative w-fit">
                   Contacto
                   {activeLink === '/contact' && (
