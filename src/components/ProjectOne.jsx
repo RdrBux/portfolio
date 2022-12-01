@@ -55,8 +55,8 @@ export default function ProjectOne() {
             </svg>
           </button>
         </div>
-        <div className="shrink-0 lg:w-7/12 xl:w-8/12">
-          <div className="relative grid grid-cols-3 gap-2 xl:gap-8">
+        <div className="shrink-0 lg:w-7/12">
+          <div className="relative grid grid-cols-3 gap-2 xl:gap-4">
             <video playsInline muted loop autoPlay>
               <source src={videoOne} type="video/mp4" />
             </video>
@@ -66,11 +66,11 @@ export default function ProjectOne() {
             <video playsInline muted loop autoPlay>
               <source src={videoThree} type="video/mp4" />
             </video>
-            {/* <img
-              className="absolute -bottom-10 -left-20 hidden w-48 lg:block"
+            <img
+              className="absolute -bottom-10 -left-32 hidden w-64 lg:block"
               src={projectImg}
               alt=""
-            /> */}
+            />
           </div>
           {/* <img className="w-full" src={ProjectImg} alt="" /> */}
         </div>

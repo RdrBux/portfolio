@@ -72,11 +72,11 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <img
-                className="row-start-1 h-96 rounded-2xl lg:col-start-2 lg:mb-0" /* -mb-20 */
+              {/* <img
+                className="row-start-1 h-96 rounded-2xl lg:col-start-2 lg:mb-0" // -mb-20
                 src={img}
                 alt=""
-              />
+              /> */}
             </motion.div>
             <Separator />
             <motion.div

@@ -53,8 +53,8 @@ export default function ProjectTwo() {
             </svg>
           </button>
         </div>
-        <div className="shrink-0 lg:w-7/12 xl:w-8/12">
-          <div className="relative grid grid-cols-3 gap-2 xl:gap-8">
+        <div className="shrink-0 lg:w-7/12">
+          <div className="relative grid grid-cols-3 gap-2 xl:gap-4">
             <video playsInline muted loop autoPlay>
               <source src={videoOne} type="video/mp4" />
             </video>
