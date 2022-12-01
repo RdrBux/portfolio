@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Chat from '../components/home/Chat';
 import Comment from '../components/home/Comment';
 import Faces from '../components/home/Faces';
 import FriendsList from '../components/home/FriendsList';
@@ -113,7 +114,7 @@ export default function Home() {
               <div className="rotated | flex flex-col gap-4 opacity-50">
                 <div className="ml-20 flex gap-4">
                   <VideoPlayer />
-                  <VideoPlayer />
+                  <Chat />
                 </div>
                 <div className="flex items-center gap-4">
                   <Faces />
