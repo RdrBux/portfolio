@@ -63,125 +63,102 @@ export default function Contact() {
 
   return (
     <TransitionElement>
-      <div className="min-h-screen w-full max-w-full origin-top">
+      <div className="h-full w-full">
         {showAlert && <AlertContact isError={isError} />}
-        <div className="container flex flex-col lg:w-7/12">
-          <div className="flex flex-col items-center py-20 text-center uppercase lg:py-32">
-            {/* <AnimatedTitle text="Contacto" /> */}
-            <div className="font-cabinet text-[54px] font-extrabold leading-none md:text-8xl lg:text-9xl 2xl:text-[12rem]">
-              <motion.div className="flex w-full items-end justify-center overflow-hidden">
-                <motion.div
-                  initial={{ y: '100%' }}
-                  animate={{
-                    y: 0,
-                    transition: {
-                      y: { duration: 0.5, ease: 'easeOut', delay: 0.2 },
-                    },
-                  }}
-                  className="h-[80%]"
-                >
-                  CONTACTO
-                </motion.div>
-              </motion.div>
-            </div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: {
-                  delay: 0.4,
-                  duration: 1,
-                },
-              }}
-              className="max-w-sm pl-1 text-sm md:max-w-md"
-            >
-              No dudes en comunicarte, ya sea por cuestiones laborales,
-              consultas o simplemente para saludar
-            </motion.p>
-          </div>
-          <motion.div
-            className="-mx-4 flex flex-col items-center gap-12 lg:gap-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.8, duration: 1 } }}
-          >
-            <div className="flex flex-col items-center gap-5 text-lg text-stone-800 lg:text-2xl">
-              <a
-                href="mailto:rodriguezrodrigoemmanuel@gmail.com"
-                target="_blank"
-                rel="noreferrer"
-                className="group w-fit"
-              >
-                <div className="flex items-center gap-2">
-                  rodriguezrodrigoemmanuel@gmail.com
-                </div>
-                <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
-              </a>
-              <div className="flex gap-16">
+        <div className="container mt-10 pb-32">
+          <div className="-mx-4 grid rounded-2xl shadow-lg lg:grid-cols-2">
+            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-blue-200 p-8 lg:rounded-r-none lg:rounded-l-2xl">
+              <div>
+                <h3 className="text-3xl font-bold lg:text-5xl">Contacto</h3>
+                <p>
+                  No dudes en comunicarte, ya sea por cuestiones laborales,
+                  consultas o simplemente para saludar
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-8 text-lg text-stone-800 lg:text-2xl">
                 <a
-                  href="https://www.linkedin.com/in/rdrbux/"
+                  href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                   target="_blank"
                   rel="noreferrer"
-                  className="group"
+                  className="group w-fit"
                 >
                   <div className="flex items-center gap-2">
-                    Linkedin {arrow}
+                    rodriguezrodrigoemmanuel@gmail.com
                   </div>
                   <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
                 </a>
-                <a
-                  href="https://github.com/RdrBux"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group"
-                >
-                  <div className="flex items-center gap-2">Github {arrow}</div>
-                  <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
-                </a>
+                <div className="flex gap-16">
+                  <a
+                    href="https://www.linkedin.com/in/rdrbux/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2">
+                      Linkedin {arrow}
+                    </div>
+                    <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
+                  </a>
+                  <a
+                    href="https://github.com/RdrBux"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group"
+                  >
+                    <div className="flex items-center gap-2">
+                      Github {arrow}
+                    </div>
+                    <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
+                  </a>
+                </div>
               </div>
             </div>
-            <form
-              ref={form}
-              onSubmit={handleSubmit}
-              className="-mx-4 mb-28 flex w-full flex-col gap-4 rounded-[2rem] bg-white p-10 text-sm shadow-lg lg:text-base" /* lg:w-3/4 */
-            >
-              <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
-              <label className="flex flex-col font-medium text-stone-700">
-                Nombre*
-                <input
-                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
-                  type="text"
-                  name="user_name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </label>
-              <label className="flex flex-col font-medium text-stone-700">
-                Correo electrónico*
-                <input
-                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
-                  type="email"
-                  name="user_email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </label>
-              <label className="flex flex-col font-medium text-stone-700">
-                Mensaje*
-                <textarea
-                  value={message}
-                  name="message"
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="mt-1 rounded-full bg-stone-100 p-4 text-base"
-                  required
-                />
-              </label>
-              <button className="mt-4 rounded-full bg-blue-900 py-4 px-12 text-base font-bold text-white">
-                ENVIAR
-              </button>
-            </form>
-          </motion.div>
+
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white p-8 lg:rounded-l-none lg:rounded-r-2xl">
+              <form
+                ref={form}
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4" /* lg:w-3/4 */
+              >
+                <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
+                <label className="flex flex-col font-medium text-slate-700">
+                  Nombre*
+                  <input
+                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    type="text"
+                    name="user_name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </label>
+                <label className="flex flex-col font-medium text-slate-700">
+                  Correo electrónico*
+                  <input
+                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    type="email"
+                    name="user_email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </label>
+                <label className="flex flex-col font-medium text-slate-700">
+                  Mensaje*
+                  <textarea
+                    value={message}
+                    name="message"
+                    onChange={(e) => setMessage(e.target.value)}
+                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    required
+                  />
+                </label>
+                <button className="mt-4 rounded-lg bg-blue-900 py-4 px-12 text-base font-bold text-white">
+                  ENVIAR
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </TransitionElement>
