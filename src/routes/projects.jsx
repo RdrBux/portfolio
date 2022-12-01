@@ -9,7 +9,6 @@ export default function Projects() {
       <div className="w-full max-w-full">
         <div className="container flex flex-col">
           <div className="flex h-[90vh] flex-col items-center justify-center gap-2 text-center uppercase">
-            {/* <AnimatedTitle text="Proyectos Recientes" /> */}
             <div className="flex flex-col items-center font-cabinet text-[54px] font-extrabold leading-none md:text-8xl lg:text-9xl 2xl:text-[12rem]">
               <motion.div className="flex w-full items-end justify-center overflow-hidden">
                 <motion.div
@@ -49,7 +48,7 @@ export default function Projects() {
                   duration: 1,
                 },
               }}
-              className="mt-4 max-w-sm pl-1 text-sm text-stone-900 md:max-w-md"
+              className="mt-4 max-w-sm pl-1 text-sm text-slate-900 md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a
@@ -59,7 +58,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
-            className="-mx-4 mb-20 flex flex-col gap-16 rounded-[2rem] border bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
+            className="-mx-4 mb-20 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
           >
             <ProjectOne />
             <hr />

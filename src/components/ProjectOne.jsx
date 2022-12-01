@@ -24,20 +24,20 @@ export default function ProjectOne() {
       >
         <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
           <div>
-            <h2 className="text-5xl font-bold lg:text-6xl">
+            <h2 className="text-5xl font-bold text-black lg:text-6xl">
               SKULL
               <br />
               CRUSHERS
             </h2>
-            <p className="text-stone-700">Proyecto / Diseño / Frontend</p>
+            <p className="text-slate-700">Proyecto / Diseño / Frontend</p>
           </div>
-          <p className="max-w-sm text-lg text-stone-800">
+          <p className="max-w-sm text-lg text-slate-800">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis
             asperiores tempore vero.
           </p>
 
-          <button className="flex w-fit items-center gap-2 rounded-full border border-stone-800 bg-stone-900 px-6 py-2 text-sm font-bold text-white shadow duration-200 hover:bg-transparent hover:text-stone-900">
+          <button className="flex w-fit items-center gap-2 rounded-full border border-black bg-black px-6 py-2 text-sm font-bold text-white shadow duration-200 hover:bg-transparent hover:text-black">
             <p>EXPLORAR</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ export default function ProjectOne() {
               <source src={videoThree} type="video/mp4" />
             </video>
             <img
-              className="absolute -bottom-10 -left-32 hidden w-64 lg:block"
+              className="absolute bottom-0 -left-32 hidden w-64 lg:block"
               src={projectImg}
               alt=""
             />
