@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import Comment from '../components/home/Comment';
+import Faces from '../components/home/Faces';
 import FriendsList from '../components/home/FriendsList';
 import SoundPlayer from '../components/home/SoundPlayer';
+import VideoPlayer from '../components/home/VideoPlayer';
 import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
 
@@ -59,13 +61,23 @@ export default function Home() {
             </p>
             <div className=""></div>
           </div>
-          <div className="bg-gray-1020 shadow-i2nner absolute -bottom-40 -right-10 h-[500px]  w-full rounded-xl lg:relative">
-            <div className="rotated | -mt-10 flex flex-col gap-4">
-              <Comment />
+          <div className="lg:bottom-400 absolute -bottom-20 -right-20 w-full  rounded-xl lg:relative lg:-mt-60">
+            <div className="rotated | flex flex-col gap-4 opacity-50">
+              <div className="flex gap-4">
+                <VideoPlayer />
+                <VideoPlayer />
+              </div>
               <div className="-ml-40 flex items-center gap-4">
+                <Faces />
                 <SoundPlayer />
+                <SoundPlayer />
+              </div>
+              <div className="-ml-80 flex items-center gap-4">
+                <Comment />
+                <Comment />
                 <FriendsList />
               </div>
+              <FriendsList />
             </div>
           </div>
         </div>

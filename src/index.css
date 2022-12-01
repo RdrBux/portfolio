@@ -10,7 +10,7 @@ html {
 }
 
 .rotated {
-  transform: rotateX(50deg) rotateZ(-35deg);
+  transform: rotateX(50deg) rotateZ(-35deg) scale(100%);
 }
 
 body {

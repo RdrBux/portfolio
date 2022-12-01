@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import imgSide from '../assets/img-side.png';
 import Separator from '../components/Separator';
 import TransitionElement from '../components/TransitionElement';
+import img from '../assets/img.jpg';
 
 export default function About() {
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ export default function About() {
               </div>
               <img
                 className="row-start-1 h-96 rounded-2xl lg:col-start-2 lg:mb-0" /* -mb-20 */
-                src={imgSide}
+                src={img}
                 alt=""
               />
             </motion.div>
