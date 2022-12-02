@@ -76,7 +76,7 @@ export default function Home() {
                   y: { duration: 0.3 },
                 },
               }}
-              className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl"
+              className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl"
             >
               /Desarrollador Fullstack
             </motion.p>

@@ -1,6 +1,6 @@
 export default function Faces() {
   return (
-    <div className="shadowed | w-fit rounded-lg border border-black opacity-20 grayscale duration-300 hover:opacity-100 hover:grayscale-0">
+    <div className="shadowed | w-fit shrink-0 rounded-lg border border-black opacity-20 grayscale duration-300 hover:opacity-100 hover:grayscale-0">
       <div className="flex items-center justify-between border-b border-black p-4">
         <p className="text-sm font-bold">How are you feeling?</p>
         <div className="flex gap-1">

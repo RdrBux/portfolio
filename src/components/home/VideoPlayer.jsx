@@ -22,7 +22,7 @@ export default function VideoPlayer() {
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="shadowed | flex w-fit rounded-lg border border-black bg-white opacity-20 grayscale duration-300 hover:bg-gray-50 hover:opacity-100 hover:grayscale-0"
+      className="shadowed | flex w-fit shrink-0 rounded-lg border border-black bg-white opacity-20 grayscale duration-300 hover:bg-gray-50 hover:opacity-100 hover:grayscale-0"
     >
       <div className="flex flex-col items-center border-r border-black p-2 text-gray-300">
         <svg

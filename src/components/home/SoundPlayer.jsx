@@ -102,7 +102,7 @@ export default function SoundPlayer() {
   );
 
   return (
-    <div className="shadowed | flex w-60 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-20 grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:grayscale-0">
+    <div className="shadowed | flex w-60 shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-20 grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:grayscale-0">
       <div className="flex items-end gap-2">
         <div className="h-10 w-5 rounded-full bg-amber-200 duration-300"></div>
         <div className="h-16 w-5 rounded-full bg-amber-200 duration-300"></div>

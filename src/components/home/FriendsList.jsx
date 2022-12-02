@@ -59,7 +59,7 @@ export default function FriendsList() {
   );
 
   return (
-    <div className="shadowed | group flex h-fit w-fit select-none rounded-full border border-black bg-white  p-4 opacity-20 grayscale duration-300 hover:opacity-100 hover:grayscale-0">
+    <div className="shadowed | group flex h-fit w-fit shrink-0 select-none rounded-full border border-black bg-white  p-4 opacity-20 grayscale duration-300 hover:opacity-100 hover:grayscale-0">
       {greenAvatar}
       {blueAvatar}
       {purpleAvatar}
