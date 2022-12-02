@@ -110,7 +110,7 @@ export default function Home() {
                 duration: 1,
               },
             }}
-            className="absolute inset-0 overflow-hidden lg:relative xl:-mt-20 2xl:-mt-40"
+            className="absolute -bottom-24 -right-40 overflow-hidden lg:relative xl:-mt-20 2xl:-mt-40"
           >
             <div className="scale-75 select-none lg:scale-100 2xl:scale-110">
               <div className="rotated | flex flex-col gap-4">

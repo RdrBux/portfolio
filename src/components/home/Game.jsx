@@ -29,6 +29,9 @@ export default function Game() {
 
   function checkWin() {
     if (result) return;
+    if (!squares.some((square) => square === '')) {
+      return setResult('TIE');
+    }
     const board = [...squares];
     const winningCombos = [
       board.slice(0, 3),
@@ -58,13 +61,17 @@ export default function Game() {
   checkWin();
 
   return (
-    <div className="shadowed | w-fit shrink-0 rounded-lg border border-black p-2 font-bold opacity-10 grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="shadowed | h-fit w-fit shrink-0 rounded-lg border border-black p-2 font-bold opacity-10 grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <p className="text-center">TIC TAC TOE</p>
       <div className="relative flex cursor-pointer flex-col rounded-lg bg-gray-50">
         {result && (
           <div
             className={`absolute flex h-full w-full flex-col items-center justify-center rounded-lg ${
-              result === 'WON' ? 'bg-green-200/80' : 'bg-red-200/80'
+              result === 'WON'
+                ? 'bg-green-200/80'
+                : result === 'LOST'
+                ? 'bg-red-200/80'
+                : 'bg-gray-200/80'
             }`}
           >
             <div>YOU {result}</div>
