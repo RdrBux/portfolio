@@ -67,7 +67,7 @@ export default function Contact() {
         {showAlert && <AlertContact isError={isError} />}
         <div className="container mt-10 pb-32">
           <div className="-mx-4 grid rounded-lg border border-gray-500 shadow-flat-r lg:grid-cols-2">
-            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-lg bg-blue-200 py-20 px-6 lg:rounded-r-none lg:rounded-l-lg lg:px-12">
+            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-lg bg-blue-400 py-20 px-6 text-gray-900 lg:rounded-r-none lg:rounded-l-lg lg:px-12">
               <div>
                 <h3 className="text-center text-6xl font-bold lg:text-8xl">
                   CONTACTO
@@ -77,7 +77,7 @@ export default function Contact() {
                   consultas o simplemente para saludar
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-8 text-lg text-gray-800 lg:text-2xl">
+              <div className="flex flex-col items-center gap-8 text-lg lg:text-2xl">
                 <a
                   href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                   target="_blank"
