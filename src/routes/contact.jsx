@@ -69,7 +69,7 @@ export default function Contact() {
           <div className="-mx-4 grid rounded-2xl shadow-lg lg:grid-cols-2">
             <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-blue-200 p-8 lg:rounded-r-none lg:rounded-l-2xl">
               <div>
-                <h3 className="text-3xl font-bold lg:text-5xl">Contacto</h3>
+                <h3 className="text-3xl font-bold lg:text-7xl">CONTACTO</h3>
                 <p>
                   No dudes en comunicarte, ya sea por cuestiones laborales,
                   consultas o simplemente para saludar
@@ -124,7 +124,7 @@ export default function Contact() {
                 <label className="flex flex-col font-medium text-slate-700">
                   Nombre*
                   <input
-                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    className="mt-1 rounded-xl bg-slate-100 p-4 text-base"
                     type="text"
                     name="user_name"
                     value={name}
@@ -135,7 +135,7 @@ export default function Contact() {
                 <label className="flex flex-col font-medium text-slate-700">
                   Correo electrónico*
                   <input
-                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    className="mt-1 rounded-xl bg-slate-100 p-4 text-base"
                     type="email"
                     name="user_email"
                     value={email}
@@ -149,11 +149,11 @@ export default function Contact() {
                     value={message}
                     name="message"
                     onChange={(e) => setMessage(e.target.value)}
-                    className="mt-1 rounded-lg bg-slate-100 p-4 text-base"
+                    className="mt-1 rounded-xl bg-slate-100 p-4 text-base"
                     required
                   />
                 </label>
-                <button className="mt-4 rounded-lg bg-blue-900 py-4 px-12 text-base font-bold text-white">
+                <button className="mt-4 rounded-xl bg-blue-900 py-4 px-12 text-base font-bold text-white">
                   ENVIAR
                 </button>
               </form>
