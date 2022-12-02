@@ -67,15 +67,17 @@ export default function Contact() {
         {showAlert && <AlertContact isError={isError} />}
         <div className="container mt-10 pb-32">
           <div className="-mx-4 grid rounded-2xl shadow-lg lg:grid-cols-2">
-            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-blue-200 p-8 lg:rounded-r-none lg:rounded-l-2xl">
+            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-2xl bg-blue-200 py-20 px-6 lg:rounded-r-none lg:rounded-l-2xl lg:px-12">
               <div>
-                <h3 className="text-3xl font-bold lg:text-7xl">CONTACTO</h3>
-                <p>
+                <h3 className="text-center text-6xl font-bold lg:text-8xl">
+                  CONTACTO
+                </h3>
+                <p className="text-center">
                   No dudes en comunicarte, ya sea por cuestiones laborales,
                   consultas o simplemente para saludar
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-8 text-lg text-stone-800 lg:text-2xl">
+              <div className="flex flex-col items-center gap-8 text-lg text-slate-800 lg:text-2xl">
                 <a
                   href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                   target="_blank"
@@ -85,7 +87,7 @@ export default function Contact() {
                   <div className="flex items-center gap-2">
                     rodriguezrodrigoemmanuel@gmail.com
                   </div>
-                  <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
+                  <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
                 </a>
                 <div className="flex gap-16">
                   <a
@@ -97,7 +99,7 @@ export default function Contact() {
                     <div className="flex items-center gap-2">
                       Linkedin {arrow}
                     </div>
-                    <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
+                    <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
                   </a>
                   <a
                     href="https://github.com/RdrBux"
@@ -108,19 +110,21 @@ export default function Contact() {
                     <div className="flex items-center gap-2">
                       Github {arrow}
                     </div>
-                    <span className="block h-[1px] max-w-full bg-stone-800 duration-300 group-hover:max-w-0"></span>
+                    <span className="block h-[1px] max-w-full bg-slate-800 duration-300 group-hover:max-w-0"></span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white p-8 lg:rounded-l-none lg:rounded-r-2xl">
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white px-6 py-12 lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
               <form
                 ref={form}
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-4" /* lg:w-3/4 */
               >
-                <h3 className="text-3xl font-bold">Enviar un mensaje</h3>
+                <h3 className="text-4xl font-bold lg:text-5xl">
+                  Enviar un mensaje
+                </h3>
                 <label className="flex flex-col font-medium text-slate-700">
                   Nombre*
                   <input
@@ -153,7 +157,7 @@ export default function Contact() {
                     required
                   />
                 </label>
-                <button className="mt-4 rounded-xl bg-blue-900 py-4 px-12 text-base font-bold text-white">
+                <button className="rounded-xl bg-blue-900 py-4 px-12 text-base font-bold text-white">
                   ENVIAR
                 </button>
               </form>

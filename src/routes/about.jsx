@@ -8,8 +8,8 @@ export default function About() {
       <div className="h-full w-full">
         <div className="container mt-10 pb-32">
           <div className="-mx-4 grid rounded-2xl shadow-lg lg:grid-cols-2">
-            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white p-8 lg:rounded-r-none lg:rounded-l-2xl">
-              <div className="h-40 w-40 self-center rounded-full bg-blue-200"></div>
+            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white py-8 px-6 lg:rounded-r-none lg:rounded-l-2xl lg:px-12">
+              <div className="h-32 w-32 self-center rounded-full bg-blue-200"></div>
               {/* <img
                 className="h-40 w-40 self-center rounded-full bg-red-200"
                 src={imgFront}
@@ -39,8 +39,8 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-blue-200 p-8 lg:rounded-l-none lg:rounded-r-2xl">
-              <h3 className="text-3xl font-bold lg:text-5xl">Habilidades</h3>
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-blue-200 px-6 py-12 lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
+              <h3 className="text-5xl font-bold">Habilidades</h3>
 
               <div className="text-xl text-slate-800">
                 Stack más usado:{' '}
@@ -54,7 +54,7 @@ export default function About() {
 
               <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-6">
                 <div className="flex flex-col rounded-lg bg-white shadow-md">
-                  <div className="flex items-center gap-4 rounded-t-lg bg-blue-900 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg bg-gradient-to-b from-blue-800 to-blue-900 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default function About() {
                 </div>
 
                 <div className="flex h-full flex-col rounded-lg bg-white shadow-md">
-                  <div className="flex items-center gap-4 rounded-t-lg bg-blue-900 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg bg-gradient-to-b from-blue-800 to-blue-900 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ export default function About() {
                 </div>
 
                 <div className="flex h-full flex-col rounded-lg bg-white shadow-md">
-                  <div className="flex items-center gap-4 rounded-t-lg bg-blue-900 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg bg-gradient-to-b from-blue-800 to-blue-900 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ export default function About() {
                 </div>
 
                 <div className="flex flex-col rounded-lg bg-white shadow-md">
-                  <div className="flex items-center gap-4 rounded-t-lg bg-blue-900 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg bg-gradient-to-b from-blue-800 to-blue-900 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
