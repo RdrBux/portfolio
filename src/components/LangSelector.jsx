@@ -37,7 +37,7 @@ export default function LangSelector() {
     >
       <div
         onClick={() => setShowOptions((prev) => !prev)}
-        className="flex items-center gap-2 rounded-full bg-slate-900/75 py-2 px-4 font-bold text-white"
+        className="flex items-center gap-2 rounded-lg bg-gray-900/75 py-2 px-4 font-bold text-white"
       >
         <div>{lang}</div>
         <svg
@@ -61,17 +61,17 @@ export default function LangSelector() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute right-0 top-12 rounded-xl border bg-slate-100"
+            className="absolute right-0 top-12 rounded-lg border bg-gray-100"
           >
             <div
               onClick={() => changeLang('Español')}
-              className="w-40 rounded-t-xl px-6 py-4 duration-300 hover:bg-slate-200"
+              className="w-40 rounded-t-xl px-6 py-4 duration-300 hover:bg-gray-200"
             >
               Español (ES)
             </div>
             <div
               /* onClick={() => changeLang('English')} */
-              className="rounded-b-lg px-6 py-4 line-through duration-300 hover:bg-slate-200"
+              className="rounded-b-lg px-6 py-4 line-through duration-300 hover:bg-gray-200"
             >
               English (EN)
             </div>
@@ -83,7 +83,7 @@ export default function LangSelector() {
 }
 
 {
-  /* <select className="absolute top-6 right-6 z-20 w-fit cursor-pointer rounded-full bg-slate-900/75 py-2 px-4 font-bold text-white">
+  /* <select className="absolute top-6 right-6 z-20 w-fit cursor-pointer rounded-full bg-gray-900/75 py-2 px-4 font-bold text-white">
   <option value="">ESPAÑOL</option>
   <option value="">ENGLISH</option>
 </select> */

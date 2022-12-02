@@ -61,7 +61,7 @@ export default function Home() {
                 <br />
                 RODRÍGUEZ
               </div>
-              <p className="-mt-1 text-sm text-slate-700">Desarrollador Web</p>
+              <p className="-mt-1 text-sm text-gray-700">Desarrollador Web</p>
             </div>
             <div className="relative flex items-center border-l border-b border-gray-400 p-4 font-semibold">
               <LangSelector />

@@ -45,11 +45,11 @@ export default function ProjectTwo() {
         <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
           <div>
             <h2 className="text-5xl font-bold text-black lg:text-6xl">DO IT</h2>
-            <p className="text-slate-700">
+            <p className="text-gray-700">
               Proyecto / Diseño / Frontend / Backend
             </p>
           </div>
-          <p className="max-w-sm text-lg text-slate-800">
+          <p className="text-slgrayate-800 max-w-sm text-lg">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis
             asperiores tempore vero.

@@ -28,7 +28,7 @@ export default function Navbar() {
           scaleX: 0,
           transition: { delay: 0.2, duration: 0.3 },
         }}
-        className="flex w-[328px] select-none justify-center rounded-full bg-slate-900/75 py-2 font-cabinet text-[15px] text-white shadow-lg backdrop-blur-sm"
+        className="flex w-[328px] select-none justify-center rounded-lg bg-gray-900/75 py-2 font-cabinet text-[15px] text-white shadow-lg backdrop-blur-sm"
       >
         <motion.ul
           initial={{ opacity: 0 }}
@@ -48,7 +48,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
                   Inicio
                   {activeLink === '/' && (
@@ -67,7 +67,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
                   Projectos
                   {activeLink === '/projects' && (
@@ -86,7 +86,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
                   Sobre mí
                   {activeLink === '/about' && (
@@ -105,7 +105,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? 'font-bold' : undefined)}
               end
             >
-              <motion.div className="nav-element | relative flex justify-center rounded-full py-2 duration-300 lg:hover:bg-white/5">
+              <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
                   Contacto
                   {activeLink === '/contact' && (

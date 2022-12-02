@@ -4,7 +4,7 @@ export default function Chat() {
   const [hiddenMsg, setHiddenMsg] = useState(false);
 
   return (
-    <div className="shadowed | w-48 shrink-0 rounded-lg bg-white opacity-10 grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="w-48 shrink-0 rounded-lg bg-white opacity-10 shadow-flat grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <div className="flex items-center gap-4 rounded-t-lg border border-black bg-green-200 p-3">
         <div className="relative h-7 w-7 overflow-hidden rounded-full	bg-purple-50">
           <div className="absolute left-1/2 top-1 h-3 w-3 -translate-x-1/2 rounded-full bg-purple-300"></div>

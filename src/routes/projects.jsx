@@ -48,7 +48,7 @@ export default function Projects() {
                   duration: 1,
                 },
               }}
-              className="mt-4 max-w-sm pl-1 text-sm text-slate-900 md:max-w-md"
+              className="mt-4 max-w-sm pl-1 text-sm text-gray-900 md:max-w-md"
             >
               Una colección de proyectos en los que he trabajado, sean páginas o
               aplicaciones web, pensadas en la búsqueda de soluciones a
@@ -58,7 +58,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
-            className="-mx-4 mb-20 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 shadow-lg lg:gap-20 lg:py-20 lg:px-8"
+            className="-mx-4 mb-20 flex flex-col gap-16 rounded-lg border border-gray-500 bg-white py-8 px-4 shadow-flat-r lg:gap-20 lg:py-20 lg:px-8"
           >
             <ProjectOne />
             <hr />

@@ -9,9 +9,9 @@ html {
   font-size: 16px;
 }
 
-.shadowed {
+/* .shadowed {
   box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.25);
-}
+} */
 
 .rotated {
   transform: rotateX(50deg) rotateZ(-35deg) scale(100%);

@@ -1,6 +1,6 @@
 export default function Comment() {
   return (
-    <div className="shadowed | w-60 shrink-0 select-none rounded-lg border border-black bg-white opacity-10 grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="w-60 shrink-0 select-none rounded-lg border border-black bg-white opacity-10 shadow-flat grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <div className="flex justify-between border-b border-black p-4">
         <div className="max-w-[100px] text-sm font-bold">
           You should try to read me

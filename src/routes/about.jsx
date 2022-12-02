@@ -7,8 +7,8 @@ export default function About() {
     <TransitionElement>
       <div className="h-full w-full">
         <div className="container mt-10 pb-32">
-          <div className="-mx-4 grid rounded-2xl shadow-lg lg:grid-cols-2">
-            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white py-8 px-6 lg:rounded-r-none lg:rounded-l-2xl lg:px-12">
+          <div className="-mx-4 grid rounded-lg border border-gray-500 shadow-flat-r lg:grid-cols-2">
+            <div className="z-10 flex flex-col gap-8 rounded-t-lg bg-white py-8 px-6 lg:rounded-r-none lg:rounded-l-lg lg:px-12">
               <div className="h-32 w-32 self-center rounded-full bg-blue-200"></div>
               {/* <img
                 className="h-40 w-40 self-center rounded-full bg-red-200"
@@ -18,7 +18,7 @@ export default function About() {
               <h2 className="text-center text-4xl font-bold lg:text-left lg:text-5xl">
                 Rodrigo Rodríguez
               </h2>
-              <div className="flex flex-col gap-3 text-slate-800">
+              <div className="flex flex-col gap-3 text-gray-800">
                 <p>
                   Desarrollador fullstack y diseñador web, actualmente viviendo
                   en Argentina.
@@ -39,12 +39,12 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-blue-200 px-6 py-12 lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-lg bg-blue-200 px-6 py-12 lg:rounded-l-none lg:rounded-r-lg lg:px-12">
               <h3 className="text-5xl font-bold">Habilidades</h3>
 
-              <div className="text-xl text-slate-800">
+              <div className="text-xl text-gray-800">
                 Stack más usado:{' '}
-                <div className="tooltip | inline-block text-slate-900">
+                <div className="tooltip | inline-block text-gray-900">
                   MERN.
                   <span className="tooltiptext">
                     MongoDB, Express, React, Node.js
@@ -73,7 +73,7 @@ export default function About() {
                     </div>
                     <h4 className="text-xl font-bold text-white">Frontend</h4>
                   </div>
-                  <p className="p-4 text-slate-700">
+                  <p className="p-4 text-gray-700">
                     HTML, CSS, Javascript, Typescript, React, Tailwindcss, Gsap,
                     Framer Motion
                   </p>
@@ -99,7 +99,7 @@ export default function About() {
                     </div>
                     <h4 className="text-xl font-bold text-white">Backend</h4>
                   </div>
-                  <p className="h-full p-4 text-slate-700">
+                  <p className="h-full p-4 text-gray-700">
                     Node.js, Express, MongoDB, MySQL, Firebase
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function About() {
                     </div>
                     <h4 className="text-xl font-bold text-white">Testing</h4>
                   </div>
-                  <p className="p-4 text-slate-700">Jest, Cypress</p>
+                  <p className="p-4 text-gray-700">Jest, Cypress</p>
                 </div>
 
                 <div className="flex flex-col rounded-lg bg-white shadow-md">
@@ -147,7 +147,7 @@ export default function About() {
                     </div>
                     <h4 className="text-xl font-bold text-white">Diseño</h4>
                   </div>
-                  <p className="p-4 text-slate-700">
+                  <p className="p-4 text-gray-700">
                     Figma, Illustrator, Photoshop
                   </p>
                 </div>

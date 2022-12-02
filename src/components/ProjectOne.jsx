@@ -49,9 +49,9 @@ export default function ProjectOne() {
               <br />
               CRUSHERS
             </h2>
-            <p className="text-slate-700">Proyecto / Diseño / Frontend</p>
+            <p className="text-gray-700">Proyecto / Diseño / Frontend</p>
           </div>
-          <p className="max-w-sm text-lg text-slate-800">
+          <p className="max-w-sm text-lg text-gray-800">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis
             asperiores tempore vero.
