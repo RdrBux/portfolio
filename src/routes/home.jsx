@@ -108,10 +108,10 @@ export default function Home() {
                 duration: 1,
               },
             }}
-            className="h-full overflow-hidden lg:relative"
+            className="absolute inset-0 h-full overflow-hidden lg:relative"
           >
-            <div className="scale-50 lg:scale-100 2xl:scale-125">
-              <div className="rotated | flex flex-col gap-4 opacity-50">
+            <div className="scale-75 select-none lg:scale-100 lg:opacity-100 2xl:scale-125">
+              <div className="rotated | flex flex-col gap-4">
                 <div className="ml-20 flex gap-4">
                   <VideoPlayer />
                   <Chat />
