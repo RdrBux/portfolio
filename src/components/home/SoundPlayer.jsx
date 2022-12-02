@@ -102,18 +102,18 @@ export default function SoundPlayer() {
   );
 
   return (
-    <div className="shadowed | flex w-60 shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="shadowed | w-50 flex shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <div className="flex items-end gap-2">
-        <div className="h-10 w-5 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-16 w-5 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-14 w-5 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-20 w-5 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-16 w-5 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-8 w-4 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-14 w-4 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-12 w-4 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-16 w-4 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-14 w-4 rounded-full bg-amber-200 duration-300"></div>
       </div>
       <div className="flex w-full items-center justify-between rounded-full bg-black/10 p-1 duration-300">
         <div className="ml-6 w-full leading-tight">
           <p className="font-bold">Play me</p>
-          <div className="mt-2 flex w-24 items-center justify-between gap-2">
+          <div className="mt-2 flex w-24 items-center justify-between gap-1">
             <div onClick={() => handleChangeSound('left')}>{chevron}</div>
             <p className="text-xs">{soundName}</p>
             <div

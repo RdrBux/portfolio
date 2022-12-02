@@ -3,6 +3,8 @@ import Chat from '../components/home/Chat';
 import Comment from '../components/home/Comment';
 import Faces from '../components/home/Faces';
 import FriendsList from '../components/home/FriendsList';
+import Game from '../components/home/Game';
+import Loading from '../components/home/Loading';
 import SoundPlayer from '../components/home/SoundPlayer';
 import VideoPlayer from '../components/home/VideoPlayer';
 import LangSelector from '../components/LangSelector';
@@ -108,25 +110,28 @@ export default function Home() {
                 duration: 1,
               },
             }}
-            className="absolute inset-0 h-full overflow-hidden lg:relative"
+            className="absolute inset-0 overflow-hidden lg:relative xl:-mt-20 2xl:-mt-40"
           >
-            <div className="scale-75 select-none lg:scale-100 lg:opacity-100 2xl:scale-125">
+            <div className="scale-75 select-none lg:scale-100 2xl:scale-110">
               <div className="rotated | flex flex-col gap-4">
-                <div className="ml-20 flex gap-4">
+                <div className="ml-40">
+                  <FriendsList />
+                </div>
+                <div className="ml-16 -mt-4 flex items-center gap-4">
                   <VideoPlayer />
                   <Chat />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="-ml-20 flex items-center gap-4">
                   <Faces />
                   <SoundPlayer />
                   <SoundPlayer />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="-ml-52 flex items-center gap-4">
                   <Comment />
                   <Comment />
-                  <FriendsList />
+                  <Game />
                 </div>
-                <FriendsList />
+                <Loading />
               </div>
             </div>
           </motion.div>
