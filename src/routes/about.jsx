@@ -7,8 +7,8 @@ export default function About() {
     <TransitionElement>
       <div className="h-full w-full">
         <div className="container mt-10 pb-32">
-          <div className="-mx-4 grid rounded-2xl sm:shadow-flat-r lg:grid-cols-2">
-            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white py-8 px-6 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none lg:px-12">
+          <div className="-mx-4 grid rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2">
+            <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white px-6 py-16 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none lg:p-12 lg:px-12">
               <div className="h-32 w-32 self-center rounded-full bg-teal-200"></div>
               {/* <img
                 className="h-40 w-40 self-center rounded-full bg-red-200"
@@ -39,7 +39,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-teal-200 px-6 py-12 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-teal-200 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12">
               <h3 className="text-5xl font-bold text-zinc-900">Habilidades</h3>
 
               <div className="text-xl text-zinc-800">

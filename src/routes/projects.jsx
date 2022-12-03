@@ -58,7 +58,7 @@ export default function Projects() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
-            className="-mx-4 mb-20 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 sm:border sm:border-black sm:shadow-flat-r lg:gap-20 lg:py-20 lg:px-8"
+            className="-mx-4 mb-32 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 sm:border sm:border-black sm:shadow-flat-r lg:gap-20 lg:py-20 lg:px-8"
           >
             <ProjectOne />
             <hr />

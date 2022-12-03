@@ -68,8 +68,8 @@ export default function Contact() {
       <div className="h-full w-full">
         {showAlert && <AlertContact isError={isError} />}
         <div className="container mt-10 pb-32">
-          <div className="-mx-4 grid rounded-2xl sm:shadow-flat-r lg:grid-cols-2">
-            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-2xl bg-teal-400 py-20 px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:px-12">
+          <div className="-mx-4 grid rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2">
+            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-2xl bg-teal-400 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
               <div>
                 <h3 className="text-center text-6xl font-bold lg:text-8xl">
                   CONTACTO
@@ -118,7 +118,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white px-6 py-12 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12 lg:px-12">
               <form
                 ref={form}
                 onSubmit={handleSubmit}
