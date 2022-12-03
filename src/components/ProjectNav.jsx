@@ -33,7 +33,7 @@ export default function Navbar() {
             Ver demo
           </a>
         </li>
-        <div className="h-6 w-[1px] bg-gray-500"></div>
+        <div className="h-6 w-[1px] bg-zinc-500"></div>
         <li>
           <a
             className="inline-block py-4 px-2 hover:underline"

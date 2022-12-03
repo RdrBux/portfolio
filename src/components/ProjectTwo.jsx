@@ -45,7 +45,7 @@ export default function ProjectTwo() {
         <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
           <div>
             <h2 className="text-5xl font-bold text-black lg:text-6xl">DO IT</h2>
-            <p className="text-gray-700">
+            <p className="text-zinc-700">
               Proyecto / Diseño / Frontend / Backend
             </p>
           </div>
@@ -96,7 +96,7 @@ export default function ProjectTwo() {
         </div>
       </div>
       {/* <div className="mt-12 hidden items-center lg:flex">
-        <div className="h-[1px] w-full bg-gray-200"></div>
+        <div className="h-[1px] w-full bg-zinc-200"></div>
         <div className="ml-4 flex shrink-0 gap-4">
           <button className="flex items-center gap-2 rounded-full border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
             VER DEMO{' '}

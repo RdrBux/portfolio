@@ -2,9 +2,6 @@ import { useState, useEffect } from 'react';
 import pop from '../../assets/sounds/pop.mp3';
 import photo from '../../assets/sounds/photo.mp3';
 import swoosh from '../../assets/sounds/swoosh.mp3';
-import surprise from '../../assets/sounds/surprise.mp3';
-import money from '../../assets/sounds/money.mp3';
-import wrong from '../../assets/sounds/wrong.mp3';
 
 export default function SoundPlayer() {
   const [sound, setSound] = useState(new Audio(pop));
@@ -25,11 +22,8 @@ export default function SoundPlayer() {
 
   const sounds = [
     { name: 'Pop', file: pop },
-    { name: 'Surprise', file: surprise },
-    { name: 'Money', file: money },
     { name: 'Photo', file: photo },
     { name: 'Swoosh', file: swoosh },
-    { name: 'Wrong', file: wrong },
   ];
 
   function handleChangeSound(side) {
