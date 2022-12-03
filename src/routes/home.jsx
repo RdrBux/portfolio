@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Carousel from '../components/home/Carousel';
 import Chat from '../components/home/Chat';
 import Comment from '../components/home/Comment';
 import Faces from '../components/home/Faces';
@@ -124,12 +125,12 @@ export default function Home() {
                 <div className="-ml-20 flex items-center gap-4">
                   <Faces />
                   <SoundPlayer />
-                  <SoundPlayer />
+                  <Comment />
                 </div>
                 <div className="-ml-52 flex items-center gap-4">
                   <Comment />
                   <Game />
-                  <Comment />
+                  <Carousel />
                 </div>
                 <Loading />
               </div>
