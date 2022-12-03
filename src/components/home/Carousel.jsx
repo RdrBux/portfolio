@@ -38,7 +38,7 @@ export default function Carousel() {
 
   return (
     <div className="h-fit w-fit shrink-0 rounded-lg border border-black p-2 opacity-10 shadow-flat grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
-      <div className="relative h-32 w-48 overflow-hidden rounded-lg border border-black bg-red-200">
+      <div className="relative h-40 w-48 overflow-hidden rounded-lg border border-black bg-red-200">
         <img className="h-full w-full" src={imgSrcArr[imgIndex]} alt="" />
         <button
           onClick={handleClickLeft}
