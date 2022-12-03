@@ -57,7 +57,7 @@ export default function ProjectOne() {
             asperiores tempore vero.
           </p>
 
-          <button className="flex w-fit items-center gap-2 rounded-full border border-black bg-black px-6 py-2 text-sm font-bold text-white shadow duration-200 hover:bg-transparent hover:text-black">
+          <button className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white shadow-flat-r duration-300 hover:bg-transparent hover:text-black hover:shadow-none">
             <p>EXPLORAR</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ export default function ProjectOne() {
       {/* <div className="mt-12 hidden items-center lg:flex">
         <div className="h-[1px] w-full bg-zinc-200"></div>
         <div className="ml-4 flex shrink-0 gap-4">
-          <button className="flex items-center gap-2 rounded-full border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
+          <button className="flex items-center gap-2 rounded-lg border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
             VER DEMO{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ export default function ProjectOne() {
               />
             </svg>
           </button>
-          <button className="flex items-center gap-2 rounded-full border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
+          <button className="flex items-center gap-2 rounded-lg border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
             VER CÓDIGO{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"

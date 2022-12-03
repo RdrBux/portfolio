@@ -85,11 +85,3 @@ body {
 }
 
 @tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: 'Respira-Black';
-    font-weight: 900;
-    src: url('./fonts/Respira-Black.ttf') format('ttf');
-  }
-}

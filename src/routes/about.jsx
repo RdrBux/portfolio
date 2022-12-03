@@ -9,7 +9,7 @@ export default function About() {
         <div className="container mt-10 pb-32">
           <div className="-mx-4 grid rounded-2xl sm:shadow-flat-r lg:grid-cols-2">
             <div className="z-10 flex flex-col gap-8 rounded-t-2xl bg-white py-8 px-6 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none lg:px-12">
-              <div className="h-32 w-32 self-center rounded-full bg-blue-200"></div>
+              <div className="h-32 w-32 self-center rounded-full bg-teal-200"></div>
               {/* <img
                 className="h-40 w-40 self-center rounded-full bg-red-200"
                 src={imgFront}
@@ -39,11 +39,11 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-zinc-300 px-6 py-12 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
+            <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-teal-200 px-6 py-12 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:px-12">
               <h3 className="text-5xl font-bold text-zinc-900">Habilidades</h3>
 
               <div className="text-xl text-zinc-800">
-                Stack más usado:{' '}
+                Uso de GitHub, Git. Stack más usado:{' '}
                 <div className="tooltip | inline-block text-zinc-900">
                   MERN.
                   <span className="tooltiptext">
@@ -54,7 +54,7 @@ export default function About() {
 
               <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-6">
                 <div className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
-                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-blue-600 to-blue-500 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/20 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default function About() {
                 </div>
 
                 <div className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
-                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-blue-600 to-blue-500 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ export default function About() {
                 </div>
 
                 <div className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
-                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-blue-600 to-blue-500 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export default function About() {
                 </div>
 
                 <div className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
-                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-blue-600 to-blue-500 p-4">
+                  <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                     <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

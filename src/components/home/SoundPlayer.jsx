@@ -68,7 +68,7 @@ export default function SoundPlayer() {
   const playButton = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-16 w-16 cursor-pointer text-blue-700 duration-300"
+      className="h-16 w-16 cursor-pointer text-cyan-700 duration-300"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -83,7 +83,7 @@ export default function SoundPlayer() {
   const pauseButton = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-16 w-16 cursor-pointer text-blue-700 duration-300"
+      className="h-16 w-16 cursor-pointer text-cyan-700 duration-300"
       viewBox="0 0 20 20"
       fill="currentColor"
     >
@@ -96,13 +96,13 @@ export default function SoundPlayer() {
   );
 
   return (
-    <div className="w-50 flex shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 shadow-flat grayscale duration-300 hover:bg-blue-200 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="w-50 flex shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 shadow-flat grayscale duration-300 hover:bg-cyan-200 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <div className="flex items-end gap-2">
-        <div className="h-8 w-4 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-14 w-4 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-12 w-4 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-16 w-4 rounded-full bg-amber-200 duration-300"></div>
-        <div className="h-14 w-4 rounded-full bg-amber-200 duration-300"></div>
+        <div className="h-8 w-4 rounded-full bg-violet-200 duration-300"></div>
+        <div className="h-14 w-4 rounded-full bg-violet-200 duration-300"></div>
+        <div className="h-12 w-4 rounded-full bg-violet-200 duration-300"></div>
+        <div className="h-16 w-4 rounded-full bg-violet-200 duration-300"></div>
+        <div className="h-14 w-4 rounded-full bg-violet-200 duration-300"></div>
       </div>
       <div className="flex w-full items-center justify-between rounded-full bg-black/10 p-1 duration-300">
         <div className="ml-6 w-full leading-tight">
