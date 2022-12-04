@@ -6,6 +6,7 @@ import Faces from '../components/home/Faces';
 import FriendsList from '../components/home/FriendsList';
 import Game from '../components/home/Game';
 import Loading from '../components/home/Loading';
+import RedButton from '../components/home/RedButton';
 import SoundPlayer from '../components/home/SoundPlayer';
 import VideoPlayer from '../components/home/VideoPlayer';
 import LangSelector from '../components/LangSelector';
@@ -125,7 +126,7 @@ export default function Home() {
                 <div className="-ml-20 flex items-center gap-4">
                   <Faces />
                   <SoundPlayer />
-                  <Comment />
+                  <RedButton />
                 </div>
                 <div className="-ml-52 flex items-center gap-4">
                   <Comment />

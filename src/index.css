@@ -84,4 +84,40 @@ body {
   border-color: black transparent transparent transparent;
 }
 
+/* RED BUTTON */
+
+.red-button {
+  position: absolute;
+  top: calc(50% - 16px);
+  left: calc(50% - 22px);
+  width: 44px;
+  height: 35.5px;
+  border-radius: 50%;
+  background: #b3b3b3;
+  box-shadow: 0 1px 0 #888888, 0 2px 0 #888888, 0 3px 0 #888888,
+    1px 4px 0 hsla(0, 0%, 0%, 0.2);
+  cursor: pointer;
+}
+
+.red-button::before {
+  position: absolute;
+  top: -9.5px;
+  left: 4px;
+  width: 36px;
+  height: 30.5px;
+  border-radius: inherit;
+  color: #ff0017;
+  background-color: #ff0017;
+  box-shadow: 0 3px 0 #df0014, 0 6px 0 #df0014, 0 9px 0 #df0014,
+    0 11px 0 #df0014, 2.5px 14px 0 hsla(0, 0%, 0%, 0.1);
+  content: '';
+  transition: all 00ms;
+}
+
+.red-button:active::before {
+  top: 0px;
+  box-shadow: 0 1.6px #df0014, 0 1.6px #df0014, 0 1.6px #df0014, 0 1.6px #df0014,
+    0.5px 2px 0 hsla(0, 0%, 0%, 0.1);
+}
+
 @tailwind utilities;
