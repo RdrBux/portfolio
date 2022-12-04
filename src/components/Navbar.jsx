@@ -20,7 +20,7 @@ export default function Navbar() {
           transition: {
             type: 'spring',
             duration: 0.6,
-            delay: location.pathname === '/' ? 3.2 : 1.5,
+            delay: location.pathname === '/' ? 2.8 : 1.5,
           },
         }}
         exit={{
@@ -28,7 +28,7 @@ export default function Navbar() {
           scaleX: 0,
           transition: { delay: 0.2, duration: 0.3 },
         }}
-        className="flex w-[328px] select-none justify-center rounded-lg bg-zinc-900/75 py-2 font-cabinet text-[15px] text-white shadow-lg backdrop-blur-sm"
+        className="flex w-[328px] select-none justify-center rounded-lg bg-zinc-900/75 py-2 font-cabinet text-[15px] text-white shadow backdrop-blur-sm"
       >
         <motion.ul
           initial={{ opacity: 0 }}
@@ -36,7 +36,7 @@ export default function Navbar() {
             opacity: 1,
             transition: {
               duration: 0.5,
-              delay: location.pathname === '/' ? 3.4 : 1.7,
+              delay: location.pathname === '/' ? 3 : 1.7,
             },
           }}
           exit={{ opacity: 0 }}

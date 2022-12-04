@@ -25,7 +25,7 @@ export default function Home() {
                 x: '-120vw',
                 transition: {
                   y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
-                  x: { duration: 2, delay: 1 },
+                  x: { duration: 2, delay: 0.8 },
                 },
               }}
               className="h-[90%]"
@@ -41,7 +41,7 @@ export default function Home() {
                 x: '120vw',
                 transition: {
                   y: { duration: 0.5, ease: 'easeOut', delay: 0.1 },
-                  x: { duration: 2, delay: 1 },
+                  x: { duration: 2, delay: 0.8 },
                 },
               }}
               className="h-[90%]"
@@ -59,7 +59,7 @@ export default function Home() {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 2.4,
+                  delay: 2,
                   opacity: { duration: 2 },
                   y: { duration: 0.3 },
                 },
@@ -75,14 +75,14 @@ export default function Home() {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 2.6,
+                  delay: 2.1,
                   opacity: { duration: 2 },
                   y: { duration: 0.3 },
                 },
               }}
               className="bg-gradient-to-r from-teal-800 to-teal-600 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl"
             >
-              /Desarrollador Fullstack
+              /Desarrollador Web
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export default function Home() {
                 opacity: 1,
                 y: 0,
                 transition: {
-                  delay: 2.8,
+                  delay: 2.2,
                   opacity: { duration: 2 },
                   y: { duration: 0.3 },
                 },
@@ -108,8 +108,8 @@ export default function Home() {
             animate={{
               opacity: 1,
               transition: {
-                delay: 3.0,
-                duration: 1,
+                delay: 2.4,
+                duration: 1.5,
               },
             }}
             className="absolute -bottom-24 -right-32 overflow-hidden lg:relative lg:bottom-auto lg:right-auto xl:-mt-20 2xl:-mt-40"
@@ -126,11 +126,11 @@ export default function Home() {
                 <div className="-ml-20 flex items-center gap-4">
                   <Faces />
                   <SoundPlayer />
-                  <RedButton />
+                  <Game />
                 </div>
                 <div className="-ml-52 flex items-center gap-4">
                   <Comment />
-                  <Game />
+                  <RedButton />
                   <Carousel />
                 </div>
                 <Loading />

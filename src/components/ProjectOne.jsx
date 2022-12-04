@@ -35,8 +35,8 @@ export default function ProjectOne() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, transition: { duration: 1 } }}
-      viewport={{ once: true }}
+      whileInView={{ opacity: 1, transition: { duration: 1, delay: 0.3 } }}
+      viewport={{ once: true, margin: '-100px' }}
     >
       <div
         onClick={handleClick}
@@ -57,7 +57,7 @@ export default function ProjectOne() {
             asperiores tempore vero.
           </p>
 
-          <button className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white shadow-flat-r duration-300 hover:bg-transparent hover:text-black hover:shadow-none">
+          <button className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white duration-300 hover:bg-transparent hover:text-black">
             <p>EXPLORAR</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
