@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { useState } from 'react';
 import kittenOne from '../../assets/carousel/kitten-1.jpg';
 import kittenTwo from '../../assets/carousel/kitten-2.jpg';
@@ -5,17 +6,36 @@ import kittenThree from '../../assets/carousel/kitten-3.jpg';
 
 export default function Carousel() {
   const [imgIndex, setImgIndex] = useState(0);
-  const imgSrcArr = [kittenOne, kittenTwo, kittenThree];
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const imagesRef = useRef();
 
-  function handleClickRight() {
-    setImgIndex((prev) => (prev + 1) % imgSrcArr.length);
+  const imgSrcArr = [kittenOne, kittenTwo, kittenThree];
+  console.log(carouselIndex);
+  function handleClickRight(currIndex) {
+    const transitionByIndex = {
+      0: '-translate-x-48',
+      1: '-translate-x-96',
+      2: '-translate-x-0',
+    };
+
+    imagesRef.current.classList = 'flex h-40 w-[36rem] duration-300';
+    imagesRef.current.classList.add(transitionByIndex[carouselIndex]);
+    setCarouselIndex((prev) => (prev + 1) % imgSrcArr.length);
   }
 
   function handleClickLeft() {
-    if (imgIndex === 0) {
-      setImgIndex(imgSrcArr.length - 1);
+    const transitionByIndex = {
+      0: '-translate-x-96',
+      1: '-translate-x-0',
+      2: '-translate-x-48',
+    };
+
+    imagesRef.current.classList = 'flex h-40 w-[36rem] duration-300';
+    imagesRef.current.classList.add(transitionByIndex[carouselIndex]);
+    if (carouselIndex === 0) {
+      setCarouselIndex(imgSrcArr.length - 1);
     } else {
-      setImgIndex((prev) => prev - 1);
+      setCarouselIndex((prev) => (prev - 1) % imgSrcArr.length);
     }
   }
 
@@ -39,7 +59,11 @@ export default function Carousel() {
   return (
     <div className="h-fit w-fit shrink-0 rounded-lg border border-black p-2 opacity-10 shadow-flat grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <div className="relative h-40 w-48 overflow-hidden rounded-lg border border-black bg-red-200">
-        <img className="h-full w-full" src={imgSrcArr[imgIndex]} alt="" />
+        <div ref={imagesRef} className="flex h-40 w-[36rem] duration-300">
+          <img className="h-40 w-48" src={imgSrcArr[0]} alt="" />
+          <img className="h-40 w-48" src={imgSrcArr[1]} alt="" />
+          <img className="h-40 w-48" src={imgSrcArr[2]} alt="" />
+        </div>
         <button
           onClick={handleClickLeft}
           className="absolute top-1/2 -translate-y-1/2 rounded-r-lg bg-black/50 py-1 text-white"
