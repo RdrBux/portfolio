@@ -40,12 +40,14 @@ export default function Projects() {
               </motion.div>
             </div>
             <motion.p
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{
                 opacity: 1,
+                y: 0,
                 transition: {
-                  delay: 0.6,
-                  duration: 1,
+                  delay: 0.4,
+                  opacity: { duration: 1 },
+                  y: { duration: 0.5 },
                 },
               }}
               className="mt-4 max-w-sm pl-1 text-sm text-zinc-900 md:max-w-md"
@@ -56,8 +58,16 @@ export default function Projects() {
             </motion.p>
           </div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { delay: 0.9, duration: 1 } }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: 0.7,
+                opacity: { duration: 1 },
+                y: { duration: 0.5 },
+              },
+            }}
             className="-mx-4 mb-32 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 sm:border sm:border-black sm:shadow-flat-r lg:gap-20 lg:py-20 lg:px-8"
           >
             <ProjectOne />

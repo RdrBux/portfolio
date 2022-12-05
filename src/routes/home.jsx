@@ -54,14 +54,14 @@ export default function Home() {
           <LangSelector />
           <div className="z-10 flex h-full flex-col justify-center gap-2">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: {
                   delay: 2,
                   opacity: { duration: 2 },
-                  y: { duration: 0.3 },
+                  y: { duration: 0.5 },
                 },
               }}
               className="text-[16vw] font-extrabold leading-none text-zinc-900 lg:text-8xl 2xl:text-9xl"
@@ -70,14 +70,14 @@ export default function Home() {
               RODRÍGUEZ
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: {
                   delay: 2.1,
                   opacity: { duration: 2 },
-                  y: { duration: 0.3 },
+                  y: { duration: 0.5 },
                 },
               }}
               className="bg-gradient-to-r from-teal-800 to-teal-600 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl"
@@ -85,14 +85,14 @@ export default function Home() {
               /Desarrollador Web
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{
                 opacity: 1,
                 y: 0,
                 transition: {
                   delay: 2.2,
                   opacity: { duration: 2 },
-                  y: { duration: 0.3 },
+                  y: { duration: 0.5 },
                 },
               }}
               className="max-w-sm text-lg"
@@ -112,7 +112,7 @@ export default function Home() {
                 duration: 1.5,
               },
             }}
-            className="absolute -bottom-24 -right-32 overflow-hidden lg:relative lg:bottom-auto lg:right-auto xl:-mt-20 2xl:-mt-40"
+            className="absolute -bottom-20 -right-28 overflow-hidden lg:relative lg:bottom-auto lg:right-auto xl:-mt-20 2xl:-mt-40"
           >
             <div className="scale-75 select-none lg:scale-100 2xl:scale-110">
               <div className="rotated | flex flex-col gap-4">

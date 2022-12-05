@@ -33,7 +33,7 @@ export default function LangSelector() {
     <motion.button
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: 2.8 } }}
-      className="langselector | absolute top-6 right-6 z-20 cursor-pointer select-none shadow"
+      className="langselector | absolute top-6 right-6 z-20 cursor-pointer select-none rounded-lg shadow"
     >
       <div
         onClick={() => setShowOptions((prev) => !prev)}

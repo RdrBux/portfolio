@@ -4,39 +4,41 @@ import LazyLoad from 'react-lazy-load';
 import videoOne from '../assets/do360-1.mp4';
 import videoTwo from '../assets/do360-2.mp4';
 import videoThree from '../assets/do360-3.mp4';
-import projectImg from '../assets/shirt2.png';
 
 export default function ProjectTwo() {
   const navigate = useNavigate();
-
-  const videosHeight = getVideosHeight();
-
-  function getVideosHeight() {
-    const width = window.innerWidth;
-    if (width < 640) {
-      return 224;
-    } else if (width < 768) {
-      return 402;
-    } else if (width < 1024) {
-      return 494;
-    } else if (width < 1280) {
-      return 377;
-    } else if (width < 1536) {
-      return 473;
-    } else {
-      return 580;
-    }
-  }
 
   function handleClick() {
     navigate('/project');
   }
 
+  const parentAnim = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const childrenAnim = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, transition: { duration: 1, delay: 0.3 } }}
-      viewport={{ once: true, margin: '-100px' }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={parentAnim}
     >
       <div
         onClick={handleClick}
@@ -44,18 +46,29 @@ export default function ProjectTwo() {
       >
         <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
           <div>
-            <h2 className="text-5xl font-bold text-black lg:text-6xl">DO IT</h2>
-            <p className="text-zinc-700">
+            <motion.h2
+              variants={childrenAnim}
+              className="text-5xl font-bold text-black lg:text-6xl"
+            >
+              DO IT
+            </motion.h2>
+            <motion.p variants={childrenAnim} className="text-zinc-700">
               Proyecto / Diseño / Frontend / Backend
-            </p>
+            </motion.p>
           </div>
-          <p className="text-slgrayate-800 max-w-sm text-lg">
+          <motion.p
+            variants={childrenAnim}
+            className="text-slgrayate-800 max-w-sm text-lg"
+          >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis
             asperiores tempore vero.
-          </p>
+          </motion.p>
 
-          <button className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white duration-300 hover:bg-transparent hover:text-black">
+          <motion.button
+            variants={childrenAnim}
+            className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white duration-300 hover:bg-transparent hover:text-black"
+          >
             <p>EXPLORAR</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +84,10 @@ export default function ProjectTwo() {
                 d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
               />
             </svg>
-          </button>
+          </motion.button>
         </div>
         <div className="shrink-0 lg:w-7/12">
-          <LazyLoad /* height={videosHeight} */>
+          <LazyLoad offset={200}>
             <div className="relative grid grid-cols-3 gap-2 xl:gap-4">
               <video playsInline muted loop autoPlay>
                 <source src={videoOne} type="video/mp4" />
@@ -85,55 +98,10 @@ export default function ProjectTwo() {
               <video playsInline muted loop autoPlay>
                 <source src={videoThree} type="video/mp4" />
               </video>
-              {/* <img
-                className="absolute -bottom-10 -left-20 hidden w-48 lg:block"
-                src={projectImg}
-                alt=""
-              /> */}
             </div>
           </LazyLoad>
-          {/* <img className="w-full" src={ProjectImg} alt="" /> */}
         </div>
       </div>
-      {/* <div className="mt-12 hidden items-center lg:flex">
-        <div className="h-[1px] w-full bg-zinc-200"></div>
-        <div className="ml-4 flex shrink-0 gap-4">
-          <button className="flex items-center gap-2 rounded-lg border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
-            VER DEMO{' '}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-3 w-3"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
-          </button>
-          <button className="flex items-center gap-2 rounded-lg border bg-stone-800 px-6 py-2 text-sm font-medium text-white duration-200 hover:border-stone-900/80 hover:bg-transparent hover:text-stone-900">
-            VER CÓDIGO{' '}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-3 w-3"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-              />
-            </svg>
-          </button>
-        </div>
-      </div> */}
     </motion.div>
   );
 }

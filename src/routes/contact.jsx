@@ -68,93 +68,86 @@ export default function Contact() {
       <div className="h-full w-full">
         {showAlert && <AlertContact isError={isError} />}
         <div className="container mt-10 pb-32">
-          <div className="-mx-4 grid rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2">
-            <div className="z-10 flex flex-col justify-center gap-16 rounded-t-2xl bg-teal-400 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
-              <div>
-                <h3 className="text-center text-6xl font-bold lg:text-8xl">
-                  CONTACTO
-                </h3>
-                <p className="text-center">
-                  No dudes en comunicarte, ya sea por cuestiones laborales,
-                  consultas o simplemente para saludar
-                </p>
-              </div>
-              <div className="flex flex-col items-center gap-8 text-lg lg:text-2xl">
-                <a
-                  href="mailto:rodriguezrodrigoemmanuel@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group w-fit"
-                >
-                  <div className="flex items-center gap-2">
-                    rodriguezrodrigoemmanuel@gmail.com
-                  </div>
-                  <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                </a>
-                <div className="flex gap-16">
-                  <a
-                    href="https://www.linkedin.com/in/rdrbux/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group"
-                  >
-                    <div className="flex items-center gap-2">
-                      Linkedin {arrow}
-                    </div>
-                    <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                  </a>
-                  <a
-                    href="https://github.com/RdrBux"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group"
-                  >
-                    <div className="flex items-center gap-2">
-                      Github {arrow}
-                    </div>
-                    <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                  </a>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{
+              scaleX: 1,
+              transition: { delay: 0.3, duration: 0.5, ease: 'easeOut' },
+            }}
+            className="-mx-4 grid origin-left rounded-2xl shadow-lg sm:shadow-flat-r lg:origin-center lg:grid-cols-2"
+          >
+            <div className="z-10 rounded-t-2xl bg-teal-400 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.8 } }}
+                className="flex h-full flex-col justify-center gap-16"
+              >
+                <div>
+                  <h3 className="text-center text-6xl font-bold lg:text-8xl">
+                    CONTACTO
+                  </h3>
+                  <p className="text-center">
+                    No dudes en comunicarte, ya sea por cuestiones laborales,
+                    consultas o simplemente para saludar
+                  </p>
                 </div>
-              </div>
+                <div className="flex flex-col items-center gap-8 text-lg lg:text-2xl">
+                  <a
+                    href="mailto:rodriguezrodrigoemmanuel@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group w-fit"
+                  >
+                    <div className="flex items-center gap-2">
+                      rodriguezrodrigoemmanuel@gmail.com
+                    </div>
+                    <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
+                  </a>
+                  <div className="flex gap-16">
+                    <a
+                      href="https://www.linkedin.com/in/rdrbux/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group"
+                    >
+                      <div className="flex items-center gap-2">
+                        Linkedin {arrow}
+                      </div>
+                      <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
+                    </a>
+                    <a
+                      href="https://github.com/RdrBux"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group"
+                    >
+                      <div className="flex items-center gap-2">
+                        Github {arrow}
+                      </div>
+                      <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
             </div>
 
             <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12 lg:px-12">
-              <form
+              <motion.form
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, transition: { delay: 0.8 } }}
                 ref={form}
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-8" /* lg:w-3/4 */
+                className="flex flex-col gap-8"
               >
                 <h3 className="text-4xl font-bold lg:text-5xl">
                   Enviar un mensaje
                 </h3>
-                {/* <label className="flex flex-col font-medium text-zinc-700">
-                  Nombre*
-                  <input
-                    className="mt-1 rounded-lg bg-zinc-100 p-4 text-base"
-                    type="text"
-                    name="user_name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                  />
-                </label> */}
                 <InputContact
                   label="Nombre"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
                   name="user_name"
                 />
-                {/* <label className="flex flex-col font-medium text-zinc-700">
-                  Correo electrónico*
-                  <input
-                    className="mt-1 rounded-lg bg-zinc-100 p-4 text-base"
-                    type="email"
-                    name="user_email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                </label> */}
                 <InputContact
                   type="email"
                   label="Correo electrónico"
@@ -162,16 +155,6 @@ export default function Contact() {
                   value={email}
                   name="user_email"
                 />
-                {/* <label className="flex flex-col font-medium text-zinc-700">
-                  Mensaje*
-                  <textarea
-                    value={message}
-                    name="message"
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="mt-1 rounded-lg bg-zinc-100 p-4 text-base"
-                    required
-                  />
-                </label> */}
                 <TextareaContact
                   label="Mensaje"
                   onChange={(e) => setMessage(e.target.value)}
@@ -181,9 +164,9 @@ export default function Contact() {
                 <button className="rounded-lg border border-black bg-teal-800 py-4 px-12 font-bold text-white shadow-flat-r duration-300 hover:bg-teal-900 hover:shadow-none">
                   ENVIAR
                 </button>
-              </form>
+              </motion.form>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </TransitionElement>

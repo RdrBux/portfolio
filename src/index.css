@@ -21,6 +21,17 @@ body {
   background-color: rgb(228 228 231);
 }
 
+/* Lazy Load */
+
+.LazyLoad {
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+}
+
 /* SCROLLBAR */
 
 /* width */
