@@ -170,6 +170,7 @@ export default function Contact() {
               <motion.form
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={parentAnim}
                 ref={form}
                 onSubmit={handleSubmit}
