@@ -114,7 +114,7 @@ export default function Contact() {
                 <div>
                   <motion.h3
                     variants={childrenAnim}
-                    className="text-center text-6xl font-bold lg:text-8xl"
+                    className="text-center text-[16vw] font-bold leading-none sm:text-[12vw] lg:text-7xl xl:text-8xl 2xl:text-9xl"
                   >
                     CONTACTO
                   </motion.h3>

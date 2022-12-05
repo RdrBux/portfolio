@@ -48,7 +48,7 @@ export default function ProjectTwo() {
           <div>
             <motion.h2
               variants={childrenAnim}
-              className="text-5xl font-bold text-black lg:text-6xl"
+              className="text-[14vw] font-bold leading-none text-black sm:text-7xl lg:text-6xl 2xl:text-7xl"
             >
               DO IT
             </motion.h2>
@@ -58,7 +58,7 @@ export default function ProjectTwo() {
           </div>
           <motion.p
             variants={childrenAnim}
-            className="text-slgrayate-800 max-w-sm text-lg"
+            className="text-lg text-zinc-800 lg:max-w-sm 2xl:max-w-md"
           >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis

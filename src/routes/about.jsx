@@ -42,7 +42,7 @@ export default function About() {
           className="container mt-10 origin-bottom pb-32"
         >
           <div className="-mx-4 grid rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2">
-            <div className="z-10 rounded-t-2xl bg-white px-6 py-16 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none lg:p-12 lg:px-12">
+            <div className="z-10 rounded-t-2xl bg-white px-6 py-16 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none xl:p-12">
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -87,7 +87,7 @@ export default function About() {
                 </div>
               </motion.div>
             </div>
-            <div className="h-full w-full rounded-b-2xl bg-teal-400 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12">
+            <div className="h-full w-full rounded-b-2xl bg-teal-400 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl xl:p-12">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -115,7 +115,7 @@ export default function About() {
                   </div>
                 </motion.div>
 
-                <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-6">
+                <div className="grid items-start gap-6 sm:grid-cols-2 lg:gap-6">
                   <motion.div
                     variants={childrenAnim}
                     className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none"
@@ -196,7 +196,7 @@ export default function About() {
                       </div>
                       <h4 className="text-xl font-bold text-white">Testing</h4>
                     </div>
-                    <p className="rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
+                    <p className="h-full rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
                       Jest, Cypress
                     </p>
                   </motion.div>

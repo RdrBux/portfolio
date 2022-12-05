@@ -64,7 +64,7 @@ export default function Home() {
                   y: { duration: 0.5 },
                 },
               }}
-              className="text-[16vw] font-extrabold leading-none text-zinc-900 lg:text-8xl 2xl:text-9xl"
+              className="text-[16vw] font-extrabold leading-none text-zinc-900 sm:text-[14vw] lg:text-7xl xl:text-8xl 2xl:text-9xl"
             >
               RODRIGO <br />
               RODRÍGUEZ

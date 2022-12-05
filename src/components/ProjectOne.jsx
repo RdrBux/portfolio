@@ -49,7 +49,7 @@ export default function ProjectOne() {
           <div>
             <motion.h2
               variants={childrenAnim}
-              className="text-5xl font-bold text-black lg:text-6xl"
+              className="text-[14vw] font-bold leading-none text-black sm:text-7xl lg:text-6xl 2xl:text-7xl"
             >
               SKULL
               <br />
@@ -61,7 +61,7 @@ export default function ProjectOne() {
           </div>
           <motion.p
             variants={childrenAnim}
-            className="max-w-sm text-lg text-zinc-800"
+            className="text-lg text-zinc-800 lg:max-w-sm 2xl:max-w-md"
           >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur esse accusamus, corrupti animi, quisquam officiis
