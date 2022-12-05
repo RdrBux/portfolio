@@ -2,67 +2,110 @@ import { motion } from 'framer-motion';
 import TransitionElement from '../components/TransitionElement';
 
 export default function About() {
+  const windowWidth = window.innerWidth;
+
+  const parentAnim = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        delay: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const childrenAnim = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
     <TransitionElement>
       <div className="h-full w-full">
         <motion.div
-          initial={{ scaleX: 0 }}
+          initial={{
+            scaleX: windowWidth >= 1024 ? 0 : 1,
+            scaleY: windowWidth >= 1024 ? 1 : 0,
+          }}
           animate={{
             scaleX: 1,
-            transition: { delay: 0.3, duration: 0.5, ease: 'easeOut' },
+            scaleY: 1,
+            transition: { delay: 0.2, duration: 0.5, ease: 'easeOut' },
           }}
-          className="container mt-10 origin-left pb-32 lg:origin-center"
+          className="container mt-10 origin-bottom pb-32"
         >
           <div className="-mx-4 grid rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2">
             <div className="z-10 rounded-t-2xl bg-white px-6 py-16 sm:border-y sm:border-l sm:border-black lg:rounded-l-2xl lg:rounded-r-none lg:p-12 lg:px-12">
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.8 } }}
+                initial="hidden"
+                animate="visible"
+                variants={parentAnim}
                 className="flex h-full flex-col gap-8"
               >
-                <div className="h-32 w-32 self-center rounded-full bg-teal-200"></div>
+                <motion.div
+                  variants={childrenAnim}
+                  className="h-32 w-32 self-center rounded-full bg-teal-200"
+                ></motion.div>
                 {/* <img
                   className="h-40 w-40 self-center rounded-full bg-red-200"
                   src={imgFront}
                   alt=""
                 /> */}
-                <h2 className="text-center text-4xl font-bold text-zinc-900 lg:text-left lg:text-6xl">
+                <motion.h2
+                  variants={childrenAnim}
+                  className="text-center text-4xl font-bold text-zinc-900 lg:text-left lg:text-6xl"
+                >
                   Rodrigo Rodríguez
-                </h2>
+                </motion.h2>
                 <div className="flex flex-col gap-3 text-lg text-zinc-800">
-                  <p>
+                  <motion.p variants={childrenAnim}>
                     Desarrollador fullstack y diseñador web, actualmente
                     viviendo en Argentina.
-                  </p>
-                  <p>
+                  </motion.p>
+                  <motion.p variants={childrenAnim}>
                     Técnico en Administración de Empresas con formación en
                     gestión y control, marketing, contabilidad y finanzas.
-                  </p>
-                  <p>
+                  </motion.p>
+                  <motion.p variants={childrenAnim}>
                     Apasionado por la creación de grandes experiencias
                     digitales, siempre enfocado en la microgestión de cada
                     detalle e interacción para optimizar las experiencias de
                     usuarios.
-                  </p>
-                  <p>
+                  </motion.p>
+                  <motion.p variants={childrenAnim}>
                     Tenista, runner y ajedrecista en el tiempo libre.
                     <br />
                     Amante de los animales.
-                  </p>
+                  </motion.p>
                 </div>
               </motion.div>
             </div>
             <div className="h-full w-full rounded-b-2xl bg-teal-400 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12">
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.8 } }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={parentAnim}
                 className="flex h-full flex-col justify-center gap-4"
               >
-                <h3 className="text-5xl font-bold text-zinc-900">
+                <motion.h3
+                  variants={childrenAnim}
+                  className="text-5xl font-bold text-zinc-900"
+                >
                   Habilidades
-                </h3>
+                </motion.h3>
 
-                <div className="text-xl text-zinc-800">
+                <motion.div
+                  variants={childrenAnim}
+                  className="text-xl text-zinc-800"
+                >
                   Uso de GitHub, Git. Stack más usado:{' '}
                   <div className="tooltip | inline-block text-zinc-900">
                     MERN.
@@ -70,10 +113,13 @@ export default function About() {
                       MongoDB, Express, React, Node.js
                     </span>
                   </div>
-                </div>
+                </motion.div>
 
                 <div className="grid items-start gap-6 lg:grid-cols-2 lg:gap-6">
-                  <div className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
+                  <motion.div
+                    variants={childrenAnim}
+                    className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none"
+                  >
                     <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                       <div className="h-fit w-fit rounded-lg bg-white/20 p-2 text-white">
                         <svg
@@ -97,9 +143,12 @@ export default function About() {
                       HTML, CSS, Javascript, Typescript, React, Tailwindcss,
                       Gsap, Framer Motion
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
+                  <motion.div
+                    variants={childrenAnim}
+                    className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none"
+                  >
                     <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                       <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                         <svg
@@ -122,9 +171,12 @@ export default function About() {
                     <p className="h-full rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
                       Node.js, Express, MongoDB, MySQL, Firebase
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
+                  <motion.div
+                    variants={childrenAnim}
+                    className="flex h-full flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none"
+                  >
                     <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                       <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                         <svg
@@ -147,9 +199,12 @@ export default function About() {
                     <p className="rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
                       Jest, Cypress
                     </p>
-                  </div>
+                  </motion.div>
 
-                  <div className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none">
+                  <motion.div
+                    variants={childrenAnim}
+                    className="flex flex-col rounded-lg shadow-flat-r duration-300 hover:shadow-none"
+                  >
                     <div className="flex items-center gap-4 rounded-t-lg border border-black bg-gradient-to-r from-teal-600 to-teal-500 p-4">
                       <div className="h-fit w-fit rounded-lg bg-white/10 p-2 text-white">
                         <svg
@@ -172,7 +227,7 @@ export default function About() {
                     <p className="rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
                       Figma, Illustrator, Photoshop
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>

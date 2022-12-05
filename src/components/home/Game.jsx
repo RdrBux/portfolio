@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 
 export default function Game() {
@@ -21,11 +20,6 @@ export default function Game() {
       );
     }
   }, [computerTurn]);
-
-  function playComputerTurn() {
-    const emptySquare = squares.findIndex((square) => square === '');
-    setSquares((prev) => [...prev, (prev[emptySquare] = 'O')]);
-  }
 
   function checkWin() {
     if (result) return;

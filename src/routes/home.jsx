@@ -80,7 +80,7 @@ export default function Home() {
                   y: { duration: 0.5 },
                 },
               }}
-              className="bg-gradient-to-r from-teal-800 to-teal-600 bg-clip-text text-3xl font-bold text-transparent lg:text-4xl"
+              className=" text-3xl font-bold text-teal-600 lg:text-4xl"
             >
               /Desarrollador Web
             </motion.p>

@@ -9,25 +9,6 @@ import projectImg from '../assets/shirt2.png';
 export default function ProjectOne() {
   const navigate = useNavigate();
 
-  const videosHeight = getVideosHeight();
-
-  function getVideosHeight() {
-    const width = window.innerWidth;
-    if (width < 640) {
-      return 224;
-    } else if (width < 768) {
-      return 402;
-    } else if (width < 1024) {
-      return 494;
-    } else if (width < 1280) {
-      return 377;
-    } else if (width < 1536) {
-      return 473;
-    } else {
-      return 580;
-    }
-  }
-
   function handleClick() {
     navigate('/project');
   }

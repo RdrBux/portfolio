@@ -16,6 +16,30 @@ export default function Contact() {
 
   const form = useRef();
 
+  const windowWidth = window.innerWidth;
+
+  const parentAnim = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+        delay: 0.5,
+        when: 'beforeChildren',
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const childrenAnim = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.3 },
+    },
+  };
+
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -69,30 +93,39 @@ export default function Contact() {
         {showAlert && <AlertContact isError={isError} />}
         <div className="container mt-10 pb-32">
           <motion.div
-            initial={{ scaleX: 0 }}
+            initial={{
+              scaleX: windowWidth >= 1024 ? 0 : 1,
+              scaleY: windowWidth >= 1024 ? 1 : 0,
+            }}
             animate={{
               scaleX: 1,
-              transition: { delay: 0.3, duration: 0.5, ease: 'easeOut' },
+              scaleY: 1,
+              transition: { delay: 0.2, duration: 0.5, ease: 'easeOut' },
             }}
-            className="-mx-4 grid origin-left rounded-2xl shadow-lg sm:shadow-flat-r lg:origin-center lg:grid-cols-2"
+            className="-mx-4 grid origin-bottom rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2"
           >
             <div className="z-10 rounded-t-2xl bg-teal-400 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.8 } }}
+                initial="hidden"
+                animate="visible"
+                variants={parentAnim}
                 className="flex h-full flex-col justify-center gap-16"
               >
                 <div>
-                  <h3 className="text-center text-6xl font-bold lg:text-8xl">
+                  <motion.h3
+                    variants={childrenAnim}
+                    className="text-center text-6xl font-bold lg:text-8xl"
+                  >
                     CONTACTO
-                  </h3>
-                  <p className="text-center">
+                  </motion.h3>
+                  <motion.p variants={childrenAnim} className="text-center">
                     No dudes en comunicarte, ya sea por cuestiones laborales,
                     consultas o simplemente para saludar
-                  </p>
+                  </motion.p>
                 </div>
                 <div className="flex flex-col items-center gap-8 text-lg lg:text-2xl">
-                  <a
+                  <motion.a
+                    variants={childrenAnim}
                     href="mailto:rodriguezrodrigoemmanuel@gmail.com"
                     target="_blank"
                     rel="noreferrer"
@@ -102,9 +135,10 @@ export default function Contact() {
                       rodriguezrodrigoemmanuel@gmail.com
                     </div>
                     <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                  </a>
+                  </motion.a>
                   <div className="flex gap-16">
-                    <a
+                    <motion.a
+                      variants={childrenAnim}
                       href="https://www.linkedin.com/in/rdrbux/"
                       target="_blank"
                       rel="noreferrer"
@@ -114,8 +148,9 @@ export default function Contact() {
                         Linkedin {arrow}
                       </div>
                       <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                      variants={childrenAnim}
                       href="https://github.com/RdrBux"
                       target="_blank"
                       rel="noreferrer"
@@ -125,7 +160,7 @@ export default function Contact() {
                         Github {arrow}
                       </div>
                       <span className="block h-[1px] max-w-full bg-zinc-800 duration-300 group-hover:max-w-0"></span>
-                    </a>
+                    </motion.a>
                   </div>
                 </div>
               </motion.div>
@@ -133,37 +168,53 @@ export default function Contact() {
 
             <div className="flex h-full w-full flex-col justify-center gap-4 rounded-b-2xl bg-white px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl lg:p-12 lg:px-12">
               <motion.form
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1, transition: { delay: 0.8 } }}
+                initial="hidden"
+                whileInView="visible"
+                variants={parentAnim}
                 ref={form}
                 onSubmit={handleSubmit}
                 className="flex flex-col gap-8"
               >
-                <h3 className="text-4xl font-bold lg:text-5xl">
+                <motion.h3
+                  variants={childrenAnim}
+                  className="text-4xl font-bold lg:text-5xl"
+                >
                   Enviar un mensaje
-                </h3>
-                <InputContact
-                  label="Nombre"
-                  onChange={(e) => setName(e.target.value)}
-                  value={name}
-                  name="user_name"
-                />
-                <InputContact
-                  type="email"
-                  label="Correo electrónico"
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  name="user_email"
-                />
-                <TextareaContact
-                  label="Mensaje"
-                  onChange={(e) => setMessage(e.target.value)}
-                  value={message}
-                  name="message"
-                />
-                <button className="rounded-lg border border-black bg-teal-800 py-4 px-12 font-bold text-white shadow-flat-r duration-300 hover:bg-teal-900 hover:shadow-none">
+                </motion.h3>
+                <motion.div variants={childrenAnim}>
+                  <InputContact
+                    label="Nombre"
+                    onChange={(e) => setName(e.target.value)}
+                    value={name}
+                    name="user_name"
+                    variants={childrenAnim}
+                  />
+                </motion.div>
+                <motion.div variants={childrenAnim}>
+                  <InputContact
+                    type="email"
+                    label="Correo electrónico"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    name="user_email"
+                    variants={childrenAnim}
+                  />
+                </motion.div>
+                <motion.div variants={childrenAnim}>
+                  <TextareaContact
+                    label="Mensaje"
+                    onChange={(e) => setMessage(e.target.value)}
+                    value={message}
+                    name="message"
+                    variants={childrenAnim}
+                  />
+                </motion.div>
+                <motion.button
+                  variants={childrenAnim}
+                  className="rounded-lg border border-black bg-teal-800 py-4 px-12 font-bold text-white shadow-flat-r duration-300 hover:bg-teal-900 hover:shadow-none"
+                >
                   ENVIAR
-                </button>
+                </motion.button>
               </motion.form>
             </div>
           </motion.div>
