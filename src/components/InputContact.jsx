@@ -27,7 +27,7 @@ export default function InputContact({
           {required && '*'}
         </div>
         <input
-          className={`h-12 w-full rounded-t bg-zinc-100 pl-4 pt-3 text-base font-normal text-zinc-900 outline-0 ${
+          className={`h-12 w-full rounded-t-lg bg-zinc-100 pl-4 pt-3 text-base font-normal text-zinc-900 outline-0 ${
             selected
               ? 'border-b-2 border-teal-800 bg-zinc-200'
               : 'border-b border-black'

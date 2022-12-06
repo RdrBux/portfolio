@@ -26,7 +26,7 @@ export default function Contact() {
         duration: 0.2,
         delay: 0.5,
         when: 'beforeChildren',
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -104,7 +104,7 @@ export default function Contact() {
             }}
             className="-mx-4 grid origin-bottom rounded-2xl shadow-lg sm:shadow-flat-r lg:grid-cols-2"
           >
-            <div className="z-10 rounded-t-2xl bg-teal-400 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
+            <div className="z-10 rounded-t-2xl bg-teal-300 py-16  px-6 text-zinc-900 sm:border-y sm:border-l sm:border-black lg:rounded-r-none lg:rounded-l-2xl lg:p-12">
               <motion.div
                 initial="hidden"
                 animate="visible"

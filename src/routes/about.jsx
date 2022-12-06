@@ -12,7 +12,7 @@ export default function About() {
         duration: 0.2,
         delay: 0.5,
         when: 'beforeChildren',
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -87,7 +87,7 @@ export default function About() {
                 </div>
               </motion.div>
             </div>
-            <div className="h-full w-full rounded-b-2xl bg-teal-400 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl xl:p-12">
+            <div className="h-full w-full rounded-b-2xl bg-teal-300 px-6 py-16 sm:border-y sm:border-r sm:border-black lg:rounded-l-none lg:rounded-r-2xl xl:p-12">
               <motion.div
                 initial="hidden"
                 whileInView="visible"
