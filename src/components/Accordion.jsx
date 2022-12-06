@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import ItemCollapse from './ItemCollapse';
 
-export default function Accordion() {
-  const data = [
+export default function Accordion({ data }) {
+  /* const data = [
     { title: 'Información' },
     { title: 'Objetivo' },
     { title: 'Trabajo realizado' },
     { title: 'Año' },
-  ];
+  ]; */
 
   const [activeItem, setActiveItem] = useState(data[0].title);
 
@@ -17,6 +17,7 @@ export default function Accordion() {
       title={item.title}
       activeItem={activeItem}
       setActiveItem={setActiveItem}
+      content={item.content}
     />
   ));
 

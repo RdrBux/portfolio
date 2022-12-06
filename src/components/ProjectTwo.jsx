@@ -9,7 +9,7 @@ export default function ProjectTwo() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate('/project');
+    navigate('/doit');
   }
 
   const parentAnim = {
@@ -60,9 +60,9 @@ export default function ProjectTwo() {
             variants={childrenAnim}
             className="text-lg text-zinc-800 lg:max-w-sm 2xl:max-w-md"
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consequuntur esse accusamus, corrupti animi, quisquam officiis
-            asperiores tempore vero.
+            El calendario virtual que te organizará tu vida personal y social.
+            DO IT permite crear actividades, compartirlas con amigos y chatear
+            desde la aplicación.
           </motion.p>
 
           <motion.button

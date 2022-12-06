@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <AnimatePresence>
-        {location.pathname !== '/project' && <Navbar />}
+        {location.pathname !== '/doit' && <Navbar />}
       </AnimatePresence>
       <AnimatedRoutes />
     </>

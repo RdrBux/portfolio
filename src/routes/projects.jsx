@@ -70,9 +70,9 @@ export default function Projects() {
             }}
             className="-mx-4 mb-32 flex flex-col gap-16 rounded-2xl bg-white py-8 px-4 sm:border sm:border-black sm:shadow-flat-r lg:gap-20 lg:py-20 lg:px-8"
           >
-            <ProjectOne />
-            <hr />
             <ProjectTwo />
+            <hr />
+            <ProjectOne />
             <hr />
             <ProjectOne />
           </motion.div>

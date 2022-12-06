@@ -1,6 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion';
 
-export default function ItemCollapse({ title, activeItem, setActiveItem }) {
+export default function ItemCollapse({
+  title,
+  activeItem,
+  setActiveItem,
+  content,
+}) {
   const state = activeItem === title;
 
   const chevron = (
@@ -32,7 +37,7 @@ export default function ItemCollapse({ title, activeItem, setActiveItem }) {
     <div className="border-b">
       <div
         onClick={handleClick}
-        className="flex cursor-pointer items-center justify-between py-5"
+        className="flex cursor-pointer select-none items-center justify-between py-5"
       >
         <p className="font-semibold">{title}</p>
         {chevron}
@@ -52,10 +57,7 @@ export default function ItemCollapse({ title, activeItem, setActiveItem }) {
             }}
             className="overflow-hidden text-stone-600"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante eu in
-            ultrices aliquet proin sapien non, tempus consectetur. A interdum
-            magna lobortis eget justo, at. Lacus, posuere tellus imperdiet
-            cursus sit scelerisque. Sed tincidunt pharetra et morbi molestie.
+            {content}
             <div className="pb-5"></div>
           </motion.div>
         )}

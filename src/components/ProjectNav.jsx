@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function Navbar() {
+export default function Navbar({ siteURL, codeURL }) {
   return (
     <motion.nav
       initial={{ opacity: 0, scaleX: 0 }}
@@ -25,19 +25,19 @@ export default function Navbar() {
         <li>
           <a
             className="inline-block py-4 px-2 hover:underline"
-            href="https://google.com"
+            href={siteURL}
             target="_blank"
             rel="noreferrer"
             mode="wait"
           >
-            Ver demo
+            Ver sitio
           </a>
         </li>
         <div className="h-6 w-[1px] bg-zinc-500"></div>
         <li>
           <a
             className="inline-block py-4 px-2 hover:underline"
-            href="https://google.com"
+            href={codeURL}
             target="_blank"
             rel="noreferrer"
           >
