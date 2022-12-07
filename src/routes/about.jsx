@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import TransitionElement from '../components/TransitionElement';
+import avatar from '../assets/avatar.png';
 
 export default function About() {
   const windowWidth = window.innerWidth;
@@ -52,12 +53,10 @@ export default function About() {
                 <motion.div
                   variants={childrenAnim}
                   className="h-32 w-32 self-center rounded-full bg-teal-200"
-                ></motion.div>
-                {/* <img
-                  className="h-40 w-40 self-center rounded-full bg-red-200"
-                  src={imgFront}
-                  alt=""
-                /> */}
+                >
+                  <img className="w-32 rounded-full" src={avatar} alt="" />
+                </motion.div>
+
                 <motion.h2
                   variants={childrenAnim}
                   className="text-center text-4xl font-bold text-zinc-900 sm:text-5xl lg:text-left xl:text-6xl"
