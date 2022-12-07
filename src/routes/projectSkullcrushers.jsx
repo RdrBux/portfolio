@@ -12,6 +12,7 @@ import contact from '../assets/skullcrushers/contact.png';
 import responsive from '../assets/skullcrushers/store.png';
 import responsiveMobile from '../assets/skullcrushers/store-mobile.png';
 import cart from '../assets/skullcrushers/cart.png';
+import LazyLoad from 'react-lazy-load';
 
 export default function ProjectSkullcrushers() {
   const navigate = useNavigate();
@@ -95,43 +96,51 @@ export default function ProjectSkullcrushers() {
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:py-16">
-            <div className="rounded-lg bg-zinc-100 lg:p-20">
-              <img className="rounded-lg shadow-lg" src={home} alt="" />
-            </div>
-            <div className="rounded-lg bg-zinc-100 lg:p-20">
-              <img className="rounded-lg shadow-lg" src={store} alt="" />
-            </div>
-            <div className="rounded-lg bg-zinc-100 lg:p-20">
-              <img className="rounded-lg shadow-lg" src={contact} alt="" />
-            </div>
+          <div className="min-h-[80vh]">
+            <LazyLoad>
+              <div className="flex flex-col gap-10 py-10 lg:py-16">
+                <div className="rounded-lg bg-zinc-100 lg:p-20">
+                  <img className="rounded-lg shadow-lg" src={home} alt="" />
+                </div>
+                <div className="rounded-lg bg-zinc-100 lg:p-20">
+                  <img className="rounded-lg shadow-lg" src={store} alt="" />
+                </div>
+                <div className="rounded-lg bg-zinc-100 lg:p-20">
+                  <img className="rounded-lg shadow-lg" src={contact} alt="" />
+                </div>
+              </div>
+            </LazyLoad>
           </div>
           <div>
-            <ProjectArticle
-              title="Responsive design"
-              content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución."
-            >
-              <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
-                <img
-                  className="rounded shadow-lg lg:rounded-lg"
-                  src={responsive}
-                  alt=""
-                />
-                <img
-                  className="rounded shadow-lg lg:rounded-lg"
-                  src={responsiveMobile}
-                  alt=""
-                />
-              </div>
-            </ProjectArticle>
-            <ProjectArticle
-              title="Carrito de compras interactivo"
-              content="Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
-            >
-              <div className="rounded-lg bg-zinc-100 lg:p-20">
-                <img className="rounded-lg shadow-lg" src={cart} alt="" />
-              </div>
-            </ProjectArticle>
+            <LazyLoad>
+              <ProjectArticle
+                title="Responsive design"
+                content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución."
+              >
+                <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
+                  <img
+                    className="rounded shadow-lg lg:rounded-lg"
+                    src={responsive}
+                    alt=""
+                  />
+                  <img
+                    className="rounded shadow-lg lg:rounded-lg"
+                    src={responsiveMobile}
+                    alt=""
+                  />
+                </div>
+              </ProjectArticle>
+            </LazyLoad>
+            <LazyLoad>
+              <ProjectArticle
+                title="Carrito de compras interactivo"
+                content="Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
+              >
+                <div className="rounded-lg bg-zinc-100 lg:p-20">
+                  <img className="rounded-lg shadow-lg" src={cart} alt="" />
+                </div>
+              </ProjectArticle>
+            </LazyLoad>
           </div>
           <div className="h-[100vh] py-10">
             <div

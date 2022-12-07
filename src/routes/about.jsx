@@ -60,7 +60,7 @@ export default function About() {
                 /> */}
                 <motion.h2
                   variants={childrenAnim}
-                  className="text-center text-4xl font-bold text-zinc-900 lg:text-left lg:text-6xl"
+                  className="text-center text-4xl font-bold text-zinc-900 sm:text-5xl lg:text-left xl:text-6xl"
                 >
                   Rodrigo Rodríguez
                 </motion.h2>

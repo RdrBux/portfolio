@@ -14,6 +14,7 @@ import dark from '../assets/doit/dark.png';
 import chat from '../assets/doit/chat.png';
 import chatMobile from '../assets/doit/pseudochat.png';
 import { useNavigate } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 export default function ProjectDOIT() {
   const navigate = useNavigate();
@@ -94,51 +95,59 @@ export default function ProjectDOIT() {
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:py-16">
-            <div className="rounded-lg bg-zinc-100 p-4 lg:p-20">
-              <img className="rounded-lg shadow-lg" src={loginImg} alt="" />
-            </div>
-            <div className="grid grid-cols-2 gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
-              <img
-                className="justify-self-end rounded-lg shadow-lg lg:w-1/2"
-                src={addTaskImg}
-                alt=""
-              />
-              <img
-                className="rounded-lg shadow-lg lg:w-1/2"
-                src={homeImg}
-                alt=""
-              />
-            </div>
+          <div className="min-h-[80vh]">
+            <LazyLoad>
+              <div className="flex flex-col gap-10 py-10 lg:py-16">
+                <div className="rounded-lg bg-zinc-100 p-4 lg:p-20">
+                  <img className="rounded-lg shadow-lg" src={loginImg} alt="" />
+                </div>
+                <div className="grid grid-cols-2 gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
+                  <img
+                    className="justify-self-end rounded-lg shadow-lg lg:w-1/2"
+                    src={addTaskImg}
+                    alt=""
+                  />
+                  <img
+                    className="rounded-lg shadow-lg lg:w-1/2"
+                    src={homeImg}
+                    alt=""
+                  />
+                </div>
+              </div>
+            </LazyLoad>
           </div>
           <div>
-            <ProjectArticle
-              title="Dark mode / Light mode"
-              content="Disponibilidad de modo oscuro, activable por el usuario y configurable en cada dispositivo."
-            >
-              <ReactCompareSlider
-                className="shadow-lg"
-                itemOne={<img className="rounded-lg" src={light} alt="" />}
-                itemTwo={<img className="rounded-lg" src={dark} alt="" />}
-              />
-            </ProjectArticle>
-            <ProjectArticle
-              title="Chat incorporado"
-              content="Servicio de mensajería desde la aplicación. Con permanencia de la información en la base de datos y respectivas notificaciones para mensajes nuevos."
-            >
-              <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
-                <img
-                  className="rounded shadow-lg lg:rounded-lg"
-                  src={chat}
-                  alt=""
+            <LazyLoad>
+              <ProjectArticle
+                title="Dark mode / Light mode"
+                content="Disponibilidad de modo oscuro, activable por el usuario y configurable en cada dispositivo."
+              >
+                <ReactCompareSlider
+                  className="shadow-lg"
+                  itemOne={<img className="rounded-lg" src={light} alt="" />}
+                  itemTwo={<img className="rounded-lg" src={dark} alt="" />}
                 />
-                <img
-                  className="rounded shadow-lg lg:rounded-lg"
-                  src={chatMobile}
-                  alt=""
-                />
-              </div>
-            </ProjectArticle>
+              </ProjectArticle>
+            </LazyLoad>
+            <LazyLoad>
+              <ProjectArticle
+                title="Chat incorporado"
+                content="Servicio de mensajería desde la aplicación. Con permanencia de la información en la base de datos y respectivas notificaciones para mensajes nuevos."
+              >
+                <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
+                  <img
+                    className="rounded shadow-lg lg:rounded-lg"
+                    src={chat}
+                    alt=""
+                  />
+                  <img
+                    className="rounded shadow-lg lg:rounded-lg"
+                    src={chatMobile}
+                    alt=""
+                  />
+                </div>
+              </ProjectArticle>
+            </LazyLoad>
           </div>
           <div className="h-[100vh] py-10">
             <div
