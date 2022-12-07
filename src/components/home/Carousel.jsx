@@ -5,12 +5,10 @@ import kittenTwo from '../../assets/carousel/kitten-2.jpg';
 import kittenThree from '../../assets/carousel/kitten-3.jpg';
 
 export default function Carousel() {
-  const [imgIndex, setImgIndex] = useState(0);
   const [carouselIndex, setCarouselIndex] = useState(0);
   const imagesRef = useRef();
 
   const imgSrcArr = [kittenOne, kittenTwo, kittenThree];
-  console.log(carouselIndex);
   function handleClickRight(currIndex) {
     const transitionByIndex = {
       0: '-translate-x-48',

@@ -2,24 +2,28 @@ import { useState, useEffect } from 'react';
 
 export default function Game() {
   const [squares, setSquares] = useState(['', '', '', '', '', '', '', '', '']);
-  const [computerTurn, setComputerTurn] = useState(false);
   const [result, setResult] = useState(false);
 
   function handleClick(i) {
-    if (computerTurn === false && squares[i] === '') {
-      setSquares((prev) => [...prev, (prev[i] = 'X')], setComputerTurn(true));
+    if (squares[i] === '') {
+      // Computer random logic
+      const emptySquares = [];
+      squares.forEach((square, index) => {
+        if (square === '' && index !== i) {
+          emptySquares.push(index);
+        }
+      });
+      const randomPick =
+        emptySquares[Math.floor(Math.random() * emptySquares.length)];
+
+      // Add both plays
+      setSquares((prev) => [
+        ...prev,
+        (prev[i] = 'X'),
+        (prev[randomPick] = 'O'),
+      ]);
     }
   }
-
-  useEffect(() => {
-    if (computerTurn) {
-      const emptySquare = squares.findIndex((square) => square === '');
-      setSquares(
-        (prev) => [...prev, (prev[emptySquare] = 'O')],
-        setComputerTurn(false)
-      );
-    }
-  }, [computerTurn]);
 
   function checkWin() {
     if (result) return;
