@@ -145,7 +145,7 @@ export default function ProjectSkullcrushers() {
           <div className="h-[100vh] py-10">
             <div
               onClick={handleClick}
-              className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-black/50 text-white"
+              className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-emerald-900 text-white"
             >
               <p>SIGUIENTE PROYECTO</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
