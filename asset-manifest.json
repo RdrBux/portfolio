@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.317c4230.css",
+    "main.js": "/portfolio/static/js/main.aac8495b.js",
+    "static/media/store-mobile.png": "/portfolio/static/media/store-mobile.715b750b4bb61e1eee89.png",
+    "static/media/store.png": "/portfolio/static/media/store.e21f8d615b9caa69b461.png",
+    "static/media/store-main.png": "/portfolio/static/media/store-main.75aa0f14c06d4420a169.png",
+    "static/media/home.png": "/portfolio/static/media/home.083136a8a3cd848fada7.png",
+    "static/media/sc360-2.mp4": "/portfolio/static/media/sc360-2.e86b72173d2645fb7bc1.mp4",
+    "static/media/do360-3.mp4": "/portfolio/static/media/do360-3.8ccaf3ae5517aa9dfdec.mp4",
+    "static/media/cart.png": "/portfolio/static/media/cart.6bc3cd05600232bf32d4.png",
+    "static/media/sc360-1.mp4": "/portfolio/static/media/sc360-1.369fec281f716277af14.mp4",
+    "static/media/sc360-3.mp4": "/portfolio/static/media/sc360-3.785d1b9a3441ac25e1e5.mp4",
+    "static/media/do360-1.mp4": "/portfolio/static/media/do360-1.5b01b4fcf5182228f91c.mp4",
+    "static/media/do360-2.mp4": "/portfolio/static/media/do360-2.d108c9ffbb1f2a773f30.mp4",
+    "static/media/login.png": "/portfolio/static/media/login.2092873c9990136b08d1.png",
+    "static/media/contact.png": "/portfolio/static/media/contact.72fadb6b3da583fb46bf.png",
+    "static/media/pseudochat.png": "/portfolio/static/media/pseudochat.36d3c045b48534193963.png",
+    "static/media/addtask.png": "/portfolio/static/media/addtask.daf170b45ce80a915676.png",
+    "static/media/light.png": "/portfolio/static/media/light.01fa185e78c234fe0db0.png",
+    "static/media/bird.gif": "/portfolio/static/media/bird.cd571a1d2bab282faf52.gif",
+    "static/media/dark.png": "/portfolio/static/media/dark.b716ec275ad069fd4e2c.png",
+    "static/media/chat.png": "/portfolio/static/media/chat.f367688742cd2fd956be.png",
+    "static/media/avatar.png": "/portfolio/static/media/avatar.912448b27b154ed34a0b.png",
+    "static/media/swoosh.mp3": "/portfolio/static/media/swoosh.18eb73ebc11e6fb4e809.mp3",
+    "static/media/kitten-2.jpg": "/portfolio/static/media/kitten-2.06b7e0b01aae1dc22588.jpg",
+    "static/media/kitten-1.jpg": "/portfolio/static/media/kitten-1.8c7878072de962784149.jpg",
+    "static/media/photo.mp3": "/portfolio/static/media/photo.9f00809aa703922b753e.mp3",
+    "static/media/pop.mp3": "/portfolio/static/media/pop.6cdf7b16f7cac14370e3.mp3",
+    "static/media/kitten-3.jpg": "/portfolio/static/media/kitten-3.54d27180cbb264f4e1cb.jpg",
+    "index.html": "/portfolio/index.html",
+    "main.317c4230.css.map": "/portfolio/static/css/main.317c4230.css.map",
+    "main.aac8495b.js.map": "/portfolio/static/js/main.aac8495b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.317c4230.css",
+    "static/js/main.aac8495b.js"
+  ]
+}
