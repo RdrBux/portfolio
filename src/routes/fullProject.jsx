@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
 import Accordion from '../components/Accordion';
-import ProjectImg from '../assets/project-img1.png';
 import ProjectArticle from '../components/ProjectArticle';
 import CloseProject from '../components/CloseProject';
 import ProjectNav from '../components/ProjectNav';
@@ -51,11 +50,11 @@ export default function FullProject() {
           <div className="mt-10 lg:mt-16">
             <Accordion />
           </div>
-          <div className="flex flex-col gap-8 py-10 lg:py-16">
+          {/* <div className="flex flex-col gap-8 py-10 lg:py-16">
             <img src={ProjectImg} alt="" />
             <img src={ProjectImg} alt="" />
             <img src={ProjectImg} alt="" />
-          </div>
+          </div> */}
           <div>
             <ProjectArticle />
             <ProjectArticle />
