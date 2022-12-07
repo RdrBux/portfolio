@@ -44,7 +44,7 @@ export default function ProjectTwo() {
         onClick={handleClick}
         className="flex w-full cursor-pointer flex-col lg:flex-row lg:items-center"
       >
-        <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
+        <div className="my-5 flex flex-col gap-5 lg:mr-10 lg:w-1/2 xl:mr-20">
           <div>
             <motion.h2
               variants={childrenAnim}
@@ -58,7 +58,7 @@ export default function ProjectTwo() {
           </div>
           <motion.p
             variants={childrenAnim}
-            className="text-lg text-zinc-800 lg:max-w-sm 2xl:max-w-md"
+            className="text-lg text-zinc-800" /* lg:max-w-sm 2xl:max-w-md */
           >
             El calendario virtual que te organizará tu vida personal y social.
             DO IT permite crear actividades, compartirlas con amigos y chatear

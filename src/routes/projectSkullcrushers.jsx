@@ -1,21 +1,19 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useScroll } from 'framer-motion';
-import { ReactCompareSlider } from 'react-compare-slider';
+import { useNavigate } from 'react-router-dom';
 import Accordion from '../components/Accordion';
 import ProjectArticle from '../components/ProjectArticle';
 import CloseProject from '../components/CloseProject';
 import ProjectNav from '../components/ProjectNav';
 import TransitionElement from '../components/TransitionElement';
-import loginImg from '../assets/doit/login.png';
-import addTaskImg from '../assets/doit/addtask.png';
-import homeImg from '../assets/doit/home.png';
-import light from '../assets/doit/light.png';
-import dark from '../assets/doit/dark.png';
-import chat from '../assets/doit/chat.png';
-import chatMobile from '../assets/doit/pseudochat.png';
-import { useNavigate } from 'react-router-dom';
+import home from '../assets/skullcrushers/home.png';
+import store from '../assets/skullcrushers/store-main.png';
+import contact from '../assets/skullcrushers/contact.png';
+import responsive from '../assets/skullcrushers/store.png';
+import responsiveMobile from '../assets/skullcrushers/store-mobile.png';
+import cart from '../assets/skullcrushers/cart.png';
 
-export default function ProjectDOIT() {
+export default function ProjectSkullcrushers() {
   const navigate = useNavigate();
   const [showFixedEls, setShowFixedEls] = useState(false);
 
@@ -36,29 +34,28 @@ export default function ProjectDOIT() {
   }, [showFixedEls]);
 
   function handleClick() {
-    navigate('/skullcrushers');
+    navigate('/doit');
   }
 
   const data = [
     {
       title: 'Información',
       content:
-        'El calendario virtual que te organizará tu vida personal y social, DO IT permite crear actividades, compartirlas con amigos y chatear desde la aplicación.',
+        'Tienda online de indumentaria masculina. Elaboración del frontend con un diseño "responsive", navegación por medio de rutas animadas.',
     },
     {
       title: 'Objetivo',
       content:
-        'Crear una aplicación simple con la finalidad de llevar un registro y organización de las actividades personales y, a la vez, que admita la interacción con otros usuarios. Permitiendo así la coordinación para cualquier tipo de eventos.',
+        'Crear la interfaz de usuario de una tienda online, haciendo énfasis en la interactividad por medio del uso de animaciones tanto en microtransacciones como en la disposición del "layout" en general.',
     },
     {
       title: 'Trabajo realizado',
       content:
-        'Elaboración del diseño en Figma, Armado de estructuras para el almacenamiento de la información y para el registro de sesiones de usuarios empleando Firebase. Escritura del Frontend con React y TypeScript, y de la intercomunicación con el servidor.',
+        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Incorporación de animaciones empleando la librería GSAP.',
     },
     {
       title: 'Tecnologías empleadas',
-      content:
-        'React, React-router-dom, TypeScript, Tailwindcss, Firebase, Figma',
+      content: 'React, React-router-dom, Tailwindcss, GSAP, Figma',
     },
     {
       title: 'Año',
@@ -77,8 +74,8 @@ export default function ProjectDOIT() {
           {showFixedEls && (
             <div>
               <ProjectNav
-                siteURL={'https://doit-c5071.firebaseapp.com/'}
-                codeURL={'https://github.com/RdrBux/letsdoit'}
+                siteURL={'https://rdrbux.github.io/skullcrushers/'}
+                codeURL={'https://github.com/RdrBux/skullcrushers'}
               />
             </div>
           )}
@@ -86,57 +83,53 @@ export default function ProjectDOIT() {
         <div className="container flex flex-col pt-14 lg:pt-24">
           <CloseProject />
           <div className="">
-            <h2 className="text-5xl font-bold lg:text-7xl">DO IT</h2>
+            <h2 className="text-5xl font-bold lg:text-7xl">
+              SKULL
+              <br />
+              CRUSHERS
+            </h2>
             <p className="text-zinc-600 lg:text-lg">
-              Proyecto / Diseño / Frontend / Backend
+              Proyecto / Diseño / Frontend
             </p>
           </div>
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
           </div>
           <div className="flex flex-col gap-10 py-10 lg:py-16">
-            <div className="rounded-lg bg-zinc-100 p-4 lg:p-20">
-              <img className="rounded-lg shadow-lg" src={loginImg} alt="" />
+            <div className="rounded-lg bg-zinc-100 lg:p-20">
+              <img className="rounded-lg shadow-lg" src={home} alt="" />
             </div>
-            <div className="grid grid-cols-2 gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
-              <img
-                className="justify-self-end rounded-lg shadow-lg lg:w-1/2"
-                src={addTaskImg}
-                alt=""
-              />
-              <img
-                className="rounded-lg shadow-lg lg:w-1/2"
-                src={homeImg}
-                alt=""
-              />
+            <div className="rounded-lg bg-zinc-100 lg:p-20">
+              <img className="rounded-lg shadow-lg" src={store} alt="" />
+            </div>
+            <div className="rounded-lg bg-zinc-100 lg:p-20">
+              <img className="rounded-lg shadow-lg" src={contact} alt="" />
             </div>
           </div>
           <div>
             <ProjectArticle
-              title="Dark mode / Light mode"
-              content="Disponibilidad de modo oscuro, activable por el usuario y configurable en cada dispositivo."
-            >
-              <ReactCompareSlider
-                className="shadow-lg"
-                itemOne={<img className="rounded-lg" src={light} alt="" />}
-                itemTwo={<img className="rounded-lg" src={dark} alt="" />}
-              />
-            </ProjectArticle>
-            <ProjectArticle
-              title="Chat incorporado"
-              content="Servicio de mensajería desde la aplicación. Con permanencia de la información en la base de datos y respectivas notificaciones para mensajes nuevos."
+              title="Responsive design"
+              content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución."
             >
               <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
                 <img
                   className="rounded shadow-lg lg:rounded-lg"
-                  src={chat}
+                  src={responsive}
                   alt=""
                 />
                 <img
                   className="rounded shadow-lg lg:rounded-lg"
-                  src={chatMobile}
+                  src={responsiveMobile}
                   alt=""
                 />
+              </div>
+            </ProjectArticle>
+            <ProjectArticle
+              title="Carrito de compras interactivo"
+              content="Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
+            >
+              <div className="rounded-lg bg-zinc-100 lg:p-20">
+                <img className="rounded-lg shadow-lg" src={cart} alt="" />
               </div>
             </ProjectArticle>
           </div>
@@ -147,7 +140,7 @@ export default function ProjectDOIT() {
             >
               <p>SIGUIENTE PROYECTO</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
-                SKULLCRUSHERS
+                DO IT
               </h3>
             </div>
           </div>

@@ -15,7 +15,8 @@ export default function App() {
   return (
     <>
       <AnimatePresence>
-        {location.pathname !== '/doit' && <Navbar />}
+        {location.pathname !== '/doit' &&
+          location.pathname !== '/skullcrushers' && <Navbar />}
       </AnimatePresence>
       <AnimatedRoutes />
     </>

@@ -74,7 +74,6 @@ export default function Projects() {
             <hr />
             <ProjectOne />
             <hr />
-            <ProjectOne />
           </motion.div>
         </div>
       </div>

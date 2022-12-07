@@ -4,13 +4,13 @@ import LazyLoad from 'react-lazy-load';
 import videoOne from '../assets/sc360-1.mp4';
 import videoTwo from '../assets/sc360-2.mp4';
 import videoThree from '../assets/sc360-3.mp4';
-import projectImg from '../assets/shirt2.png';
+/* import projectImg from '../assets/shirt2.png'; */
 
 export default function ProjectOne() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate('/project');
+    navigate('/skullcrushers');
   }
 
   const parentAnim = {
@@ -45,7 +45,7 @@ export default function ProjectOne() {
         onClick={handleClick}
         className="flex w-full cursor-pointer flex-col lg:flex-row lg:items-center"
       >
-        <div className="my-5 flex flex-col gap-5 lg:mr-20 lg:w-1/2">
+        <div className="my-5 flex flex-col gap-5 lg:mr-10 lg:w-1/2 xl:mr-20">
           <div>
             <motion.h2
               variants={childrenAnim}
@@ -61,11 +61,10 @@ export default function ProjectOne() {
           </div>
           <motion.p
             variants={childrenAnim}
-            className="text-lg text-zinc-800 lg:max-w-sm 2xl:max-w-md"
+            className="text-lg text-zinc-800" /* lg:max-w-sm 2xl:max-w-md */
           >
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Consequuntur esse accusamus, corrupti animi, quisquam officiis
-            asperiores tempore vero.
+            Tienda online de indumentaria masculina. Elaboración del frontend
+            con un diseño "responsive", navegación por medio de rutas animadas.
           </motion.p>
 
           <motion.button
@@ -101,11 +100,11 @@ export default function ProjectOne() {
               <video playsInline muted loop autoPlay>
                 <source src={videoThree} type="video/mp4" />
               </video>
-              <img
-                className="absolute bottom-0 -left-32 hidden w-64 lg:block"
+              {/* <img
+                className="absolute bottom-0 -left-20 hidden w-48 lg:block xl:-left-32 xl:w-64"
                 src={projectImg}
                 alt=""
-              />
+              /> */}
             </div>
           </LazyLoad>
         </div>

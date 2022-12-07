@@ -6,6 +6,7 @@ import FullProject from '../routes/fullProject';
 import Home from '../routes/home';
 import ProjectDOIT from '../routes/projectDOIT';
 import Projects from '../routes/projects';
+import ProjectSkullcrushers from '../routes/projectSkullcrushers';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -17,8 +18,9 @@ const AnimatedRoutes = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/project" element={<FullProject />} />
+          {/* <Route path="/project" element={<FullProject />} /> */}
           <Route path="/doit" element={<ProjectDOIT />} />
+          <Route path="/skullcrushers" element={<ProjectSkullcrushers />} />
         </Routes>
       </AnimatePresence>
     </div>
