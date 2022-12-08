@@ -1,27 +1,37 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Game() {
   const [squares, setSquares] = useState(['', '', '', '', '', '', '', '', '']);
   const [result, setResult] = useState(false);
 
+  const squaresDisplay = squares.map((square, index) => (
+    <div
+      key={index}
+      onClick={() => handleClick(index)}
+      className="flex h-8 w-8 items-center justify-center rounded-tl-lg border hover:bg-gray-100"
+    >
+      {square}
+    </div>
+  ));
+
   function handleClick(i) {
+    // player logic
     if (squares[i] === '') {
-      // Computer random logic
+      const squaresCopy = [...squares];
+      squaresCopy[i] = 'X';
+
+      // computer logic
       const emptySquares = [];
-      squares.forEach((square, index) => {
+      squaresCopy.forEach((square, index) => {
         if (square === '' && index !== i) {
           emptySquares.push(index);
         }
       });
       const randomPick =
         emptySquares[Math.floor(Math.random() * emptySquares.length)];
+      squaresCopy[randomPick] = 'O';
 
-      // Add both plays
-      setSquares((prev) => [
-        ...prev,
-        (prev[i] = 'X'),
-        (prev[randomPick] = 'O'),
-      ]);
+      setSquares(squaresCopy);
     }
   }
 
@@ -91,7 +101,8 @@ export default function Game() {
             </button>
           </div>
         )}
-        <div className="flex">
+        <div className="grid grid-cols-3">{squaresDisplay}</div>
+        {/* <div className="flex">
           <div
             onClick={() => handleClick(0)}
             className="flex h-8 w-8 items-center justify-center rounded-tl-lg hover:bg-gray-100"
@@ -150,7 +161,7 @@ export default function Game() {
           >
             {squares[8]}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
