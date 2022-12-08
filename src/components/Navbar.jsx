@@ -69,7 +69,7 @@ export default function Navbar() {
             >
               <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
-                  Projectos
+                  Proyectos
                   {activeLink === '/projects' && (
                     <motion.div
                       layoutId="underline"
