@@ -2,11 +2,11 @@ import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import About from '../routes/about';
 import Contact from '../routes/contact';
-import FullProject from '../routes/fullProject';
 import Home from '../routes/home';
 import ProjectDOIT from '../routes/projectDOIT';
 import Projects from '../routes/projects';
 import ProjectSkullcrushers from '../routes/projectSkullcrushers';
+import ProjectCV from '../routes/projectCV';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -21,6 +21,7 @@ const AnimatedRoutes = () => {
           {/* <Route path="/project" element={<FullProject />} /> */}
           <Route path="/doit" element={<ProjectDOIT />} />
           <Route path="/skullcrushers" element={<ProjectSkullcrushers />} />
+          <Route path="/cv" element={<ProjectCV />} />
         </Routes>
       </AnimatePresence>
     </div>

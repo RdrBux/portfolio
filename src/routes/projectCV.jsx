@@ -6,12 +6,11 @@ import ProjectArticle from '../components/ProjectArticle';
 import CloseProject from '../components/CloseProject';
 import ProjectNav from '../components/ProjectNav';
 import TransitionElement from '../components/TransitionElement';
-import home from '../assets/skullcrushers/home.png';
-import store from '../assets/skullcrushers/store-main.png';
-import contact from '../assets/skullcrushers/contact.png';
-import responsive from '../assets/skullcrushers/store.png';
-import responsiveMobile from '../assets/skullcrushers/store-mobile.png';
-import cart from '../assets/skullcrushers/cart.png';
+import main from '../assets/cv/main.jpg';
+import builder from '../assets/cv/builder.png';
+import responsive from '../assets/cv/responsive.png';
+import responsiveMobile from '../assets/cv/responsive-mobile.png';
+import pdf from '../assets/cv/pdf.png';
 import LazyLoad from 'react-lazy-load';
 
 export default function ProjectSkullcrushers() {
@@ -35,28 +34,28 @@ export default function ProjectSkullcrushers() {
   }, [showFixedEls]);
 
   function handleClick() {
-    navigate('/cv');
+    navigate('/doit');
   }
 
   const data = [
     {
       title: 'Información',
       content:
-        'Tienda online de indumentaria masculina. Elaboración del frontend con un diseño "responsive", navegación por medio de rutas animadas.',
+        'Creador de Curriculum Vitae en simples pasos. Incluye múltiples plantillas, selector de colores y posibilidad de agregar imágenes. Los documentos generados se pueden imprimir directamente o descargar en formato PDF.',
     },
     {
       title: 'Objetivo',
       content:
-        'Crear la interfaz de usuario de una tienda online, haciendo énfasis en la interactividad por medio del uso de animaciones tanto en microtransacciones como en la disposición del "layout" en general.',
+        'Desarrollar una herramienta para la creación de CVs que permita elaborar diseños avanzados solo agregando datos personales.',
     },
     {
       title: 'Trabajo realizado',
       content:
-        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Incorporación de animaciones empleando la librería GSAP. Elaboración de mockups de las remeras con photoshop e imagenes creadas usando la IA StableDiffusion.',
+        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Integración del módulo react-to-print para posibilitar la descarga de los curriculums.',
     },
     {
       title: 'Tecnologías empleadas',
-      content: 'React, React-router-dom, Tailwindcss, GSAP, Figma',
+      content: 'React, React-router-dom, Tailwindcss, React-to-print, Figma',
     },
     {
       title: 'Año',
@@ -75,8 +74,8 @@ export default function ProjectSkullcrushers() {
           {showFixedEls && (
             <div>
               <ProjectNav
-                siteURL={'https://rdrbux.github.io/skullcrushers/'}
-                codeURL={'https://github.com/RdrBux/skullcrushers'}
+                siteURL={'https://rdrbux.github.io/cv-application/'}
+                codeURL={'https://github.com/RdrBux/cv-application'}
               />
             </div>
           )}
@@ -84,11 +83,7 @@ export default function ProjectSkullcrushers() {
         <div className="container flex flex-col pt-14 lg:pt-24">
           <CloseProject />
           <div className="">
-            <h2 className="text-5xl font-bold lg:text-7xl">
-              SKULL
-              <br />
-              CRUSHERS
-            </h2>
+            <h2 className="text-5xl font-bold lg:text-7xl">CV Design</h2>
             <p className="text-zinc-600 lg:text-lg">
               Proyecto / Diseño / Frontend
             </p>
@@ -100,13 +95,10 @@ export default function ProjectSkullcrushers() {
             <LazyLoad>
               <div className="flex flex-col gap-10 py-10 lg:py-16">
                 <div className="rounded-lg bg-zinc-100 lg:p-20">
-                  <img className="rounded-lg shadow-lg" src={home} alt="" />
+                  <img className="rounded-lg shadow-lg" src={main} alt="" />
                 </div>
                 <div className="rounded-lg bg-zinc-100 lg:p-20">
-                  <img className="rounded-lg shadow-lg" src={store} alt="" />
-                </div>
-                <div className="rounded-lg bg-zinc-100 lg:p-20">
-                  <img className="rounded-lg shadow-lg" src={contact} alt="" />
+                  <img className="rounded-lg shadow-lg" src={builder} alt="" />
                 </div>
               </div>
             </LazyLoad>
@@ -115,9 +107,9 @@ export default function ProjectSkullcrushers() {
             <LazyLoad>
               <ProjectArticle
                 title="Responsive design"
-                content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución."
+                content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. El layout se ajusta entre una o dos columnas para optimizar el espacio disponible."
               >
-                <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
+                <div className="grid grid-cols-[5fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
                   <img
                     className="rounded shadow-lg lg:rounded-lg"
                     src={responsive}
@@ -133,11 +125,11 @@ export default function ProjectSkullcrushers() {
             </LazyLoad>
             <LazyLoad>
               <ProjectArticle
-                title="Carrito de compras interactivo"
-                content="Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
+                title="Resultado descargable en formato PDF"
+                content="Una vez finalizada la elaboración, el CV se puede descargar con solo presionar un botón. Se puede escoger entre imprimirlo directamente o guardarlo en formato PDF."
               >
                 <div className="rounded-lg bg-zinc-100 lg:p-20">
-                  <img className="rounded-lg shadow-lg" src={cart} alt="" />
+                  <img className="rounded-lg shadow-lg" src={pdf} alt="" />
                 </div>
               </ProjectArticle>
             </LazyLoad>
@@ -145,11 +137,11 @@ export default function ProjectSkullcrushers() {
           <div className="h-[100vh] py-10">
             <div
               onClick={handleClick}
-              className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-indigo-900 text-white"
+              className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-emerald-900 text-white"
             >
               <p>SIGUIENTE PROYECTO</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
-                CV Design
+                DO IT
               </h3>
             </div>
           </div>

@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
-import videoOne from '../assets/sc360-1.mp4';
-import videoTwo from '../assets/sc360-2.mp4';
-import videoThree from '../assets/sc360-3.mp4';
+import videoOne from '../assets/cv-design.mp4';
 
-export default function ProjectOne() {
+export default function ProjectTwo() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate('/skullcrushers');
+    navigate('/cv');
   }
 
   const parentAnim = {
@@ -50,9 +48,7 @@ export default function ProjectOne() {
               variants={childrenAnim}
               className="text-[14vw] font-bold leading-none text-black sm:text-7xl lg:text-6xl 2xl:text-7xl"
             >
-              SKULL
-              <br />
-              CRUSHERS
+              CV Design
             </motion.h2>
             <motion.p variants={childrenAnim} className="text-zinc-700">
               Proyecto / Diseño / Frontend
@@ -62,8 +58,8 @@ export default function ProjectOne() {
             variants={childrenAnim}
             className="text-lg text-zinc-800" /* lg:max-w-sm 2xl:max-w-md */
           >
-            Tienda online de indumentaria masculina. Elaboración del frontend
-            con un diseño "responsive", navegación por medio de rutas animadas.
+            Creador de Curriculum Vitae en simples pasos. Incluye múltiples
+            plantillas, selector de colores y posibilidad de agregar imágenes.
           </motion.p>
 
           <motion.button
@@ -87,23 +83,12 @@ export default function ProjectOne() {
             </svg>
           </motion.button>
         </div>
-        <div className="shrink-0 lg:w-7/12">
+        <div className="shrink-0 lg:w-7/12 xl:-ml-20">
           <LazyLoad offset={200}>
-            <div className="relative grid grid-cols-3 gap-2 xl:gap-4">
+            <div className="relative grid">
               <video playsInline muted loop autoPlay>
                 <source src={videoOne} type="video/mp4" />
               </video>
-              <video playsInline muted loop autoPlay>
-                <source src={videoTwo} type="video/mp4" />
-              </video>
-              <video playsInline muted loop autoPlay>
-                <source src={videoThree} type="video/mp4" />
-              </video>
-              {/* <img
-                className="absolute bottom-0 -left-20 hidden w-48 lg:block xl:-left-32 xl:w-64"
-                src={projectImg}
-                alt=""
-              /> */}
             </div>
           </LazyLoad>
         </div>

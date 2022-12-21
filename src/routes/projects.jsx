@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import ProjectOne from '../components/ProjectOne';
 import ProjectTwo from '../components/ProjectTwo';
+import ProjectThree from '../components/ProjectThree';
 import TransitionElement from '../components/TransitionElement';
 
 export default function Projects() {
@@ -73,6 +74,8 @@ export default function Projects() {
             <ProjectTwo />
             <hr />
             <ProjectOne />
+            <hr />
+            <ProjectThree />
           </motion.div>
         </div>
       </div>
