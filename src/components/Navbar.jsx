@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -50,7 +52,7 @@ export default function Navbar() {
             >
               <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
-                  Inicio
+                  {t('nav.options.0')}
                   {activeLink === '/' && (
                     <motion.div
                       layoutId="underline"
@@ -69,7 +71,7 @@ export default function Navbar() {
             >
               <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
-                  Proyectos
+                  {t('nav.options.1')}
                   {activeLink === '/projects' && (
                     <motion.div
                       layoutId="underline"
@@ -88,7 +90,7 @@ export default function Navbar() {
             >
               <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
-                  Sobre mí
+                  {t('nav.options.2')}
                   {activeLink === '/about' && (
                     <motion.div
                       layoutId="underline"
@@ -107,7 +109,7 @@ export default function Navbar() {
             >
               <motion.div className="nav-element | relative flex justify-center rounded-lg py-2 duration-300 lg:hover:bg-white/10">
                 <div className="relative w-fit">
-                  Contacto
+                  {t('nav.options.3')}
                   {activeLink === '/contact' && (
                     <motion.div
                       layoutId="underline"

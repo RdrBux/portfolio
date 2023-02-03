@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
+const lngs = {
+  es: { nativeName: 'Español' },
+  en: { nativeName: 'English' },
+};
 
 export default function LangSelector() {
-  const [lang, setLang] = useState('Español');
   const [showOptions, setShowOptions] = useState(false);
+
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     function clickOutside(e) {
@@ -22,10 +29,8 @@ export default function LangSelector() {
     return () => window.removeEventListener('click', clickOutside);
   }, []);
 
-  function changeLang(newLang) {
-    if (lang !== newLang) {
-      setLang(newLang);
-    }
+  function changeLang(lng) {
+    i18n.changeLanguage(lng);
     setShowOptions(false);
   }
 
@@ -39,7 +44,7 @@ export default function LangSelector() {
         onClick={() => setShowOptions((prev) => !prev)}
         className="flex items-center gap-2 rounded-lg bg-zinc-900/75 py-2 px-4 font-bold text-white"
       >
-        <div>{lang}</div>
+        <div>{lngs[i18n.resolvedLanguage].nativeName}</div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -63,28 +68,30 @@ export default function LangSelector() {
             exit={{ opacity: 0 }}
             className="absolute right-0 top-12 rounded-lg border bg-zinc-100"
           >
-            <div
-              onClick={() => changeLang('Español')}
+            {/*  <div
+              onClick={() => il8n.changeLanguage('es')}
               className="w-40 rounded-t-xl px-6 py-4 duration-300 hover:bg-zinc-200"
             >
               Español (ES)
             </div>
             <div
-              /* onClick={() => changeLang('English')} */
-              className="rounded-b-lg px-6 py-4 line-through duration-300 hover:bg-zinc-200"
+              onClick={() => il8n.changeLanguage('en')}
+              className="w-40 rounded-b-lg px-6 py-4 duration-300 hover:bg-zinc-200"
             >
               English (EN)
-            </div>
+            </div> */}
+            {Object.keys(lngs).map((lng) => (
+              <div
+                key={lng}
+                onClick={() => changeLang(lng)}
+                className="w-32 rounded-t-xl px-6 py-4 duration-300 hover:bg-zinc-200"
+              >
+                {lngs[lng].nativeName}
+              </div>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>
     </motion.button>
   );
-}
-
-{
-  /* <select className="absolute top-6 right-6 z-20 w-fit cursor-pointer rounded-lg bg-zinc-900/75 py-2 px-4 font-bold text-white">
-  <option value="">ESPAÑOL</option>
-  <option value="">ENGLISH</option>
-</select> */
 }

@@ -3,8 +3,11 @@ import ProjectOne from '../components/ProjectOne';
 import ProjectTwo from '../components/ProjectTwo';
 import ProjectThree from '../components/ProjectThree';
 import TransitionElement from '../components/TransitionElement';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
     <TransitionElement>
       <div className="w-full max-w-full">
@@ -22,7 +25,7 @@ export default function Projects() {
                   }}
                   className="h-[80%]"
                 >
-                  PROYECTOS
+                  {t('projects.titleTop')}
                 </motion.div>
               </motion.div>
               <motion.div className="flex w-full items-end justify-center overflow-hidden">
@@ -36,7 +39,7 @@ export default function Projects() {
                   }}
                   className="h-[80%]"
                 >
-                  RECIENTES
+                  {t('projects.titleBottom')}
                 </motion.div>
               </motion.div>
             </div>
@@ -53,9 +56,7 @@ export default function Projects() {
               }}
               className="mt-4 max-w-sm pl-1 text-sm text-zinc-900 md:max-w-md"
             >
-              Una colección de proyectos en los que he trabajado, sean páginas o
-              aplicaciones web, pensadas en la búsqueda de soluciones a
-              problemas actuales y futuros
+              {t('projects.description')}
             </motion.p>
           </div>
           <motion.div

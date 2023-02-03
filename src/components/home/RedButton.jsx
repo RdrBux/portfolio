@@ -11,6 +11,7 @@ export default function RedButton() {
         setShowButton(true);
       }, 2000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index]);
 
   const texts = [

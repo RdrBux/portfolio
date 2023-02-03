@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function TextareaContact({
   value,
@@ -9,6 +10,7 @@ export default function TextareaContact({
   name,
 }) {
   const [selected, setSelected] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="relative">
@@ -40,7 +42,7 @@ export default function TextareaContact({
           name={name}
         />
         <div className="mt-1 h-4 px-4 text-xs font-normal">
-          {required ? '*obligatorio' : ''}
+          {required ? `*${t('contact.form.asterisk')}` : ''}
         </div>
       </label>
     </div>

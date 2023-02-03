@@ -6,6 +6,7 @@ import AlertContact from '../components/AlertContact';
 import TransitionElement from '../components/TransitionElement';
 import InputContact from '../components/InputContact';
 import TextareaContact from '../components/TextareaContact';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
   const [name, setName] = useState('');
@@ -13,6 +14,7 @@ export default function Contact() {
   const [message, setMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [isError, setIsError] = useState(false);
+  const { t } = useTranslation();
 
   const form = useRef();
 
@@ -116,11 +118,10 @@ export default function Contact() {
                     variants={childrenAnim}
                     className="text-center text-[16vw] font-bold leading-none sm:text-[12vw] lg:text-7xl xl:text-8xl 2xl:text-9xl"
                   >
-                    CONTACTO
+                    {t('contact.title')}
                   </motion.h3>
                   <motion.p variants={childrenAnim} className="text-center">
-                    No dudes en comunicarte, ya sea por cuestiones laborales,
-                    consultas o simplemente para saludar
+                    {t('contact.description')}
                   </motion.p>
                 </div>
                 <div className="flex flex-col items-center gap-8 text-lg lg:text-2xl">
@@ -180,11 +181,11 @@ export default function Contact() {
                   variants={childrenAnim}
                   className="text-4xl font-bold lg:text-5xl"
                 >
-                  Enviar un mensaje
+                  {t('contact.form.title')}
                 </motion.h3>
                 <motion.div variants={childrenAnim}>
                   <InputContact
-                    label="Nombre"
+                    label={t('contact.form.labels.0')}
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                     name="user_name"
@@ -194,7 +195,7 @@ export default function Contact() {
                 <motion.div variants={childrenAnim}>
                   <InputContact
                     type="email"
-                    label="Correo electrónico"
+                    label={t('contact.form.labels.1')}
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                     name="user_email"
@@ -203,7 +204,7 @@ export default function Contact() {
                 </motion.div>
                 <motion.div variants={childrenAnim}>
                   <TextareaContact
-                    label="Mensaje"
+                    label={t('contact.form.labels.2')}
                     onChange={(e) => setMessage(e.target.value)}
                     value={message}
                     name="message"
@@ -214,7 +215,7 @@ export default function Contact() {
                   variants={childrenAnim}
                   className="rounded-lg border border-black bg-teal-800 py-4 px-12 font-bold text-white shadow-flat-r duration-300 hover:bg-teal-900 hover:shadow-none"
                 >
-                  ENVIAR
+                  {t('contact.form.button')}
                 </motion.button>
               </motion.form>
             </div>

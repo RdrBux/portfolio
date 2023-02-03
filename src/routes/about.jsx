@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import TransitionElement from '../components/TransitionElement';
 import avatar from '../assets/avatar.png';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
   const windowWidth = window.innerWidth;
 
   const parentAnim = {
@@ -65,23 +67,18 @@ export default function About() {
                 </motion.h2>
                 <div className="flex flex-col gap-3 text-lg text-zinc-800">
                   <motion.p variants={childrenAnim}>
-                    Desarrollador fullstack y diseñador web, actualmente
-                    viviendo en Argentina.
+                    {t('about.para1')}
                   </motion.p>
                   <motion.p variants={childrenAnim}>
-                    Técnico en Administración de Empresas con formación en
-                    gestión y control, marketing, contabilidad y finanzas.
+                    {t('about.para2')}
                   </motion.p>
                   <motion.p variants={childrenAnim}>
-                    Apasionado por la creación de grandes experiencias
-                    digitales, siempre enfocado en la microgestión de cada
-                    detalle e interacción para optimizar las experiencias de
-                    usuarios.
+                    {t('about.para3')}
                   </motion.p>
                   <motion.p variants={childrenAnim}>
-                    Tenista, runner y ajedrecista en el tiempo libre.
+                    {t('about.para4a')}
                     <br />
-                    Amante de los animales.
+                    {t('about.para4b')}
                   </motion.p>
                 </div>
               </motion.div>
@@ -98,14 +95,14 @@ export default function About() {
                   variants={childrenAnim}
                   className="text-5xl font-bold text-zinc-900"
                 >
-                  Habilidades
+                  {t('about.skills.title')}
                 </motion.h3>
 
                 <motion.div
                   variants={childrenAnim}
                   className="text-xl text-zinc-800"
                 >
-                  Uso de GitHub, Git. Stack más usado:{' '}
+                  {t('about.skills.description')}{' '}
                   <div className="tooltip | inline-block text-zinc-900">
                     MERN.
                     <span className="tooltiptext">
@@ -168,7 +165,7 @@ export default function About() {
                       <h4 className="text-xl font-bold text-white">Backend</h4>
                     </div>
                     <p className="h-full rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
-                      Node.js, Express, MongoDB, MySQL, Firebase
+                      Node.js, Express, MongoDB, SQL, Firebase
                     </p>
                   </motion.div>
 
@@ -221,7 +218,9 @@ export default function About() {
                           />
                         </svg>
                       </div>
-                      <h4 className="text-xl font-bold text-white">Diseño</h4>
+                      <h4 className="text-xl font-bold text-white">
+                        {t('about.skills.design')}
+                      </h4>
                     </div>
                     <p className="rounded-b-lg border-x border-b border-black bg-white p-4 text-black">
                       Figma, Illustrator, Photoshop

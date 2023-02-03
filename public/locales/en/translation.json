@@ -1,0 +1,36 @@
+{
+	"home": {
+		"job": "Web Developer",
+		"description": "Working on the transformation of great ideas into unique digital experiences"
+	},
+	"nav": {
+		"options": ["Home", "Projects", "About me", "Contact"]
+	},
+	"projects": {
+		"titleTop": "RECENT",
+		"titleBottom": "PROJECTS",
+		"description": "A collection of projects in which I have worked, they're web pages or applications designed to find solutions to current and future problems"
+	},
+	"about": {
+		"para1": "Fullstack developer and Web designer, currently living in Argentina.",
+		"para2": "Associate Degree in Business Administration with knowledge in management and control, marketing, accounting and finance.",
+		"para3": "Passionate about creating great digital experiences, always focused on micromanaging every detail and interaction to optimize user experiences.",
+		"para4a": "Tennis player, runner and chess player in the free time.",
+		"para4b": "Animal lover.",
+		"skills": {
+			"title": "Skills",
+			"description": "Use of GitHub, Git. Most used stack:",
+			"design": "Design"
+		}
+	},
+	"contact": {
+		"title": "CONTACT",
+		"description": "Feel free to contact, either for job inquiries, consultation or simply to say hello",
+		"form": {
+			"title": "Send a message",
+			"labels": ["Name", "Email", "Message"],
+			"asterisk": "required",
+			"button": "SEND"
+		}
+	}
+}

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Carousel from '../components/home/Carousel';
 import Chat from '../components/home/Chat';
 import Comment from '../components/home/Comment';
@@ -13,6 +14,8 @@ import LangSelector from '../components/LangSelector';
 import TransitionElement from '../components/TransitionElement';
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <TransitionElement>
       <div className="h-screen w-full overflow-hidden bg-white">
@@ -82,7 +85,7 @@ export default function Home() {
               }}
               className=" text-3xl font-bold text-teal-600 lg:text-4xl"
             >
-              /Desarrollador Web
+              /{t('home.job')}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 40 }}
@@ -97,8 +100,7 @@ export default function Home() {
               }}
               className="max-w-sm text-lg"
             >
-              Trabajando en la transformación de grandes ideas en experiencias
-              digitales únicas
+              {t('home.description')}
             </motion.p>
             <div className=""></div>
           </div>
