@@ -1,0 +1,36 @@
+{
+	"home": {
+		"job": "Desarrollador Web",
+		"description": "Trabajando en la transformación de grandes ideas en experiencias digitales únicas"
+	},
+	"nav": {
+		"options": ["Inicio", "Proyectos", "Sobre mí", "Contacto"]
+	},
+	"projects": {
+		"titleTop": "PROYECTOS",
+		"titleBottom": "RECIENTES",
+		"description": "Una colección de proyectos en los que he trabajado, sean páginas o aplicaciones web, pensadas en la búsqueda de soluciones a problemas actuales y futuros"
+	},
+	"about": {
+		"para1": "Desarrollador fullstack y diseñador web, actualmente viviendo en Argentina.",
+		"para2": "Técnico en Administración de Empresas con formación en gestión y control, marketing, contabilidad y finanzas.",
+		"para3": "Apasionado por la creación de grandes experiencias digitales, siempre enfocado en la microgestión de cada detalle e interacción para optimizar las experiencias de usuarios.",
+		"para4a": "Tenista, runner y ajedrecista en el tiempo libre.",
+		"para4b": "Amante de los animales.",
+		"skills": {
+			"title": "Habilidades",
+			"description": "Uso de GitHub, Git. Stack más usado:",
+			"design": "Diseño"
+		}
+	},
+	"contact": {
+		"title": "CONTACTO",
+		"description": "No dudes en comunicarte, ya sea por cuestiones laborales, consultas o simplemente para saludar",
+		"form": {
+			"title": "Enviar un mensaje",
+			"labels": ["Nombre", "Correo electrónico", "Mensaje"],
+			"asterisk": "obligatorio",
+			"button": "ENVIAR"
+		}
+	}
+}
