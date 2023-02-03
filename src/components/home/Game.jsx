@@ -69,7 +69,7 @@ export default function Game() {
   checkWin();
 
   return (
-    <div className="relative h-fit w-fit shrink-0 animate-pulso rounded-lg border border-black bg-white p-2 font-bold opacity-10 shadow-flat grayscale duration-300 animation-delay-5000 hover:animate-none hover:opacity-100 hover:grayscale-0">
+    <div className="relative h-fit w-fit shrink-0 rounded-lg border border-black bg-white p-2 font-bold opacity-10 shadow-flat grayscale duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
       <p className="text-center">TIC TAC TOE</p>
       <div className="relative flex cursor-pointer flex-col rounded-lg bg-gray-50">
         {result && (

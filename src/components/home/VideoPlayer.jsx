@@ -22,7 +22,7 @@ export default function VideoPlayer() {
     <div
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="flex w-fit shrink-0 animate-pulso rounded-lg border border-black bg-white opacity-10 shadow-flat grayscale duration-300 animation-delay-1000 hover:animate-none hover:bg-gray-50 hover:opacity-100 hover:grayscale-0"
+      className="flex w-fit shrink-0 rounded-lg border border-black bg-white opacity-10 shadow-flat grayscale duration-300 hover:bg-gray-50 hover:opacity-100 hover:grayscale-0 lg:opacity-20"
     >
       <div className="flex flex-col items-center border-r border-black p-2 text-gray-300">
         <svg
@@ -54,7 +54,7 @@ export default function VideoPlayer() {
       </div>
       <div className="grid w-60 auto-rows-auto">
         <div className="flex items-center justify-between border-b border-black px-4 py-2">
-          <p className="text-sm font-bold text-gray-400">LOGO</p>
+          <p className="text-sm font-bold text-gray-400">CLICK ME</p>
           <div className="flex gap-1">
             <div className="h-2 w-2 rounded-full bg-gray-300"></div>
             <div className="h-2 w-2 rounded-full bg-gray-300"></div>
