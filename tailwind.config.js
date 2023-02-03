@@ -7,10 +7,13 @@ module.exports = {
         flat: '-5px 5px 0px rgba(0, 0, 0, 0.25)',
         'flat-r': '5px 5px 0px rgba(0, 0, 0, 0.25)',
       },
+      animation: {
+        pulso: 'pulso 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;',
+      },
       keyframes: {
-        pulse: {
-          '0%, 100%': { opacity: 0.1 },
-          '50%': { opacity: 0.3 },
+        pulso: {
+          '0%, 65%, 85%, 100%': { opacity: 0.1 },
+          '75%': { opacity: 1 },
         },
       },
     },
@@ -25,5 +28,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animation-delay')],
 };

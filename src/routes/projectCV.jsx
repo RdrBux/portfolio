@@ -51,7 +51,7 @@ export default function ProjectSkullcrushers() {
     {
       title: 'Trabajo realizado',
       content:
-        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Integración del módulo react-to-print para posibilitar la descarga de los curriculums.',
+        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Integración del módulo React-to-print para posibilitar la descarga de los curriculums.',
     },
     {
       title: 'Tecnologías empleadas',

@@ -108,7 +108,7 @@ export default function Home() {
             animate={{
               opacity: 1,
               transition: {
-                delay: 2.4,
+                delay: 3,
                 duration: 1.5,
               },
             }}

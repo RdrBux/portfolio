@@ -96,7 +96,7 @@ export default function SoundPlayer() {
   );
 
   return (
-    <div className="w-50 flex shrink-0 select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 shadow-flat grayscale duration-300 hover:bg-cyan-200 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="w-50 flex shrink-0 animate-pulso select-none flex-col items-center gap-4 rounded-lg border border-black bg-white p-4 opacity-10 shadow-flat grayscale duration-300 animation-delay-4000 hover:animate-none  hover:bg-cyan-200 hover:opacity-100 hover:grayscale-0">
       <div className="flex items-end gap-2">
         <div className="h-8 w-4 rounded-full bg-violet-200 duration-300"></div>
         <div className="h-14 w-4 rounded-full bg-violet-200 duration-300"></div>

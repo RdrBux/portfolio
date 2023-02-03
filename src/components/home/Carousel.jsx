@@ -55,7 +55,7 @@ export default function Carousel() {
   );
 
   return (
-    <div className="h-fit w-fit shrink-0 rounded-lg border border-black bg-white p-2 opacity-10 shadow-flat grayscale delay-75 duration-300 hover:opacity-100 hover:grayscale-0 lg:opacity-20">
+    <div className="h-fit w-fit shrink-0 animate-pulso rounded-lg border border-black bg-white p-2 opacity-10 shadow-flat grayscale delay-75 duration-300 animation-delay-8000 hover:animate-none hover:opacity-100 hover:grayscale-0">
       <div className="relative h-40 w-48 overflow-hidden rounded-lg border border-black bg-red-200">
         <div ref={imagesRef} className="flex h-40 w-[36rem] duration-300">
           <img className="h-40 w-48" src={imgSrcArr[0]} alt="" />
