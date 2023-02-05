@@ -9,7 +9,11 @@
 	"projects": {
 		"titleTop": "RECENT",
 		"titleBottom": "PROJECTS",
-		"description": "A collection of projects in which I have worked, they're web pages or applications designed to find solutions to current and future problems"
+		"description": "A collection of projects in which I have worked, they're web pages or applications designed to find solutions to current and future problems",
+		"button": "EXPLORE",
+		"titles": ["Information", "Main goal", "Work done", "Technologies used", "Year"],
+		"next": "NEXT PROJECT",
+		"nav": ["Live site", "View code"]
 	},
 	"about": {
 		"para1": "Fullstack developer and Web designer, currently living in Argentina.",
@@ -31,6 +35,57 @@
 			"labels": ["Name", "Email", "Message"],
 			"asterisk": "required",
 			"button": "SEND"
+		}
+	},
+	"projectOne": {
+		"title": "SKULLCRUSHERS",
+		"tags": "Project / Design / Frontend",
+		"description": "Online men's clothing store. Frontend developed with a responsive design, navigation through animated routes.",
+		"accordion": {
+			"goal": "Create the user interface of an online store, emphasizing interactivity through the use of animations both in microtransactions and in the general layout.",
+			"work": "Elaboration of the design in Figma. Coding of the Frontend with React and creation of routes using React-router-dom. Animations using the GSAP library. Elaboration of mockups of the t-shirts with photoshop and images created using the AI StableDiffusion."
+		},
+		"articleOne": {
+			"title": "Responsive design",
+			"description": "Design automatically adapted to the user's device used to access the site. Items in the store are displayed in different carousel types based on the screen resolution."
+		},
+		"articleTwo": {
+			"title": "Interactive shopping cart",
+			"description": "Ability to add and remove items from the cart. Automated cart open when adding a new item. Permanent display of the number of selected objects."
+		}
+	},
+	"projectTwo": {
+		"title": "DO IT",
+		"tags": "Project / Design / Frontend / Backend",
+		"description": "The virtual calendar that will organize your personal and social life. DO IT allows you to create activities, share them with friends and chat from the application.",
+		"accordion": {
+			"goal": "Create a simple application with the purpose of keeping track and organization of personal activities and, at the same time, allowing interaction with other users. Thus allowing coordination for any type of event.",
+			"work": "Elaboration of the design in Figma, Design of data structures for the storage of information and for the registration of user sessions using Firebase. Frontend coding with React and TypeScript, and intercommunication with the server."
+		},
+		"articleOne": {
+			"title": "Dark mode / Light mode",
+			"description": "Dark mode availability, user-activated and configurable on each device."
+		},
+		"articleTwo": {
+			"title": "Built-in chat service",
+			"description": "Messaging service from the application. With permanence of the information in the database and respective notifications for new messages."
+		}
+	},
+	"projectThree": {
+		"title": "CV Design",
+		"tags": "Project / Design / Frontend",
+		"description": "Résumé creator in simple steps. It includes multiple templates, color selector, and the ability to add images.",
+		"accordion": {
+			"goal": "Develop a tool for creating CVs that allows you to create advanced designs just by adding personal data.",
+			"work": "Elaboration of the design in Figma. Coding of the Frontend with React and creation of routes using React-router-dom. Integration of the React-to-print module to enable the download of the resumes."
+		},
+		"articleOne": {
+			"title": "Responsive design",
+			"description": "Design completely adapted according to the device used to access the site. The layout fits between one or two columns to optimize the available space."
+		},
+		"articleTwo": {
+			"title": "Downloadable result in PDF format",
+			"description": "Once the creation of the CV is finished, it can be downloaded with just a button. You can choose between printing it directly or saving it in PDF format."
 		}
 	}
 }
