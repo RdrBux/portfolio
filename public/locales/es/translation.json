@@ -9,7 +9,11 @@
 	"projects": {
 		"titleTop": "PROYECTOS",
 		"titleBottom": "RECIENTES",
-		"description": "Una colección de proyectos en los que he trabajado, sean páginas o aplicaciones web, pensadas en la búsqueda de soluciones a problemas actuales y futuros"
+		"description": "Una colección de proyectos en los que he trabajado, sean páginas o aplicaciones web, pensadas en la búsqueda de soluciones a problemas actuales y futuros",
+		"button": "EXPLORAR",
+		"titles": ["Información", "Objetivo", "Trabajo realizado", "Tecnologías empleadas", "Año"],
+		"next": "SIGUIENTE PROYECTO",
+		"nav": ["Ver sitio", "Ver código"]
 	},
 	"about": {
 		"para1": "Desarrollador fullstack y diseñador web, actualmente viviendo en Argentina.",
@@ -31,6 +35,57 @@
 			"labels": ["Nombre", "Correo electrónico", "Mensaje"],
 			"asterisk": "obligatorio",
 			"button": "ENVIAR"
+		}
+	},
+	"projectOne": {
+		"title": "SKULLCRUSHERS",
+		"tags": "Proyecto / Diseño / Frontend",
+		"description": "Tienda online de indumentaria masculina. Elaboración del frontend con un diseño \"responsive\", navegación por medio de rutas animadas.",
+		"accordion": {
+			"goal": "Crear la interfaz de usuario de una tienda online, haciendo énfasis en la interactividad por medio del uso de animaciones tanto en microtransacciones como en la disposición del \"layout\" en general.",
+			"work": "Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Incorporación de animaciones empleando la librería GSAP. Elaboración de mockups de las remeras con photoshop e imagenes creadas usando la IA StableDiffusion."
+		},
+		"articleOne": {
+			"title": "Responsive design",
+			"description": "Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución de pantalla."
+		},
+		"articleTwo": {
+			"title": "Carrito de compras interactivo",
+			"description": "Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
+		}
+	},
+	"projectTwo": {
+		"title": "DO IT",
+		"tags": "Proyecto / Diseño / Frontend / Backend",
+		"description": "El calendario virtual que te organizará tu vida personal y social. DO IT permite crear actividades, compartirlas con amigos y chatear desde la aplicación.",
+		"accordion": {
+			"goal": "Crear una aplicación simple con la finalidad de llevar un registro y organización de las actividades personales y, a la vez, que admita la interacción con otros usuarios. Permitiendo así la coordinación para cualquier tipo de eventos.",
+			"work": "Elaboración del diseño en Figma, Armado de estructuras para el almacenamiento de la información y para el registro de sesiones de usuarios empleando Firebase. Escritura del Frontend con React y TypeScript, y de la intercomunicación con el servidor."
+		},
+		"articleOne": {
+			"title": "Dark mode / Light mode",
+			"description": "Disponibilidad de modo oscuro, activable por el usuario y configurable en cada dispositivo."
+		},
+		"articleTwo": {
+			"title": "Chat incorporado",
+			"description": "Servicio de mensajería desde la aplicación. Con permanencia de la información en la base de datos y respectivas notificaciones para mensajes nuevos."
+		}
+	},
+	"projectThree": {
+		"title": "CV Design",
+		"tags": "Proyecto / Diseño / Frontend",
+		"description": "Creador de Curriculum Vitae en simples pasos. Incluye múltiples plantillas, selector de colores y posibilidad de agregar imágenes.",
+		"accordion": {
+			"goal": "Desarrollar una herramienta para la creación de CVs que permita elaborar diseños avanzados solo agregando datos personales.",
+			"work": "Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Integración del módulo React-to-print para posibilitar la descarga de los curriculums."
+		},
+		"articleOne": {
+			"title": "Responsive design",
+			"description": "Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. El layout se ajusta entre una o dos columnas para optimizar el espacio disponible."
+		},
+		"articleTwo": {
+			"title": "Resultado descargable en formato PDF",
+			"description": "Una vez finalizada la elaboración, el CV se puede descargar con solo presionar un botón. Se puede escoger entre imprimirlo directamente o guardarlo en formato PDF."
 		}
 	}
 }

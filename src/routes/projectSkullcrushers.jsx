@@ -13,9 +13,11 @@ import responsive from '../assets/skullcrushers/store.png';
 import responsiveMobile from '../assets/skullcrushers/store-mobile.png';
 import cart from '../assets/skullcrushers/cart.png';
 import LazyLoad from 'react-lazy-load';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectSkullcrushers() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [showFixedEls, setShowFixedEls] = useState(false);
 
   const { scrollYProgress } = useScroll();
@@ -40,26 +42,23 @@ export default function ProjectSkullcrushers() {
 
   const data = [
     {
-      title: 'Información',
-      content:
-        'Tienda online de indumentaria masculina. Elaboración del frontend con un diseño "responsive", navegación por medio de rutas animadas.',
+      title: t('projects.titles.0'),
+      content: t('projectOne.description'),
     },
     {
-      title: 'Objetivo',
-      content:
-        'Crear la interfaz de usuario de una tienda online, haciendo énfasis en la interactividad por medio del uso de animaciones tanto en microtransacciones como en la disposición del "layout" en general.',
+      title: t('projects.titles.1'),
+      content: t('projectOne.accordion.goal'),
     },
     {
-      title: 'Trabajo realizado',
-      content:
-        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Incorporación de animaciones empleando la librería GSAP. Elaboración de mockups de las remeras con photoshop e imagenes creadas usando la IA StableDiffusion.',
+      title: t('projects.titles.2'),
+      content: t('projectOne.accordion.work'),
     },
     {
-      title: 'Tecnologías empleadas',
+      title: t('projects.titles.3'),
       content: 'React, React-router-dom, Tailwindcss, GSAP, Figma',
     },
     {
-      title: 'Año',
+      title: t('projects.titles.4'),
       content: '2022',
     },
   ];
@@ -89,9 +88,7 @@ export default function ProjectSkullcrushers() {
               <br />
               CRUSHERS
             </h2>
-            <p className="text-zinc-600 lg:text-lg">
-              Proyecto / Diseño / Frontend
-            </p>
+            <p className="text-zinc-600 lg:text-lg">{t('projectOne.tags')}</p>
           </div>
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
@@ -114,8 +111,8 @@ export default function ProjectSkullcrushers() {
           <div>
             <LazyLoad>
               <ProjectArticle
-                title="Responsive design"
-                content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. Los objetos de la tienda se visualizan en distintos tipos de carrusel según la resolución."
+                title={t('projectOne.articleOne.title')}
+                content={t('projectOne.articleOne.description')}
               >
                 <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
                   <img
@@ -133,8 +130,8 @@ export default function ProjectSkullcrushers() {
             </LazyLoad>
             <LazyLoad>
               <ProjectArticle
-                title="Carrito de compras interactivo"
-                content="Posibilidad de agregar y remover objetos del carrito. Apertura automática animada al agregar un nuevo elemento. Visualización permanente de la cantidad de objetos seleccionados."
+                title={t('projectOne.articleTwo.title')}
+                content={t('projectOne.articleTwo.description')}
               >
                 <div className="rounded-lg bg-zinc-100 lg:p-20">
                   <img className="rounded-lg shadow-lg" src={cart} alt="" />
@@ -147,7 +144,7 @@ export default function ProjectSkullcrushers() {
               onClick={handleClick}
               className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-indigo-900 text-white"
             >
-              <p>SIGUIENTE PROYECTO</p>
+              <p>{t('projects.next')}</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
                 CV Design
               </h3>

@@ -4,8 +4,11 @@ import LazyLoad from 'react-lazy-load';
 import videoOne from '../assets/sc360-1.mp4';
 import videoTwo from '../assets/sc360-2.mp4';
 import videoThree from '../assets/sc360-3.mp4';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectOne() {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
 
   function handleClick() {
@@ -55,22 +58,21 @@ export default function ProjectOne() {
               CRUSHERS
             </motion.h2>
             <motion.p variants={childrenAnim} className="text-zinc-700">
-              Proyecto / Diseño / Frontend
+              {t('projectOne.tags')}
             </motion.p>
           </div>
           <motion.p
             variants={childrenAnim}
             className="text-lg text-zinc-800" /* lg:max-w-sm 2xl:max-w-md */
           >
-            Tienda online de indumentaria masculina. Elaboración del frontend
-            con un diseño "responsive", navegación por medio de rutas animadas.
+            {t('projectOne.description')}
           </motion.p>
 
           <motion.button
             variants={childrenAnim}
             className="flex w-fit items-center gap-2 rounded-lg border border-black bg-black px-6 py-2 text-sm font-bold text-white duration-300 hover:bg-transparent hover:text-black"
           >
-            <p>EXPLORAR</p>
+            <p>{t('projects.button')}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

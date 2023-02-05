@@ -15,9 +15,11 @@ import chat from '../assets/doit/chat.png';
 import chatMobile from '../assets/doit/pseudochat.png';
 import { useNavigate } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectDOIT() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [showFixedEls, setShowFixedEls] = useState(false);
 
   const { scrollYProgress } = useScroll();
@@ -42,27 +44,24 @@ export default function ProjectDOIT() {
 
   const data = [
     {
-      title: 'Información',
-      content:
-        'El calendario virtual que te organizará tu vida personal y social, DO IT permite crear actividades, compartirlas con amigos y chatear desde la aplicación.',
+      title: t('projects.titles.0'),
+      content: t('projectTwo.description'),
     },
     {
-      title: 'Objetivo',
-      content:
-        'Crear una aplicación simple con la finalidad de llevar un registro y organización de las actividades personales y, a la vez, que admita la interacción con otros usuarios. Permitiendo así la coordinación para cualquier tipo de eventos.',
+      title: t('projects.titles.1'),
+      content: t('projectTwo.accordion.goal'),
     },
     {
-      title: 'Trabajo realizado',
-      content:
-        'Elaboración del diseño en Figma, Armado de estructuras para el almacenamiento de la información y para el registro de sesiones de usuarios empleando Firebase. Escritura del Frontend con React y TypeScript, y de la intercomunicación con el servidor.',
+      title: t('projects.titles.2'),
+      content: t('projectTwo.accordion.work'),
     },
     {
-      title: 'Tecnologías empleadas',
+      title: t('projects.titles.3'),
       content:
         'React, React-router-dom, TypeScript, Tailwindcss, Firebase, Figma',
     },
     {
-      title: 'Año',
+      title: t('projects.titles.4'),
       content: '2022',
     },
   ];
@@ -88,9 +87,7 @@ export default function ProjectDOIT() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">DO IT</h2>
-            <p className="text-zinc-600 lg:text-lg">
-              Proyecto / Diseño / Frontend / Backend
-            </p>
+            <p className="text-zinc-600 lg:text-lg">{t('projectTwo.tags')}</p>
           </div>
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
@@ -119,8 +116,8 @@ export default function ProjectDOIT() {
           <div>
             <LazyLoad>
               <ProjectArticle
-                title="Dark mode / Light mode"
-                content="Disponibilidad de modo oscuro, activable por el usuario y configurable en cada dispositivo."
+                title={t('projectTwo.articleOne.title')}
+                content={t('projectTwo.articleOne.description')}
               >
                 <ReactCompareSlider
                   className="shadow-lg"
@@ -131,8 +128,8 @@ export default function ProjectDOIT() {
             </LazyLoad>
             <LazyLoad>
               <ProjectArticle
-                title="Chat incorporado"
-                content="Servicio de mensajería desde la aplicación. Con permanencia de la información en la base de datos y respectivas notificaciones para mensajes nuevos."
+                title={t('projectTwo.articleTwo.title')}
+                content={t('projectTwo.articleTwo.description')}
               >
                 <div className="grid grid-cols-[3fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
                   <img
@@ -154,7 +151,7 @@ export default function ProjectDOIT() {
               onClick={handleClick}
               className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-zinc-900 text-white"
             >
-              <p>SIGUIENTE PROYECTO</p>
+              <p>{t('projects.next')}</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
                 SKULLCRUSHERS
               </h3>

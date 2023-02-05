@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar({ siteURL, codeURL }) {
+  const { t } = useTranslation();
+
   return (
     <motion.nav
       initial={{ opacity: 0, scaleX: 0 }}
@@ -30,7 +33,7 @@ export default function Navbar({ siteURL, codeURL }) {
             rel="noreferrer"
             mode="wait"
           >
-            Ver sitio
+            {t('projects.nav.0')}
           </a>
         </li>
         <div className="h-6 w-[1px] bg-zinc-500"></div>
@@ -41,7 +44,7 @@ export default function Navbar({ siteURL, codeURL }) {
             target="_blank"
             rel="noreferrer"
           >
-            Ver código
+            {t('projects.nav.1')}
           </a>
         </li>
       </motion.ul>

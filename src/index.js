@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <ScrollToTop />
-      <Suspense fallback="...is loading">
+      <Suspense fallback="">
         <App />
       </Suspense>
     </HashRouter>

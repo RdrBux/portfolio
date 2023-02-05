@@ -66,7 +66,7 @@ export default function LangSelector() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute right-0 top-12 rounded-lg border bg-zinc-100"
+            className="absolute right-0 top-12 overflow-hidden rounded-lg border bg-zinc-100"
           >
             {/*  <div
               onClick={() => il8n.changeLanguage('es')}
@@ -84,7 +84,7 @@ export default function LangSelector() {
               <div
                 key={lng}
                 onClick={() => changeLang(lng)}
-                className="w-32 rounded-t-xl px-6 py-4 duration-300 hover:bg-zinc-200"
+                className="w-32 px-6 py-4 duration-300 hover:bg-zinc-200"
               >
                 {lngs[lng].nativeName}
               </div>

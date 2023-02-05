@@ -12,9 +12,11 @@ import responsive from '../assets/cv/responsive.png';
 import responsiveMobile from '../assets/cv/responsive-mobile.png';
 import pdf from '../assets/cv/pdf.png';
 import LazyLoad from 'react-lazy-load';
+import { useTranslation } from 'react-i18next';
 
 export default function ProjectSkullcrushers() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [showFixedEls, setShowFixedEls] = useState(false);
 
   const { scrollYProgress } = useScroll();
@@ -39,26 +41,23 @@ export default function ProjectSkullcrushers() {
 
   const data = [
     {
-      title: 'Información',
-      content:
-        'Creador de Curriculum Vitae en simples pasos. Incluye múltiples plantillas, selector de colores y posibilidad de agregar imágenes. Los documentos generados se pueden imprimir directamente o descargar en formato PDF.',
+      title: t('projects.titles.0'),
+      content: t('projectThree.description'),
     },
     {
-      title: 'Objetivo',
-      content:
-        'Desarrollar una herramienta para la creación de CVs que permita elaborar diseños avanzados solo agregando datos personales.',
+      title: t('projects.titles.1'),
+      content: t('projectThree.accordion.goal'),
     },
     {
-      title: 'Trabajo realizado',
-      content:
-        'Elaboración del diseño en Figma. Escritura del Frontend con React y creación de rutas empleando React-router-dom. Integración del módulo React-to-print para posibilitar la descarga de los curriculums.',
+      title: t('projects.titles.2'),
+      content: t('projectThree.accordion.work'),
     },
     {
-      title: 'Tecnologías empleadas',
+      title: t('projects.titles.3'),
       content: 'React, React-router-dom, Tailwindcss, React-to-print, Figma',
     },
     {
-      title: 'Año',
+      title: t('projects.titles.4'),
       content: '2022',
     },
   ];
@@ -84,9 +83,7 @@ export default function ProjectSkullcrushers() {
           <CloseProject />
           <div className="">
             <h2 className="text-5xl font-bold lg:text-7xl">CV Design</h2>
-            <p className="text-zinc-600 lg:text-lg">
-              Proyecto / Diseño / Frontend
-            </p>
+            <p className="text-zinc-600 lg:text-lg">{t('projectThree.tags')}</p>
           </div>
           <div className="mt-10 lg:mt-16">
             <Accordion data={data} />
@@ -106,8 +103,8 @@ export default function ProjectSkullcrushers() {
           <div>
             <LazyLoad>
               <ProjectArticle
-                title="Responsive design"
-                content="Diseño completamente adaptado según el dispositivo que se emplee para acceder al sitio. El layout se ajusta entre una o dos columnas para optimizar el espacio disponible."
+                title={t('projectThree.articleOne.title')}
+                content={t('projectThree.articleOne.description')}
               >
                 <div className="grid grid-cols-[5fr,1fr] items-center gap-4 rounded-lg bg-zinc-100 p-4 lg:gap-10 lg:p-20">
                   <img
@@ -125,8 +122,8 @@ export default function ProjectSkullcrushers() {
             </LazyLoad>
             <LazyLoad>
               <ProjectArticle
-                title="Resultado descargable en formato PDF"
-                content="Una vez finalizada la elaboración, el CV se puede descargar con solo presionar un botón. Se puede escoger entre imprimirlo directamente o guardarlo en formato PDF."
+                title={t('projectThree.articleTwo.title')}
+                content={t('projectThree.articleTwo.description')}
               >
                 <div className="rounded-lg bg-zinc-100 lg:p-20">
                   <img className="rounded-lg shadow-lg" src={pdf} alt="" />
@@ -139,7 +136,7 @@ export default function ProjectSkullcrushers() {
               onClick={handleClick}
               className="flex h-full cursor-pointer flex-col items-center justify-center rounded-2xl bg-emerald-900 text-white"
             >
-              <p>SIGUIENTE PROYECTO</p>
+              <p>{t('projects.next')}</p>
               <h3 className="text-4xl font-semibold md:text-6xl lg:text-8xl">
                 DO IT
               </h3>
