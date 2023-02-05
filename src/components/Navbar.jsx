@@ -22,7 +22,7 @@ export default function Navbar() {
           transition: {
             type: 'spring',
             duration: 0.6,
-            delay: location.pathname === '/' ? 2.8 : 1.5,
+            delay: location.pathname === '/' ? 3 : 1.5,
           },
         }}
         exit={{
